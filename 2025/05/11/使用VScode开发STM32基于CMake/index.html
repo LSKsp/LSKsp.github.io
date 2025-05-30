@@ -20,12 +20,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="使用VScode开发STM32:基于CMake本教程使用VScode作为代码编辑工具、使用Cmake作为构建系统生成器、Make进行构建系统、使用arm-none-eabi-gcc进行交叉编译、使用OpenOCD作为代码下载与调试工具，最终搭建出适用于ARM架构系列芯片的开发环境。此教程以STM32F103ZET6芯片为例，演示LED灯闪烁的项目。 经验证，可满足基本基本项目需求。同时由于arm-">
+  <meta name="description" content="[toc] 使用VScode开发STM32:基于CMake本教程使用VScode作为代码编辑工具、使用Cmake作为构建系统生成器、Make进行构建系统、使用arm-none-eabi-gcc进行交叉编译、使用OpenOCD作为代码下载与调试工具，最终搭建出适用于ARM架构系列芯片的开发环境。此教程以STM32F103ZET6芯片为例，演示LED灯闪烁的项目。 经验证，可满足基本基本项目需求。同时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用VScode开发STM32:基于CMake">
 <meta property="og:url" content="https://lsksp.github.io/2025/05/11/%E4%BD%BF%E7%94%A8VScode%E5%BC%80%E5%8F%91STM32%E5%9F%BA%E4%BA%8ECMake/index.html">
 <meta property="og:site_name" content="二进制的向阳的博客">
-<meta property="og:description" content="使用VScode开发STM32:基于CMake本教程使用VScode作为代码编辑工具、使用Cmake作为构建系统生成器、Make进行构建系统、使用arm-none-eabi-gcc进行交叉编译、使用OpenOCD作为代码下载与调试工具，最终搭建出适用于ARM架构系列芯片的开发环境。此教程以STM32F103ZET6芯片为例，演示LED灯闪烁的项目。 经验证，可满足基本基本项目需求。同时由于arm-">
+<meta property="og:description" content="[toc] 使用VScode开发STM32:基于CMake本教程使用VScode作为代码编辑工具、使用Cmake作为构建系统生成器、Make进行构建系统、使用arm-none-eabi-gcc进行交叉编译、使用OpenOCD作为代码下载与调试工具，最终搭建出适用于ARM架构系列芯片的开发环境。此教程以STM32F103ZET6芯片为例，演示LED灯闪烁的项目。 经验证，可满足基本基本项目需求。同时">
 <meta property="og:locale" content="zn_CH">
 <meta property="og:image" content="https://lsksp.github.io/2025/05/11/%E4%BD%BF%E7%94%A8VScode%E5%BC%80%E5%8F%91STM32%E5%9F%BA%E4%BA%8ECMake/CMake.png">
 <meta property="og:image" content="https://lsksp.github.io/2025/05/11/%E4%BD%BF%E7%94%A8VScode%E5%BC%80%E5%8F%91STM32%E5%9F%BA%E4%BA%8ECMake/cmake_d.png">
@@ -51,7 +51,7 @@
 <meta property="og:image" content="https://lsksp.github.io/2025/05/11/%E4%BD%BF%E7%94%A8VScode%E5%BC%80%E5%8F%91STM32%E5%9F%BA%E4%BA%8ECMake/finish.png">
 <meta property="og:image" content="https://lsksp.github.io/2025/05/11/%E4%BD%BF%E7%94%A8VScode%E5%BC%80%E5%8F%91STM32%E5%9F%BA%E4%BA%8ECMake/volite.png">
 <meta property="article:published_time" content="2025-05-10T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-11T12:09:17.825Z">
+<meta property="article:modified_time" content="2025-05-30T01:24:59.609Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
@@ -182,14 +182,14 @@
     <div class="widget">
       <h3 class="widget-title">Categories</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/RTOS/">
-                RTOS
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
                 工具使用
                 <div class="category-count">3</div>
+            </a>
+        
+            <a class="category-link" href="/categories/RTOS/">
+                RTOS
+                <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/Linux/">
@@ -316,7 +316,8 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h3 id="使用VScode开发STM32-基于CMake"><a href="#使用VScode开发STM32-基于CMake" class="headerlink" title="使用VScode开发STM32:基于CMake"></a>使用VScode开发STM32:基于CMake</h3><p>本教程使用VScode作为代码编辑工具、使用Cmake作为构建系统生成器、Make进行构建系统、使用arm-none-eabi-gcc进行交叉编译、使用OpenOCD作为代码下载与调试工具，最终搭建出适用于ARM架构系列芯片的开发环境。此教程以STM32F103ZET6芯片为例，演示LED灯闪烁的项目。</p>
+          <p>[toc]</p>
+<h3 id="使用VScode开发STM32-基于CMake"><a href="#使用VScode开发STM32-基于CMake" class="headerlink" title="使用VScode开发STM32:基于CMake"></a>使用VScode开发STM32:基于CMake</h3><p>本教程使用VScode作为代码编辑工具、使用Cmake作为构建系统生成器、Make进行构建系统、使用arm-none-eabi-gcc进行交叉编译、使用OpenOCD作为代码下载与调试工具，最终搭建出适用于ARM架构系列芯片的开发环境。此教程以STM32F103ZET6芯片为例，演示LED灯闪烁的项目。</p>
 <p>经验证，可满足基本基本项目需求。同时由于arm-none-eabi-gcc编译器相比于keil的AC5、AC6编译器，所编译的hex文件比较大，Flash占用较高，为了兼顾keil开发项目，也为了能够与其他人的项目兼容，这里的keil与VScode的项目文件互不干扰，满足兼容性需求。</p>
 <p>本文涉及的软件安装包、工程模板已放在我的百度网盘中，需要自取。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">链接：https://pan.baidu.com/s/1pO-5R3Li5NIfctx3UzaPig?pwd=ts91 </span><br><span class="line">提取码：ts91 </span><br><span class="line">--来自百度网盘超级会员V4的分享</span><br></pre></td></tr></table></figure>
