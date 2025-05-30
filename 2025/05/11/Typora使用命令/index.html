@@ -20,15 +20,15 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="[toc] 一、标题#123456789101112131415一级标题# 名称六级标题###### 名称----------------------------------------------一级标题ctrl + 1六级标题ctrl + 6清楚标题ctrl + 0  二、有序列表#123456781. 名称ctrl + shift +[降级tab升级shift + tab  三、无序列表#1">
+  <meta name="description" content="一、标题 二、有序列表 三、无序列表 四、任务列表 五、表格 六、代码 七、图片 八、超链接 九、水平分割线 十、引用 其他    一、标题123456789101112131415一级标题# 名称六级标题###### 名称----------------------------------------------一级标题ctrl + 1六级标题ctrl + 6清楚标题ctrl + 0  二">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Typora使用命令">
 <meta property="og:url" content="https://lsksp.github.io/2025/05/11/Typora%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="二进制的向阳的博客">
-<meta property="og:description" content="[toc] 一、标题#123456789101112131415一级标题# 名称六级标题###### 名称----------------------------------------------一级标题ctrl + 1六级标题ctrl + 6清楚标题ctrl + 0  二、有序列表#123456781. 名称ctrl + shift +[降级tab升级shift + tab  三、无序列表#1">
+<meta property="og:description" content="一、标题 二、有序列表 三、无序列表 四、任务列表 五、表格 六、代码 七、图片 八、超链接 九、水平分割线 十、引用 其他    一、标题123456789101112131415一级标题# 名称六级标题###### 名称----------------------------------------------一级标题ctrl + 1六级标题ctrl + 6清楚标题ctrl + 0  二">
 <meta property="og:locale" content="zn_CH">
 <meta property="article:published_time" content="2025-05-10T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-30T01:22:56.754Z">
+<meta property="article:modified_time" content="2025-05-30T01:43:58.047Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Typora">
 <meta name="twitter:card" content="summary">
@@ -158,11 +158,6 @@
     <div class="widget">
       <h3 class="widget-title">Categories</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
-                工具使用
-                <div class="category-count">3</div>
-            </a>
-        
             <a class="category-link" href="/categories/RTOS/">
                 RTOS
                 <div class="category-count">1</div>
@@ -173,18 +168,23 @@
                 <div class="category-count">1</div>
             </a>
         
+            <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
+                工具使用
+                <div class="category-count">3</div>
+            </a>
+        
             <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
                 开发环境配置
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E8%87%AA%E5%88%B6%E5%B0%8F%E5%B7%A5%E5%85%B7/">
-                自制小工具
+            <a class="category-link" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/">
+                再探C语言
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/">
-                再探C语言
+            <a class="category-link" href="/categories/%E8%87%AA%E5%88%B6%E5%B0%8F%E5%B7%A5%E5%85%B7/">
+                自制小工具
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -283,7 +283,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            417 words 
+            464 words 
           </div>
         </div>
         
@@ -292,28 +292,44 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <p>[toc]</p>
-<h3><span id="yi-biao-ti">一、标题</span><a href="#yi-biao-ti" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">一级标题</span><br><span class="line"># 名称</span><br><span class="line"></span><br><span class="line">六级标题</span><br><span class="line">###### 名称</span><br><span class="line"></span><br><span class="line">----------------------------------------------</span><br><span class="line">一级标题</span><br><span class="line">ctrl + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">六级标题</span><br><span class="line">ctrl + <span class="number">6</span></span><br><span class="line"></span><br><span class="line">清楚标题</span><br><span class="line">ctrl + <span class="number">0</span></span><br></pre></td></tr></table></figure>
+          <!-- toc -->
 
-<h3><span id="er-you-xu-lie-biao">二、有序列表</span><a href="#er-you-xu-lie-biao" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 名称</span><br><span class="line">ctrl + shift +[</span><br><span class="line"></span><br><span class="line">降级</span><br><span class="line">tab</span><br><span class="line"></span><br><span class="line">升级</span><br><span class="line">shift + tab</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="#%E4%B8%80-%E6%A0%87%E9%A2%98">一、标题</a></li>
+<li><a href="#%E4%BA%8C-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">二、有序列表</a></li>
+<li><a href="#%E4%B8%89-%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">三、无序列表</a></li>
+<li><a href="#%E5%9B%9B-%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">四、任务列表</a></li>
+<li><a href="#%E4%BA%94-%E8%A1%A8%E6%A0%BC">五、表格</a></li>
+<li><a href="#%E5%85%AD-%E4%BB%A3%E7%A0%81">六、代码</a></li>
+<li><a href="#%E4%B8%83-%E5%9B%BE%E7%89%87">七、图片</a></li>
+<li><a href="#%E5%85%AB-%E8%B6%85%E9%93%BE%E6%8E%A5">八、超链接</a></li>
+<li><a href="#%E4%B9%9D-%E6%B0%B4%E5%B9%B3%E5%88%86%E5%89%B2%E7%BA%BF">九、水平分割线</a></li>
+<li><a href="#%E5%8D%81-%E5%BC%95%E7%94%A8">十、引用</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
+</ul>
+<!-- tocstop -->
 
-<h3><span id="san-wu-xu-lie-biao">三、无序列表</span><a href="#san-wu-xu-lie-biao" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 名称</span><br><span class="line">- 名称</span><br></pre></td></tr></table></figure>
+<h3><span id="一-标题">一、标题</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">一级标题</span><br><span class="line"># 名称</span><br><span class="line"></span><br><span class="line">六级标题</span><br><span class="line">###### 名称</span><br><span class="line"></span><br><span class="line">----------------------------------------------</span><br><span class="line">一级标题</span><br><span class="line">ctrl + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">六级标题</span><br><span class="line">ctrl + <span class="number">6</span></span><br><span class="line"></span><br><span class="line">清楚标题</span><br><span class="line">ctrl + <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
-<h3><span id="si-ren-wu-lie-biao">四、任务列表</span><a href="#si-ren-wu-lie-biao" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 名称</span><br></pre></td></tr></table></figure>
+<h3><span id="二-有序列表">二、有序列表</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 名称</span><br><span class="line">ctrl + shift +[</span><br><span class="line"></span><br><span class="line">降级</span><br><span class="line">tab</span><br><span class="line"></span><br><span class="line">升级</span><br><span class="line">shift + tab</span><br></pre></td></tr></table></figure>
 
-<h3><span id="wu-biao-ge">五、表格</span><a href="#wu-biao-ge" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|名称|名称|名称|</span><br></pre></td></tr></table></figure>
+<h3><span id="三-无序列表">三、无序列表</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 名称</span><br><span class="line">- 名称</span><br></pre></td></tr></table></figure>
 
-<h3><span id="liu-dai-ma">六、代码</span><a href="#liu-dai-ma" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">行内代码</span><br><span class="line">`内容`</span><br><span class="line"></span><br><span class="line">代码块</span><br><span class="line">```语言类型</span><br><span class="line">~~~语言类型</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line"></span><br><span class="line">代码块</span><br><span class="line">ctrl + shift + k</span><br></pre></td></tr></table></figure>
+<h3><span id="四-任务列表">四、任务列表</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 名称</span><br></pre></td></tr></table></figure>
 
-<h3><span id="qi-tu-pian">七、图片</span><a href="#qi-tu-pian" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择图片</span><br><span class="line">![]()</span><br></pre></td></tr></table></figure>
+<h3><span id="五-表格">五、表格</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|名称|名称|名称|</span><br></pre></td></tr></table></figure>
 
-<h3><span id="ba-chao-lian-jie">八、超链接</span><a href="#ba-chao-lian-jie" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">超链接</span><br><span class="line">[显示](位置/链接)</span><br></pre></td></tr></table></figure>
+<h3><span id="六-代码">六、代码</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">行内代码</span><br><span class="line">`内容`</span><br><span class="line"></span><br><span class="line">代码块</span><br><span class="line">```语言类型</span><br><span class="line">~~~语言类型</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line"></span><br><span class="line">代码块</span><br><span class="line">ctrl + shift + k</span><br></pre></td></tr></table></figure>
 
-<h3><span id="jiu-shui-ping-fen-ge-xian">九、水平分割线</span><a href="#jiu-shui-ping-fen-ge-xian" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">分割线</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3><span id="七-图片">七、图片</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择图片</span><br><span class="line">![]()</span><br></pre></td></tr></table></figure>
 
-<h3><span id="shi-yin-yong">十、引用</span><a href="#shi-yin-yong" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">引用</span><br><span class="line">&gt; 内容</span><br></pre></td></tr></table></figure>
+<h3><span id="八-超链接">八、超链接</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">超链接</span><br><span class="line">[显示](位置/链接)</span><br></pre></td></tr></table></figure>
 
-<h3><span id="qi-ta">其他</span><a href="#qi-ta" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">加粗</span><br><span class="line">ctrl + b</span><br><span class="line"></span><br><span class="line">斜体</span><br><span class="line">ctrl + i</span><br><span class="line"></span><br><span class="line">高亮</span><br><span class="line">==内容==</span><br></pre></td></tr></table></figure>
+<h3><span id="九-水平分割线">九、水平分割线</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">分割线</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3><span id="十-引用">十、引用</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">引用</span><br><span class="line">&gt; 内容</span><br></pre></td></tr></table></figure>
+
+<h3><span id="其他">其他</span></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">加粗</span><br><span class="line">ctrl + b</span><br><span class="line"></span><br><span class="line">斜体</span><br><span class="line">ctrl + i</span><br><span class="line"></span><br><span class="line">高亮</span><br><span class="line">==内容==</span><br></pre></td></tr></table></figure>
 
 
 

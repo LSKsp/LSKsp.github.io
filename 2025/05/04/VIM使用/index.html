@@ -20,15 +20,15 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="[toc] VIM使用#一、移动#1.1单个字符移动#   按键 功能    h 左移   j 下移   k 上移   l 右移   1.2 行首尾移动#   按键 功能    0&#x2F;g0 移动到本行开头   ^&#x2F;g^ 移动到本行第一个字符   $&#x2F;g$ 移动到结尾   1.3 单词之间移动#   按键 功能    b&#x2F;e 单词开头&#x2F;单词结尾   f">
+  <meta name="description" content="VIM使用 一、移动 1.1单个字符移动 1.2 行首尾移动 1.3 单词之间移动 1.4 整文移动   二、剪切&#x2F;删除&#x2F;粘贴 三、跳转 四、其他      VIM使用一、移动1.1单个字符移动   按键 功能    h 左移   j 下移   k 上移   l 右移   1.2 行首尾移动   按键 功能    0&#x2F;g0 移动到本行开头   ^&#x2F;g^">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VIM使用教程">
 <meta property="og:url" content="https://lsksp.github.io/2025/05/04/VIM%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="二进制的向阳的博客">
-<meta property="og:description" content="[toc] VIM使用#一、移动#1.1单个字符移动#   按键 功能    h 左移   j 下移   k 上移   l 右移   1.2 行首尾移动#   按键 功能    0&#x2F;g0 移动到本行开头   ^&#x2F;g^ 移动到本行第一个字符   $&#x2F;g$ 移动到结尾   1.3 单词之间移动#   按键 功能    b&#x2F;e 单词开头&#x2F;单词结尾   f">
+<meta property="og:description" content="VIM使用 一、移动 1.1单个字符移动 1.2 行首尾移动 1.3 单词之间移动 1.4 整文移动   二、剪切&#x2F;删除&#x2F;粘贴 三、跳转 四、其他      VIM使用一、移动1.1单个字符移动   按键 功能    h 左移   j 下移   k 上移   l 右移   1.2 行首尾移动   按键 功能    0&#x2F;g0 移动到本行开头   ^&#x2F;g^">
 <meta property="og:locale" content="zn_CH">
 <meta property="article:published_time" content="2025-05-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-30T01:24:07.191Z">
+<meta property="article:modified_time" content="2025-05-30T01:44:18.331Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="VIM">
 <meta name="twitter:card" content="summary">
@@ -158,11 +158,6 @@
     <div class="widget">
       <h3 class="widget-title">Categories</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
-                工具使用
-                <div class="category-count">3</div>
-            </a>
-        
             <a class="category-link" href="/categories/RTOS/">
                 RTOS
                 <div class="category-count">1</div>
@@ -173,18 +168,23 @@
                 <div class="category-count">1</div>
             </a>
         
+            <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
+                工具使用
+                <div class="category-count">3</div>
+            </a>
+        
             <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
                 开发环境配置
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E8%87%AA%E5%88%B6%E5%B0%8F%E5%B7%A5%E5%85%B7/">
-                自制小工具
+            <a class="category-link" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/">
+                再探C语言
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/">
-                再探C语言
+            <a class="category-link" href="/categories/%E8%87%AA%E5%88%B6%E5%B0%8F%E5%B7%A5%E5%85%B7/">
+                自制小工具
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -283,7 +283,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            697 words 
+            762 words 
           </div>
         </div>
         
@@ -292,8 +292,26 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <p>[toc]</p>
-<h3><span id="vim-shi-yong">VIM使用</span><a href="#vim-shi-yong" class="header-anchor">#</a></h3><h4><span id="yi-yi-dong">一、移动</span><a href="#yi-yi-dong" class="header-anchor">#</a></h4><h5><span id="1-1-dan-ge-zi-fu-yi-dong">1.1单个字符移动</span><a href="#1-1-dan-ge-zi-fu-yi-dong" class="header-anchor">#</a></h5><table>
+          <!-- toc -->
+
+<ul>
+<li><a href="#vim%E4%BD%BF%E7%94%A8">VIM使用</a><ul>
+<li><a href="#%E4%B8%80-%E7%A7%BB%E5%8A%A8">一、移动</a><ul>
+<li><a href="#11%E5%8D%95%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%A7%BB%E5%8A%A8">1.1单个字符移动</a></li>
+<li><a href="#12-%E8%A1%8C%E9%A6%96%E5%B0%BE%E7%A7%BB%E5%8A%A8">1.2 行首尾移动</a></li>
+<li><a href="#13-%E5%8D%95%E8%AF%8D%E4%B9%8B%E9%97%B4%E7%A7%BB%E5%8A%A8">1.3 单词之间移动</a></li>
+<li><a href="#14-%E6%95%B4%E6%96%87%E7%A7%BB%E5%8A%A8">1.4 整文移动</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-%E5%89%AA%E5%88%87%E5%88%A0%E9%99%A4%E7%B2%98%E8%B4%B4">二、剪切&#x2F;删除&#x2F;粘贴</a></li>
+<li><a href="#%E4%B8%89-%E8%B7%B3%E8%BD%AC">三、跳转</a></li>
+<li><a href="#%E5%9B%9B-%E5%85%B6%E4%BB%96">四、其他</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h3><span id="vim使用">VIM使用</span></h3><h4><span id="一-移动">一、移动</span></h4><h5><span id="11单个字符移动">1.1单个字符移动</span></h5><table>
 <thead>
 <tr>
 <th align="center">按键</th>
@@ -317,7 +335,7 @@
 <td align="center">右移</td>
 </tr>
 </tbody></table>
-<h5><span id="1-2-xing-shou-wei-yi-dong">1.2 行首尾移动</span><a href="#1-2-xing-shou-wei-yi-dong" class="header-anchor">#</a></h5><table>
+<h5><span id="12-行首尾移动">1.2 行首尾移动</span></h5><table>
 <thead>
 <tr>
 <th align="center">按键</th>
@@ -337,7 +355,7 @@
 <td align="center">移动到结尾</td>
 </tr>
 </tbody></table>
-<h5><span id="1-3-dan-ci-zhi-jian-yi-dong">1.3 单词之间移动</span><a href="#1-3-dan-ci-zhi-jian-yi-dong" class="header-anchor">#</a></h5><table>
+<h5><span id="13-单词之间移动">1.3 单词之间移动</span></h5><table>
 <thead>
 <tr>
 <th align="center">按键</th>
@@ -353,7 +371,7 @@
 <td align="center">跳转到char位置处</td>
 </tr>
 </tbody></table>
-<h5><span id="1-4-zheng-wen-yi-dong">1.4 整文移动</span><a href="#1-4-zheng-wen-yi-dong" class="header-anchor">#</a></h5><table>
+<h5><span id="14-整文移动">1.4 整文移动</span></h5><table>
 <thead>
 <tr>
 <th align="center">按键</th>
@@ -385,7 +403,7 @@
 <td align="center"></td>
 </tr>
 </tbody></table>
-<h4><span id="er-jian-qie-x2f-shan-chu-x2f-nian-tie">二、剪切&#x2F;删除&#x2F;粘贴</span><a href="#er-jian-qie-x2f-shan-chu-x2f-nian-tie" class="header-anchor">#</a></h4><table>
+<h4><span id="二-剪切x2f删除x2f粘贴">二、剪切&#x2F;删除&#x2F;粘贴</span></h4><table>
 <thead>
 <tr>
 <th align="center">按键</th>
@@ -433,7 +451,7 @@
 <td align="center">粘贴</td>
 </tr>
 </tbody></table>
-<h4><span id="san-tiao-zhuan">三、跳转</span><a href="#san-tiao-zhuan" class="header-anchor">#</a></h4><table>
+<h4><span id="三-跳转">三、跳转</span></h4><table>
 <thead>
 <tr>
 <th align="center">按键</th>
@@ -481,7 +499,7 @@
 <td align="center">向下滚动半屏</td>
 </tr>
 </tbody></table>
-<h4><span id="si-qi-ta">四、其他</span><a href="#si-qi-ta" class="header-anchor">#</a></h4><table>
+<h4><span id="四-其他">四、其他</span></h4><table>
 <thead>
 <tr>
 <th align="center">按键</th>
