@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>MPU内存保护单元 | 二进制的向阳的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="MPU，即内存保护单元，可以设置不同存储区域的存储器访问特性（用户级、特权访问、全访问）和存储器属性（如可缓存、可缓冲、可共享），对存储器（主要是内存和外设）提供保护，从而提高系统可靠性。  存储器访问特性    权限类型 特权模式（内核） 用户任务 典型用途    特权只读（PRIV_RO） 可读 不可访问 (触发故障) 保护只读内核代码&#x2F;常量   特权读写（PRIV_RW） 可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MPU内存保护单元">
+<meta property="og:url" content="https://lsksp.github.io/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/index.html">
+<meta property="og:site_name" content="二进制的向阳的博客">
+<meta property="og:description" content="MPU，即内存保护单元，可以设置不同存储区域的存储器访问特性（用户级、特权访问、全访问）和存储器属性（如可缓存、可缓冲、可共享），对存储器（主要是内存和外设）提供保护，从而提高系统可靠性。  存储器访问特性    权限类型 特权模式（内核） 用户任务 典型用途    特权只读（PRIV_RO） 可读 不可访问 (触发故障) 保护只读内核代码&#x2F;常量   特权读写（PRIV_RW） 可">
+<meta property="og:locale" content="zn_CH">
+<meta property="og:image" content="https://lsksp.github.io/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/type_of_memory.png">
+<meta property="og:image" content="https://lsksp.github.io/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/image-20250715090857174.png">
+<meta property="og:image" content="https://lsksp.github.io/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/mpu_tex_c_b.png">
+<meta property="article:published_time" content="2025-07-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-16T17:41:45.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="MPU内存保护">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lsksp.github.io/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/type_of_memory.png">
+  
+    <link rel="alternate" href="/atom.xml" title="二进制的向阳的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body>
+  
+  
+    
+<div id="banner" class="">
+  <img src="/picture/mysun.jpg" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>二进制的向阳的博客 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/picture/my.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">二进制的向阳 </div>
+      <div class="dot"></div>
+      <div class="subtitle">保持热爱，奔赴星海！ </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/2045365798?spm_id_from=333.1007.0.0" title="bilibili"><i class="fa-brands fa-bilibili"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/LSKsp/" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                上位机开发
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/">
+                通讯协议
+                <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/MCU%E5%BC%80%E5%8F%91/">
+                MCU开发
+                <div class="category-count">8</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
+                工具使用
+                <div class="category-count">8</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A9%B1%E5%8A%A8/">
+                驱动
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/RTOS/">
+                RTOS
+                <div class="category-count">5</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                环境配置
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/">
+                再探C语言
+                <div class="category-count">3</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Linux/">
+                Linux
+                <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/pyQt/">
+                pyQt
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%9F%BA%E7%A1%80/">
+                嵌入式基础
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2025/10/15/STM32%E4%B9%8Bfromelf%E7%9A%84%E4%BD%BF%E7%94%A8/" title="STM32之fromelf的使用" >
+            <div class="recent-link-text">
+              STM32之fromelf的使用
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/10/15/ST%E4%BA%A7%E5%93%81%E5%9E%8B%E5%8F%B7%E8%A7%A3%E6%9E%90/" title="ST产品型号解析" >
+            <div class="recent-link-text">
+              ST产品型号解析
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/" title="TCP/IP协议概述" >
+            <div class="recent-link-text">
+              TCP/IP协议概述
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/09/30/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/" title="RT-Thread之邮箱使用示例" >
+            <div class="recent-link-text">
+              RT-Thread之邮箱使用示例
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/09/29/RT-Thread%E4%B9%8B%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/" title="RT-Thread之消息队列使用示例" >
+            <div class="recent-link-text">
+              RT-Thread之消息队列使用示例
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/CAN/" rel="tag">CAN</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/FreeRTOS/" rel="tag">FreeRTOS</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4/" rel="tag">MPU内存保护</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/RT-Thread/" rel="tag">RT-Thread</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/STM32/" rel="tag">STM32</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP&#x2F;IP</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/VScode/" rel="tag">VScode</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/conda/" rel="tag">conda</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/config/" rel="tag">config</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/envs/" rel="tag">envs</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/tkinter/" rel="tag">tkinter</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/typedef/" rel="tag">typedef</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/" rel="tag">启动过程</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%84%E5%AD%98%E5%99%A8/" rel="tag">寄存器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" rel="tag">版本管理</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-MPU内存保护单元" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        MPU内存保护单元
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-10T16:00:00.000Z" itemprop="datePublished">2025-07-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/MCU%E5%BC%80%E5%8F%91/">MCU开发</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            3k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4/" rel="tag">MPU内存保护</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+           <!-- toc -->
+
+<p>MPU，即内存保护单元，可以设置不同存储区域的存储器访问特性（<strong>用户级</strong>、<strong>特权访问</strong>、<strong>全访问</strong>）和<strong>存储器属性</strong>（如可缓存、可缓冲、可共享），对<strong>存储器（主要是内存和外设）提供保护</strong>，从而提高系统可靠性。</p>
+<ul>
+<li><p><strong>存储器访问特性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">权限类型</th>
+<th align="center">特权模式（内核）</th>
+<th align="center">用户任务</th>
+<th align="center">典型用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">特权只读（PRIV_RO）</td>
+<td align="center">可读</td>
+<td align="center">不可访问 (触发故障)</td>
+<td align="center">保护只读内核代码&#x2F;常量</td>
+</tr>
+<tr>
+<td align="center">特权读写（PRIV_RW）</td>
+<td align="center">可读写</td>
+<td align="center">不可访问 (触发故障)</td>
+<td align="center">内核数据结构、关键寄存器</td>
+</tr>
+<tr>
+<td align="center">全访问(FULL_ACCESS)</td>
+<td align="center">可读写</td>
+<td align="center">可读写</td>
+<td align="center">用户堆栈、共享内存</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>存储器属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">存储器属性</th>
+<th align="center">硬件行为</th>
+<th align="center">数据一致性</th>
+<th align="center">典型用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>可缓存</strong></td>
+<td align="center">读写经过Cache</td>
+<td align="center">需软件维护（Clean&#x2F;Invalidate）</td>
+<td align="center">单核私有高性能数据</td>
+</tr>
+<tr>
+<td align="center"><strong>可缓冲</strong></td>
+<td align="center">写入通过Write Buffer异步完成</td>
+<td align="center">可能导致顺序重排</td>
+<td align="center">低速外设寄存器</td>
+</tr>
+<tr>
+<td align="center"><strong>可共享</strong></td>
+<td align="center">允许多主设备访问</td>
+<td align="center">硬件强制同步或禁用缓存</td>
+<td align="center">DMA缓冲区、多核共享内存</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>作用</strong></p>
+<ul>
+<li><p>阻止用户应用程序破坏操作系统使用的数据；</p>
+</li>
+<li><p>阻止一个任务访问其他任务的数据区，从而隔离任务；</p>
+</li>
+<li><p>把关键数据区域设置为只读从根本上解决被破切的可能；</p>
+</li>
+<li><p>检测意外的存储访问，如堆栈溢出、数组越界等；</p>
+</li>
+<li><p>将SRAM或RAM空间定义为不可执行，防止注入攻击；</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="STM32的MPU保护单元配置"><a href="#STM32的MPU保护单元配置" class="headerlink" title="STM32的MPU保护单元配置"></a>STM32的MPU保护单元配置</h2><p>在STM32H743（Cortex-M7内核）中，MPU可配置保护16个内存保护区域，每个区域最小要求256字节，且每一个区域还可配置为8个子域（大小一样）。</p>
+<h4 id="一、MPU控制模式"><a href="#一、MPU控制模式" class="headerlink" title="一、MPU控制模式"></a>一、MPU控制模式</h4><p><strong>MPU（Memory Protection Unit）控制模式</strong>决定了在默认状态或异常处理期间MPU的行为及其对内存访问的影响。</p>
+<table>
+<thead>
+<tr>
+<th align="center">控制模式</th>
+<th align="center">背景区域行为</th>
+<th align="center">异常期间MPU状态</th>
+<th align="center">安全性</th>
+<th align="center">典型用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>NOT USED</strong></td>
+<td align="center">无，所有内存开放</td>
+<td align="center">无效</td>
+<td align="center">无</td>
+<td align="center">调试&#x2F;无保护需求</td>
+</tr>
+<tr>
+<td align="center"><strong>BR禁访+MPU异常禁用</strong></td>
+<td align="center">不可访问</td>
+<td align="center">禁用</td>
+<td align="center">中</td>
+<td align="center">通用RTOS</td>
+</tr>
+<tr>
+<td align="center"><strong>BR禁访+MPU异常启用</strong></td>
+<td align="center">不可访问</td>
+<td align="center">启用</td>
+<td align="center">高</td>
+<td align="center">高安全固件</td>
+</tr>
+<tr>
+<td align="center"><strong>BR特权+MPU异常禁用</strong></td>
+<td align="center">仅特权访问</td>
+<td align="center">禁用</td>
+<td align="center">中-高</td>
+<td align="center">特权分离系统（如Linux内核空间）</td>
+</tr>
+<tr>
+<td align="center"><strong>BR特权+MPU异常启用</strong></td>
+<td align="center">仅特权访问</td>
+<td align="center">启用</td>
+<td align="center">最高</td>
+<td align="center">安全认证产品（ISO 26262 ASIL-D）</td>
+</tr>
+</tbody></table>
+<h4 id="二、三种内存类型"><a href="#二、三种内存类型" class="headerlink" title="二、三种内存类型"></a>二、三种内存类型</h4><ul>
+<li>Normal memory：CPU以最高效的方式加载和存储字节、半字和字，CPU对于这种内存区的加载或存储不一定要按照程序代码的顺序执行；</li>
+<li>Device memory：加载和存储要严格按照次序进行，硕确保寄存器按照正确顺序执行；</li>
+<li>Strongly ordered memory：程序完全按照代码顺序执行，CPU会等待当前加载存储执行完毕后才执行下一条指令，导致性能下降。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">内存类型</th>
+<th align="center">适用对象</th>
+<th align="center">性能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Normal memory</td>
+<td align="center">ROM、FLASH、SRAM</td>
+<td align="center">高</td>
+</tr>
+<tr>
+<td align="center">Device memory</td>
+<td align="center">外设</td>
+<td align="center">中</td>
+</tr>
+<tr>
+<td align="center">Strongly ordered memory</td>
+<td align="center">强序</td>
+<td align="center">低</td>
+</tr>
+</tbody></table>
+<img src="/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/type_of_memory.png" alt="三种内存形式" style="zoom: 50%;">
+
+<h4 id="三、Cache介绍"><a href="#三、Cache介绍" class="headerlink" title="三、Cache介绍"></a>三、Cache介绍</h4><p>Cache(高级缓存)是提升STM32性能的关键一步。M7内核芯片做了一级Cache支持，Cache分为数据缓存D-Cache和指令缓存I-Cache。</p>
+<p>Cache支持4种基本操作：(使能、清空、禁止、无效化）。</p>
+<img src="/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/image-20250715090857174.png" alt="image-20250715090857174" style="zoom: 50%;">
+
+<p>数据缓存D-Cache是解决CPU加速访问SRAM，MPU能够指定区域的Cache策略</p>
+<h5 id="1、Cache写操作"><a href="#1、Cache写操作" class="headerlink" title="1、Cache写操作"></a>1、Cache写操作</h5><ul>
+<li><p>写命中（Cache hit）：CPU要写的SRAM区数据在Cache中已经开辟了对应的区域；</p>
+<table>
+<thead>
+<tr>
+<th align="center">处理方式</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">write through</td>
+<td align="center">直接写到内存并并同时放到cache里面，内存和cache同步更新</td>
+</tr>
+<tr>
+<td align="center">write back</td>
+<td align="center">数据更新时只写入cache，只有数据替换时被修改的cache数据才写到内存</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>写不命中（Cache Miss）：Cache里面没有开辟对应的区域；</p>
+<table>
+<thead>
+<tr>
+<th align="center">处理方式</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">write allocate</td>
+<td align="center">把要写的数据载入到cache，对cache写后更新到内存</td>
+</tr>
+<tr>
+<td align="center">no write allocate</td>
+<td align="center">直接写入内存</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h5 id="2、Cache读操作"><a href="#2、Cache读操作" class="headerlink" title="2、Cache读操作"></a>2、Cache读操作</h5><ul>
+<li><p>读命中（Cache hit）：CPU要读取的SRAM区数据在Cache中已经加载好；</p>
+<table>
+<thead>
+<tr>
+<th align="center">处理方式</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Cache read</td>
+<td align="center">直接从cache中读出数据即可（不能保证数据一致性）</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>读不命中（Cache Miss）：Cache里面没有需要读的数据；</p>
+<table>
+<thead>
+<tr>
+<th align="center">处理方式</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">read through</td>
+<td align="center">直接从内存中读出，不用cache</td>
+</tr>
+<tr>
+<td align="center">read allocate</td>
+<td align="center">把数据从内存加载到cache，再从cache读取</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h5 id="2、数据一致性解决"><a href="#2、数据一致性解决" class="headerlink" title="2、数据一致性解决"></a>2、数据一致性解决</h5><ul>
+<li><p>设置共享属性</p>
+<p>Cache相当于没有开启。</p>
+</li>
+<li><p>软件维护</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">clean清空</td>
+<td align="center">SCB_CleanDCache()</td>
+<td align="center">当Cache已变化，内存没有更新时，DMA搬运之前进行此操作，将Cache同步到内存</td>
+</tr>
+<tr>
+<td align="center">invalidata无效化</td>
+<td align="center">SCB_InvalidataDCache()</td>
+<td align="center">当SRAM数据已变化，Cache未更新时,DMA搬运数据后，将SRAM数据同步到Cache中</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="二、区域设置"><a href="#二、区域设置" class="headerlink" title="二、区域设置"></a>二、区域设置</h4><table>
+<thead>
+<tr>
+<th align="center">配置项</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">MPU Region</td>
+<td align="center">参数类型：Enable&#x2F;Disable，是否启用区域MPU区域保护</td>
+</tr>
+<tr>
+<td align="center">MPU Region Base Address</td>
+<td align="center">定义Region 0的起始地址（地址必须按区域大小对齐）</td>
+</tr>
+<tr>
+<td align="center">MPU Region Size</td>
+<td align="center">设置Region 0覆盖的内存大小。</td>
+</tr>
+<tr>
+<td align="center">MPU TEX field level</td>
+<td align="center">扩展内存类型（用于细化内存属性和缓存策略）</td>
+</tr>
+<tr>
+<td align="center">MPU Shareability Permission</td>
+<td align="center">参数类型：Enable&#x2F;Disable，是否共享</td>
+</tr>
+<tr>
+<td align="center">MPU Cacheable Permissionn</td>
+<td align="center">参数类型：Enable&#x2F;Disable，是否缓存</td>
+</tr>
+<tr>
+<td align="center">MPU Bufferable Permissionn</td>
+<td align="center">参数类型：Enable&#x2F;Disable，是否缓冲</td>
+</tr>
+<tr>
+<td align="center">MPU Instruction Access</td>
+<td align="center">参数类型：Enable&#x2F;Disable，是否使能从该区域执行指令。</td>
+</tr>
+<tr>
+<td align="center">MPU Access Permission</td>
+<td align="center">见下表</td>
+</tr>
+</tbody></table>
+<p>TEX是内存的“身份证”，告诉硬件它属于哪一类（普通RAM、设备寄存器还是特殊内存），而C&#x2F;B是它的“行为指南”（如何读写）。两者协作但职责分离。</p>
+<img src="/2025/07/11/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/mpu_tex_c_b.png" alt="2023-07-02" style="zoom: 50%;">
+
+<ul>
+<li><p>MPU设置内存的访问权限（MPU Access Permission）</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">执行（x）</th>
+<th align="center">读（R）</th>
+<th align="center">写（W）</th>
+<th align="center">典型用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><code>ALL ACCESS NOT PERMITTED</code></strong></td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">内存隔离&#x2F;非法访问检测</td>
+</tr>
+<tr>
+<td align="center"><strong><code>Privileged READS</code></strong></td>
+<td align="center">❌</td>
+<td align="center">✔️</td>
+<td align="center">❌</td>
+<td align="center">只读配置表（仅内核可访问）</td>
+</tr>
+<tr>
+<td align="center"><strong><code>Privileged READS + Unprivileged READS</code></strong></td>
+<td align="center">❌</td>
+<td align="center">✔️</td>
+<td align="center">❌</td>
+<td align="center">全局只读数据</td>
+</tr>
+<tr>
+<td align="center"><strong><code>Privileged READ/WRITE</code></strong></td>
+<td align="center">❌</td>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">内核数据结构 &#x2F; 外设寄存器</td>
+</tr>
+<tr>
+<td align="center"><strong><code>Privileged READ/WRITE + Unprivileged READS</code></strong></td>
+<td align="center">❌</td>
+<td align="center">✔️</td>
+<td align="center">❌</td>
+<td align="center">安全日志（用户只读，内核可写）</td>
+</tr>
+<tr>
+<td align="center"><strong><code>ALL ACCESS PERMITTED</code></strong></td>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">完全开放区域（调试&#x2F;启动阶段）</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="三、建议配（MPU-TEX-LEVEL0）（注意考虑数据一致性问题）"><a href="#三、建议配（MPU-TEX-LEVEL0）（注意考虑数据一致性问题）" class="headerlink" title="三、建议配（MPU_TEX_LEVEL0）（注意考虑数据一致性问题）"></a>三、建议配（MPU_TEX_LEVEL0）（注意考虑数据一致性问题）</h4><table>
+<thead>
+<tr>
+<th align="center">设备</th>
+<th align="center">基地址</th>
+<th align="center">区域大小</th>
+<th align="center">指令访问</th>
+<th align="center">访问权限</th>
+<th align="center">共享、Cache、缓冲</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DTCM</td>
+<td align="center">0x2000 0000</td>
+<td align="center">128K</td>
+<td align="center">允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、cache、缓冲</td>
+</tr>
+<tr>
+<td align="center">AXI SRAM</td>
+<td align="center">0x2400 0000</td>
+<td align="center">512K</td>
+<td align="center">允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、cache、缓冲</td>
+</tr>
+<tr>
+<td align="center">SRAM1~3</td>
+<td align="center">0x3000 0000</td>
+<td align="center">512K</td>
+<td align="center">允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、cache、缓冲</td>
+</tr>
+<tr>
+<td align="center">SRAM4</td>
+<td align="center">0x3800 0000</td>
+<td align="center">64K</td>
+<td align="center">允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、cache、缓冲</td>
+</tr>
+<tr>
+<td align="center">FMC</td>
+<td align="center">0x6000 0000</td>
+<td align="center">64M</td>
+<td align="center">允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、不cache、不缓冲</td>
+</tr>
+<tr>
+<td align="center">SDRAM</td>
+<td align="center">OxC000 0000</td>
+<td align="center">64M</td>
+<td align="center">允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、cache、缓冲</td>
+</tr>
+<tr>
+<td align="center">NAND</td>
+<td align="center">0x8000 0000</td>
+<td align="center">256M</td>
+<td align="center">不允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、不cache、不缓冲</td>
+</tr>
+<tr>
+<td align="center">SPI FLASH</td>
+<td align="center">0x9000 0000</td>
+<td align="center">8M</td>
+<td align="center">允许</td>
+<td align="center">全访问</td>
+<td align="center">不共享、cache、缓冲</td>
+</tr>
+</tbody></table>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2025/07/20/typedef%E7%94%A8%E6%B3%95/"
+      title="typedef用法"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        typedef用法
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/06/24/Git%E4%BD%BF%E7%94%A8/"
+      title="Git使用"
+     >
+
+    <p class="title-text">
+      
+        Git使用
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 二进制的向阳<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>

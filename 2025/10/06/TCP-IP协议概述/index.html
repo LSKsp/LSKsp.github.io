@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>TCP/IP协议概述 | 二进制的向阳的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="一、网络分层体系1、OSI参考模型OSI 参考模型（Open Systems Interconnection Reference Model）是由国际标准化组织（ISO）制定的网络通信框架标准，通过定义七层标准化通信体系，为不同厂商设备互联提供统一规范：  目的：解决早期网络设备兼容性问题，实现跨厂商、跨平台的互联互通； 核心思想：分层解耦，每层专注特定功能，下层为上层提供服务； 意义：虽实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TCP&#x2F;IP协议概述">
+<meta property="og:url" content="https://lsksp.github.io/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/index.html">
+<meta property="og:site_name" content="二进制的向阳的博客">
+<meta property="og:description" content="一、网络分层体系1、OSI参考模型OSI 参考模型（Open Systems Interconnection Reference Model）是由国际标准化组织（ISO）制定的网络通信框架标准，通过定义七层标准化通信体系，为不同厂商设备互联提供统一规范：  目的：解决早期网络设备兼容性问题，实现跨厂商、跨平台的互联互通； 核心思想：分层解耦，每层专注特定功能，下层为上层提供服务； 意义：虽实">
+<meta property="og:locale" content="zn_CH">
+<meta property="og:image" content="https://lsksp.github.io/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/OSI.png">
+<meta property="og:image" content="https://lsksp.github.io/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/TCP-IP.png">
+<meta property="og:image" content="https://lsksp.github.io/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%B0%81%E8%A3%85%E5%92%8C%E5%88%86%E7%94%A8.png">
+<meta property="og:image" content="https://lsksp.github.io/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93.png">
+<meta property="og:image" content="https://lsksp.github.io/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/%E4%BF%9D%E6%8C%81%E7%83%AD%E7%88%B1%EF%BC%8C%E5%A5%94%E8%B5%B4%E6%98%9F%E6%B5%B7.jpg">
+<meta property="article:published_time" content="2025-10-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-16T17:41:45.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="TCP&#x2F;IP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lsksp.github.io/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/OSI.png">
+  
+    <link rel="alternate" href="/atom.xml" title="二进制的向阳的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body>
+  
+  
+    
+<div id="banner" class="">
+  <img src="/picture/mysun.jpg" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>二进制的向阳的博客 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/picture/my.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">二进制的向阳 </div>
+      <div class="dot"></div>
+      <div class="subtitle">保持热爱，奔赴星海！ </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/2045365798?spm_id_from=333.1007.0.0" title="bilibili"><i class="fa-brands fa-bilibili"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/LSKsp/" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                上位机开发
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/">
+                通讯协议
+                <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/MCU%E5%BC%80%E5%8F%91/">
+                MCU开发
+                <div class="category-count">8</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
+                工具使用
+                <div class="category-count">8</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A9%B1%E5%8A%A8/">
+                驱动
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/RTOS/">
+                RTOS
+                <div class="category-count">5</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                环境配置
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/">
+                再探C语言
+                <div class="category-count">3</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Linux/">
+                Linux
+                <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/pyQt/">
+                pyQt
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%9F%BA%E7%A1%80/">
+                嵌入式基础
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2025/10/15/STM32%E4%B9%8Bfromelf%E7%9A%84%E4%BD%BF%E7%94%A8/" title="STM32之fromelf的使用" >
+            <div class="recent-link-text">
+              STM32之fromelf的使用
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/10/15/ST%E4%BA%A7%E5%93%81%E5%9E%8B%E5%8F%B7%E8%A7%A3%E6%9E%90/" title="ST产品型号解析" >
+            <div class="recent-link-text">
+              ST产品型号解析
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/" title="TCP/IP协议概述" >
+            <div class="recent-link-text">
+              TCP/IP协议概述
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/09/30/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/" title="RT-Thread之邮箱使用示例" >
+            <div class="recent-link-text">
+              RT-Thread之邮箱使用示例
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/09/29/RT-Thread%E4%B9%8B%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/" title="RT-Thread之消息队列使用示例" >
+            <div class="recent-link-text">
+              RT-Thread之消息队列使用示例
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/CAN/" rel="tag">CAN</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/FreeRTOS/" rel="tag">FreeRTOS</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4/" rel="tag">MPU内存保护</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/RT-Thread/" rel="tag">RT-Thread</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/STM32/" rel="tag">STM32</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP&#x2F;IP</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/VScode/" rel="tag">VScode</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/conda/" rel="tag">conda</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/config/" rel="tag">config</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/envs/" rel="tag">envs</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/tkinter/" rel="tag">tkinter</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/typedef/" rel="tag">typedef</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/" rel="tag">启动过程</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%84%E5%AD%98%E5%99%A8/" rel="tag">寄存器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" rel="tag">版本管理</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-TCP-IP协议概述" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        TCP/IP协议概述
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-10-05T16:00:00.000Z" itemprop="datePublished">2025-10-06</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/">通讯协议</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.5k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP&#x2F;IP</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+           <!-- toc -->
+
+<h3 id="一、网络分层体系"><a href="#一、网络分层体系" class="headerlink" title="一、网络分层体系"></a>一、网络分层体系</h3><h4 id="1、OSI参考模型"><a href="#1、OSI参考模型" class="headerlink" title="1、OSI参考模型"></a>1、OSI参考模型</h4><p><strong>OSI 参考模型</strong>（Open Systems Interconnection Reference Model）是由国际标准化组织（ISO）制定的网络通信框架标准，通过定义<strong>七层标准化通信体系</strong>，为不同厂商设备互联提供统一规范：</p>
+<ol>
+<li><strong>目的</strong>：解决早期网络设备兼容性问题，实现跨厂商、跨平台的互联互通；</li>
+<li><strong>核心思想</strong>：分层解耦，每层专注特定功能，下层为上层提供服务；</li>
+<li><strong>意义</strong>：虽实际网络中TCP&#x2F;IP协议栈更常用，但OSI模型仍是网络协议设计的理论基础和教学工具。</li>
+</ol>
+<img src="/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/OSI.png" style="zoom: 50%;">
+
+<h4 id="2、TCP-IP的分层"><a href="#2、TCP-IP的分层" class="headerlink" title="2、TCP&#x2F;IP的分层"></a>2、TCP&#x2F;IP的分层</h4><p>网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。TCP&#x2F;IP分层模型是互联网协议套件的基础，它简化了OSI模型，将网络通信过程划分为四个层次。TCP&#x2F;IP模型的主要目的是提供一个实际可行的网络通信架构，它是互联网和许多其他网络的基础。TCP &#x2F;IP，是一组不同层次上的多个协议的组合。 TCP&#x2F; IP通常被认为是一个四层协议系统，如下图所示。</p>
+<img src="/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/TCP-IP.png" style="zoom:50%;">
+
+<ul>
+<li><strong>应用层</strong>：定义数据格式与交互规则，提供 HTTP、FTP、SMTP、DNS 等协议，通过端口与传输层衔接，实现多应用并发。</li>
+<li><strong>传输层</strong>：通过端口复用实现端到端通信；TCP 提供可靠连接、重传与拥塞控制，UDP 仅增加端口与可选校验，高效但不可靠。</li>
+<li><strong>网络层</strong>：以 IP 为核心，负责跨网寻址、路由与转发；配套 ICMP、IGMP、ARP 实现差错报告、组播管理和地址解析，支持分片重组，构建全球统一地址空间。</li>
+<li><strong>链路层</strong>：处理比特流传输，将报文封装成帧，添加 MAC 地址与 CRC；通过 ARP 解析硬件地址，实现局域网互联，为 TCP&#x2F;IP 提供无差别的帧级传输接口。</li>
+</ul>
+<p>OSI七层模型是网络通信的理论标准，TCP&#x2F;IP四层则是实际应用的简化版本，通过分层协作实现了高效的数据传输。</p>
+<table>
+<thead>
+<tr>
+<th>OSI分层</th>
+<th>TCP&#x2F;IP四层</th>
+<th>典型协议&#x2F;单元</th>
+<th>功能简述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>应用层</td>
+<td>应用层</td>
+<td>HTTP, FTP, SMTP, DNS</td>
+<td>用户业务数据格式与交互规则</td>
+</tr>
+<tr>
+<td>表示层</td>
+<td>应用层</td>
+<td>SSL&#x2F;TLS, JPEG, ASCII</td>
+<td>数据加密、压缩、格式转换</td>
+</tr>
+<tr>
+<td>会话层</td>
+<td>应用层</td>
+<td>RPC, NetBIOS</td>
+<td>会话建立、维持、终止</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>传输层</td>
+<td>TCP, UDP</td>
+<td>端到端可靠&#x2F;不可靠传输、端口复用</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>网络层</td>
+<td>IP, ICMP, IGMP, ARP</td>
+<td>跨网寻址、路由、分片、差错报告</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td>链路层</td>
+<td>Ethernet, PPP, ARP</td>
+<td>帧封装、MAC 寻址、差错检测</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td>链路层</td>
+<td>比特流, RJ-45, 光纤</td>
+<td>电气&#x2F;光学信号、比特传输</td>
+</tr>
+</tbody></table>
+<h3 id="二、数据的封装和分用"><a href="#二、数据的封装和分用" class="headerlink" title="二、数据的封装和分用"></a>二、数据的封装和分用</h3><p>当应用程序用 TCP传送数据时，数据被送入协议栈中，然后逐个通过每一层直到被当作一串比特流送入网络。其中每一层对收到的数据都要增加一些首部信息（有时还要增加尾部信息），该过程叫做<strong>数据的封装</strong>。当目的主机收到一个以太网数据帧时，数据就开始从协议栈中由底向上升，同时去掉各层协议加上的报文首部。每层协议盒都要去检查报文首部中的协议标识，以确定接收数据的上层协议。这个过程称作<strong>数据的分用</strong>。过程如下所示。</p>
+<img src="/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/数据的封装和分用.png" style="zoom: 67%;">
+
+<h3 id="三、以太网帧数据的传输"><a href="#三、以太网帧数据的传输" class="headerlink" title="三、以太网帧数据的传输"></a>三、以太网帧数据的传输</h3><p>在讲述网络传输之前，了解以下网络中的名词是十分重要的。</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">所在层级</th>
+<th align="center">作用域</th>
+<th align="center">核心职能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IP 地址</td>
+<td align="center">网络层 (L3)</td>
+<td align="center">全网逻辑</td>
+<td align="center">跨网络标识主机，决定“去哪”；与掩码配合判断本地&#x2F;远程</td>
+</tr>
+<tr>
+<td align="center">MAC 地址</td>
+<td align="center">链路层 (L2)</td>
+<td align="center">本地物理段</td>
+<td align="center">固化标识网卡，同网段内“交给谁”</td>
+</tr>
+<tr>
+<td align="center">子网掩码</td>
+<td align="center">网络层 (L3)</td>
+<td align="center">主机本地</td>
+<td align="center">划分 IP 中的网络位与主机位，决定“是否同一网段”</td>
+</tr>
+<tr>
+<td align="center">网关 (默认路由)</td>
+<td align="center">网络层 (L3)</td>
+<td align="center">跨网段</td>
+<td align="center">提供下一跳 IP，把远程流量送出本段</td>
+</tr>
+<tr>
+<td align="center">交换机</td>
+<td align="center">链路层 (L2)</td>
+<td align="center">单广播域</td>
+<td align="center">自学习 MAC 地址，按表二层转发帧，隔离冲突域</td>
+</tr>
+<tr>
+<td align="center">路由器</td>
+<td align="center">网络层 (L3)</td>
+<td align="center">多广播域</td>
+<td align="center">查 IP 路由表，跨网转发包，隔离广播，实现网际互联</td>
+</tr>
+<tr>
+<td align="center">CAM表</td>
+<td align="center">链路层 (L2)</td>
+<td align="center">交换机内部</td>
+<td align="center">MAC-端口映射表，用于快速硬件查表，决定帧从哪个端口发出</td>
+</tr>
+<tr>
+<td align="center">路由表</td>
+<td align="center">网络层 (L3)</td>
+<td align="center">路由器内部</td>
+<td align="center">目的网络-下一跳-出接口映射，指导 IP 报文跨网转发</td>
+</tr>
+</tbody></table>
+<h4 id="1、局域网间通讯"><a href="#1、局域网间通讯" class="headerlink" title="1、局域网间通讯"></a>1、局域网间通讯</h4><img src="/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/网络传输.png" style="zoom:80%;">
+
+<p>如（图）网络传输所示，若电脑A与电脑B通讯，数据传输步骤如下所示：</p>
+<ol>
+<li>电脑A用子网掩码判断目标IP与自身同网段 → 走局域网直接交付。</li>
+<li>电脑A查本地ARP缓存：<ul>
+<li>命中 → 直接得到电脑B的MAC；</li>
+<li>未命中 → A发ARP请求（广播），B单播回应MAC，A缓存并填充帧头。</li>
+</ul>
+</li>
+<li>电脑A构造以太网帧：目的MAC&#x3D;B，源MAC&#x3D;A，类型&#x3D;0x0800，载荷为IP报文。</li>
+<li>帧进入交换机A：<ul>
+<li>交换机A学习源MAC，更新CAM表；</li>
+<li>查目的MAC，若表项存在则单播转发到对应端口；若无表项则泛洪到同一VLAN内所有端口（除源端口）。</li>
+</ul>
+</li>
+<li>电脑B收到帧，FCS校验正确后解封→交IP层→确认目的IP为本机，完成通信。</li>
+</ol>
+<h4 id="2、跨网络通讯"><a href="#2、跨网络通讯" class="headerlink" title="2、跨网络通讯"></a>2、跨网络通讯</h4><p>如（图）网络传输所示，若电脑A与电脑E通讯，数据传输步骤如下所示：</p>
+<ol>
+<li>电脑A用子网掩码判断目标IP与自身不同网段 → 需走默认网关。</li>
+<li>电脑A查本地ARP缓存：<ul>
+<li>命中 → 直接得到网关MAC；</li>
+<li>未命中 → A发ARP请求（广播），网关单播回应MAC，A缓存并填充帧头。</li>
+</ul>
+</li>
+<li>电脑A构造以太网帧：目的MAC&#x3D;网关，源MAC&#x3D;A，类型&#x3D;0x0800，载荷为IP报文（目的IP&#x3D;E）。</li>
+<li>帧进入交换机A：<ul>
+<li>学习源MAC，更新CAM表；</li>
+<li>查目的MAC命中网关端口，单播转发给路由器A。</li>
+</ul>
+</li>
+<li>路由器A收帧→解封至IP层→查路由表得下一跳（路由器B接口）→减TTL→重新封装新帧： 目的MAC&#x3D;路由器B接口MAC，源MAC&#x3D;本出接口MAC。</li>
+<li>帧经交换机B（若存在）→送达路由器B。</li>
+<li>路由器B解封→查路由表得目的网络直连本地接口→查ARP缓存：<ul>
+<li>命中 → 直接得到电脑E的MAC；</li>
+<li>未命中 → B发ARP请求（广播），E单播回应MAC，B缓存并填充帧头。</li>
+</ul>
+</li>
+<li>路由器B构造末帧：目的MAC&#x3D;E，源MAC&#x3D;本接口MAC，类型&#x3D;0x0800，发往交换机C。</li>
+<li>交换机C学习源MAC，查目的MAC命中E端口，单播转发。</li>
+<li>电脑E收到帧，FCS校验正确后解封→交IP层→确认目的IP为本机，完成跨网络通信。</li>
+</ol>
+<img src="/2025/10/06/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/保持热爱，奔赴星海.jpg" style="zoom: 50%;">
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2025/10/15/ST%E4%BA%A7%E5%93%81%E5%9E%8B%E5%8F%B7%E8%A7%A3%E6%9E%90/"
+      title="ST产品型号解析"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        ST产品型号解析
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/09/30/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/"
+      title="RT-Thread之邮箱使用示例"
+     >
+
+    <p class="title-text">
+      
+        RT-Thread之邮箱使用示例
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 二进制的向阳<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
