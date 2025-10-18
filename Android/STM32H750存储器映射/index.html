@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zn-CH">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="MySQL,数据库," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="STM32H750 是 ST 基于 Cortex-M7 内核的高性能 MCU，其复杂的 存储器架构 和 多总线矩阵 为开发者提供了极高的灵活性，但也带来了学习难度。深入了解STM32存储器映射和物理内存布局，了解不同存储区域的用途与性能差异，对于我们实际开发，如bootloader程序编写、MPU配置、链接脚本等，有着巨大帮助。  一、存储器映射STM32是一个32为单片机，它可以很方便访问4GB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="https://lsksp.github.io/Android/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/index.html">
+<meta property="og:site_name" content="二进制的向阳的博客">
+<meta property="og:description" content="STM32H750 是 ST 基于 Cortex-M7 内核的高性能 MCU，其复杂的 存储器架构 和 多总线矩阵 为开发者提供了极高的灵活性，但也带来了学习难度。深入了解STM32存储器映射和物理内存布局，了解不同存储区域的用途与性能差异，对于我们实际开发，如bootloader程序编写、MPU配置、链接脚本等，有着巨大帮助。  一、存储器映射STM32是一个32为单片机，它可以很方便访问4GB">
+<meta property="og:locale" content="zn_CH">
+<meta property="og:image" content="https://lsksp.github.io/Android/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/STM32%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84.png">
+<meta property="article:published_time" content="2025-10-17T18:57:23.829Z">
+<meta property="article:modified_time" content="2025-10-18T16:51:44.948Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="数据库">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lsksp.github.io/Android/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/STM32%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://LSKsp.github.io/Android/STM32H750存储器映射/"/>
+
+
+
+
+
+  <title>Hello World | 二进制的向阳的博客</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zn-CH">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">二进制的向阳的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">保持热爱，奔赴星海！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://LSKsp.github.io/Android/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="二进制的向阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2025-10-18T02:57:23+08:00">
+                2025-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>STM32H750 是 ST 基于 Cortex-M7 内核的高性能 MCU，其复杂的 <strong>存储器架构</strong> 和 <strong>多总线矩阵</strong> 为开发者提供了极高的灵活性，但也带来了学习难度。深入了解STM32存储器映射和物理内存布局，了解不同存储区域的用途与性能差异，对于我们实际开发，如bootloader程序编写、MPU配置、链接脚本等，有着巨大帮助。</p>
+<hr>
+<h4 id="一、存储器映射"><a href="#一、存储器映射" class="headerlink" title="一、存储器映射"></a>一、存储器映射</h4><p>STM32是一个32为单片机，它可以很方便访问4GB以内的存储空间，存储器本身是没有地址信息的，对存储器分配地址的过程就叫存储器映射。ST将所有的存储器及外设资源都映射在一个4GB的地址空间上（8个块)，从而可以通过访问对应的地址，访问具体的外设。其映射关系如下图所示:</p>
+<img src="/Android/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/STM32存储器映射.png" style="zoom:50%;">
+
+<h6 id="STM32H750存储器映射"><a href="#STM32H750存储器映射" class="headerlink" title="STM32H750存储器映射"></a>STM32H750存储器映射</h6><h4 id="二、Block-0"><a href="#二、Block-0" class="headerlink" title="二、Block 0"></a>二、Block 0</h4><table>
+<thead>
+<tr>
+<th>地址范围</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x0000 0000 ~ 0x0000 FFFF</td>
+<td><strong>ITCM RAM</strong>，只能被CPU和MDMA 访问，属于高速的RAM</td>
+</tr>
+<tr>
+<td>0x0001 0000 ~ 0x000F FFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x0010 0000 ~ 0x0010 EDBF</td>
+<td>系统存储器，用于存储STM32出厂固化的<strong>Bootloader程序</strong></td>
+</tr>
+<tr>
+<td>0x0011 0000 ~ 0x001F FFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x0020 0000 ~ 0x003F FFFF</td>
+<td>FLASH 存储基于ITCM总线接口，不支持写操作，即只读。</td>
+</tr>
+<tr>
+<td>0x0040 0000 ~ 0x07FF FFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x0800 0000 ~ 0x0801 FFFF</td>
+<td>用户FLASH，用于存储用户代码</td>
+</tr>
+<tr>
+<td>0x0802 0000 ~ 0x1FFF EFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x1FFF 0000 ~ 0x1FFF 001F</td>
+<td>16个字节用于锁定对应的OTP数据块</td>
+</tr>
+<tr>
+<td>0x1FFF 0020 ~ 0x1FFF FFFF</td>
+<td>保留</td>
+</tr>
+</tbody></table>
+<h4 id="三、Block-1"><a href="#三、Block-1" class="headerlink" title="三、Block 1"></a>三、Block 1</h4><table>
+<thead>
+<tr>
+<th>地址范围</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x2000 0000 ~ 0x2001 FFFF</td>
+<td>DTCM RAM</td>
+</tr>
+<tr>
+<td>0x2400 0000 ~ 0x2407 FFFF</td>
+<td>AXI SRAM</td>
+</tr>
+<tr>
+<td>0x3000 0000 ~ 0x3001 FFFF</td>
+<td>SRAM1</td>
+</tr>
+<tr>
+<td>0x3002 0000 ~ 0x3003 FFFF</td>
+<td>SRAM2</td>
+</tr>
+<tr>
+<td>0x3004 0000 ~ 0x3004 7FFF</td>
+<td>SRAM3</td>
+</tr>
+<tr>
+<td>0x3800 0000 ~ 0x3800 FFFF</td>
+<td>SRAM4</td>
+</tr>
+<tr>
+<td>0x3880 0000 ~ 0x3880 0FFF</td>
+<td>Backup SRAM</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>DTCM RAM，用于数据存取，特点是速度很快，和内核一样。</p>
+</li>
+<li><p>AXI SRAM，位于D1域，数据带宽是64bit，挂在AXI总线上。</p>
+</li>
+<li><p>SRAM1，SRAM2和SRAM3区，位于D2域，数据带宽是32bit，挂在AHB总线上。</p>
+</li>
+<li><p>SRAM1：用于D2域中的DMA缓冲，也可以当D1域断电后用于运行程序代码。</p>
+</li>
+<li><p>SRAM2：用于D2域中的DMA缓冲 ，也可以用于用户数据存取。</p>
+</li>
+<li><p>SRAM3：主要用于以太网和USB的缓冲。</p>
+</li>
+<li><p>SRAM4：位于D3域，数据带宽是32bit，挂在AHB总线上。可以用于D3域中的DMA缓冲，</p>
+</li>
+</ul>
+<p>​		也可以当D1和D2域进入Dstandby待机方式后，继续保存用户数据。</p>
+<ul>
+<li>Backup SRAM：位于D3域，数据带宽是32bit，挂在AHB总线上。主要用于系统进入低功</li>
+</ul>
+<p>​		耗模式后，继续保存数据（Vbat引脚外接电池）。</p>
+<h4 id="四、Block-2"><a href="#四、Block-2" class="headerlink" title="四、Block 2"></a>四、Block 2</h4><table>
+<thead>
+<tr>
+<th align="left">地址范围</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0x4000 0000 ~ 0x4000 D3FF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x4000 D400 ~ 0x4000 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x4001 0000 ~ 0x4001 77FF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x4001 7800 ~ 0x4001 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x4002 0000 ~ 0x400B FFFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x400C 0000 ~ 0x4801 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x4802 0000 ~ 0x4802 2BFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x4802 2C00 ~ 0x4FFF FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5000 0000 ~ 0x5000 3FFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5000 4000 ~ 0x50FF FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5100 0000 ~ 0x5200 8FFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5200 9000 ~ 0x57FF FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5800 0000 ~ 0x5800 6BFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5800 6C00 ~ 0x5801 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5802 0000 ~ 0x5802 67FF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5802 6800 ~ 0x5FFF FFFF</td>
+<td align="left">保留</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"># 数据库</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/MCU%E5%BC%80%E5%8F%91/STM32%E4%B9%8Bfromelf%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="next" title="STM32之fromelf的使用">
+                <i class="fa fa-chevron-left"></i> STM32之fromelf的使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84"><span class="nav-number">1.</span> <span class="nav-text">一、存储器映射</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84"><span class="nav-number">1.0.1.</span> <span class="nav-text">STM32H750存储器映射</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Block-0"><span class="nav-number">2.</span> <span class="nav-text">二、Block 0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81Block-1"><span class="nav-number">3.</span> <span class="nav-text">三、Block 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Block-2"><span class="nav-number">4.</span> <span class="nav-text">四、Block 2</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
