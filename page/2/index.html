@@ -249,168 +249,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://LSKsp.github.io/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/ASCII%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="二进制的向阳的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/ASCII%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E5%99%A8/" itemprop="url">ASCII表格生成器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2025-09-06T00:00:00+08:00">
-                2025-09-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">上位机开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-             <!-- toc -->
-
-<p>在写代码时有时要在代码中插入表格，手写太麻烦，所以使用 <strong>Python 的 Tkinter</strong> 开发了一个功能齐全、可自定义的 <strong>ASCII 表格生成器上位机工具</strong>。</p>
-<h3 id="一、效果展示"><a href="#一、效果展示" class="headerlink" title="一、效果展示"></a>一、效果展示</h3><h4 id="1、在文本中的效果："><a href="#1、在文本中的效果：" class="headerlink" title="1、在文本中的效果："></a>1、在文本中的效果：</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌────────────────────────────────────────────┐</span><br><span class="line">│               DW3000 寄存器映射表            │</span><br><span class="line">├────────────────────────────────────────────┤</span><br><span class="line">│   addr   │       name      │     width     │</span><br><span class="line">├──────────┼─────────────────┼───────────────┤</span><br><span class="line">│   <span class="number">0x00</span>   │      DEV_ID     │     <span class="number">32</span>-bit    │</span><br><span class="line">│   <span class="number">0x12</span>   │   RX_BUFFER_0   │   <span class="number">1024</span>-byte   │</span><br><span class="line">└────────────────────────────────────────────┘</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、上位机界面效果："><a href="#2、上位机界面效果：" class="headerlink" title="2、上位机界面效果："></a>2、上位机界面效果：</h4><img src="/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/ASCII%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E5%99%A8/界面.png">
-
-<h3 id="二、操作"><a href="#二、操作" class="headerlink" title="二、操作"></a>二、操作</h3><h4 id="1、直接使用exe文件"><a href="#1、直接使用exe文件" class="headerlink" title="1、直接使用exe文件"></a>1、直接使用exe文件</h4><p>百度网盘链接如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">通过网盘分享的文件：ASCII表格生成器</span><br><span class="line">链接: https:<span class="comment">//pan.baidu.com/s/1GY5-F0Ha-sWsSDttyw6aCw?pwd=kcy4 提取码: kcy4 </span></span><br><span class="line">--来自百度网盘超级会员v5的分享</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、使用源码编译方法（源码见附录）"><a href="#2、使用源码编译方法（源码见附录）" class="headerlink" title="2、使用源码编译方法（源码见附录）"></a>2、使用源码编译方法（源码见附录）</h4><p>首先安装Python，执行以下指令安装所需要的python库：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装GUI库</span></span><br><span class="line">pip install sv_ttk -i https:<span class="comment">//pypi.tuna.tsinghua.edu.cn/simple/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 安装打包所需要的库</span></span><br><span class="line">pip install sv_ttk -i https:<span class="comment">//pypi.tuna.tsinghua.edu.cn/simple/</span></span><br></pre></td></tr></table></figure>
-
-<p>执行打包命令：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中my.ico为应用图标</span></span><br><span class="line">pyinstaller -F -w -i my.ico --hidden-import numpy tool.py</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、附录："><a href="#三、附录：" class="headerlink" title="三、附录："></a>三、附录：</h3><h4 id="1、源码"><a href="#1、源码" class="headerlink" title="1、源码"></a>1、源码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> ttk, messagebox, scrolledtext</span><br><span class="line"><span class="keyword">import</span> sv_ttk</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PerfectAsciiTableGenerator</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, root</span>):</span><br><span class="line">        <span class="variable language_">self</span>.root = root</span><br><span class="line">        <span class="variable language_">self</span>.root.title(<span class="string">&quot;ASCII表格生成器-LSK&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.root.geometry(<span class="string">&quot;800x600&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 应用Sun Valley主题</span></span><br><span class="line">        sv_ttk.set_theme(<span class="string">&quot;light&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 创建主框架</span></span><br><span class="line">        <span class="variable language_">self</span>.main_frame = ttk.Frame(root, padding=<span class="string">&quot;10&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.main_frame.pack(fill=tk.BOTH, expand=<span class="literal">True</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 标题部分</span></span><br><span class="line">        <span class="variable language_">self</span>.title_frame = ttk.LabelFrame(<span class="variable language_">self</span>.main_frame, text=<span class="string">&quot;表格设置&quot;</span>, padding=<span class="string">&quot;10&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.title_frame.pack(fill=tk.X, pady=(<span class="number">0</span>, <span class="number">10</span>))</span><br><span class="line">        </span><br><span class="line">        ttk.Label(<span class="variable language_">self</span>.title_frame, text=<span class="string">&quot;表格标题:&quot;</span>).grid(row=<span class="number">0</span>, column=<span class="number">0</span>, sticky=tk.W)</span><br><span class="line">        <span class="variable language_">self</span>.title_entry = ttk.Entry(<span class="variable language_">self</span>.title_frame, width=<span class="number">50</span>)</span><br><span class="line">        <span class="variable language_">self</span>.title_entry.grid(row=<span class="number">0</span>, column=<span class="number">1</span>, padx=<span class="number">5</span>, pady=<span class="number">5</span>, sticky=tk.W)</span><br><span class="line">        <span class="variable language_">self</span>.title_entry.insert(<span class="number">0</span>, <span class="string">&quot;DW3000 寄存器映射表&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 数据部分</span></span><br><span class="line">        <span class="variable language_">self</span>.data_frame = ttk.LabelFrame(<span class="variable language_">self</span>.main_frame, text=<span class="string">&quot;表格数据&quot;</span>, padding=<span class="string">&quot;10&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.data_frame.pack(fill=tk.BOTH, expand=<span class="literal">True</span>)</span><br><span class="line">        </span><br><span class="line">        ttk.Label(<span class="variable language_">self</span>.data_frame, text=<span class="string">&quot;第一行为表头，用制表符或空格分隔列:&quot;</span>).pack(anchor=tk.W)</span><br><span class="line">        <span class="variable language_">self</span>.data_text = scrolledtext.ScrolledText(<span class="variable language_">self</span>.data_frame, height=<span class="number">10</span>)</span><br><span class="line">        <span class="variable language_">self</span>.data_text.pack(fill=tk.BOTH, expand=<span class="literal">True</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 设置示例数据</span></span><br><span class="line">        example_data = <span class="string">&quot;&quot;&quot;addr\tname\twidth</span></span><br><span class="line"><span class="string">0x00\tDEV_ID\t32-bit</span></span><br><span class="line"><span class="string">0x12\tRX_BUFFER_0\t1024-byte&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.data_text.insert(tk.END, example_data)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 按钮部分</span></span><br><span class="line">        <span class="variable language_">self</span>.button_frame = ttk.Frame(<span class="variable language_">self</span>.main_frame)</span><br><span class="line">        <span class="variable language_">self</span>.button_frame.pack(fill=tk.X, pady=(<span class="number">10</span>, <span class="number">0</span>))</span><br><span class="line">        </span><br><span class="line">        <span class="variable language_">self</span>.generate_btn = ttk.Button(<span class="variable language_">self</span>.button_frame, text=<span class="string">&quot;生成表格&quot;</span>, command=<span class="variable language_">self</span>.generate_table)</span><br><span class="line">        <span class="variable language_">self</span>.generate_btn.pack(side=tk.LEFT, padx=<span class="number">5</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="variable language_">self</span>.copy_btn = ttk.Button(<span class="variable language_">self</span>.button_frame, text=<span class="string">&quot;复制&quot;</span>, command=<span class="variable language_">self</span>.copy_to_clipboard)</span><br><span class="line">        <span class="variable language_">self</span>.copy_btn.pack(side=tk.LEFT, padx=<span class="number">5</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 结果部分</span></span><br><span class="line">        <span class="variable language_">self</span>.result_frame = ttk.LabelFrame(<span class="variable language_">self</span>.main_frame, text=<span class="string">&quot;生成的表格&quot;</span>, padding=<span class="string">&quot;10&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.result_frame.pack(fill=tk.BOTH, expand=<span class="literal">True</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="variable language_">self</span>.result_text = scrolledtext.ScrolledText(<span class="variable language_">self</span>.result_frame, height=<span class="number">15</span>)</span><br><span class="line">        <span class="variable language_">self</span>.result_text.pack(fill=tk.BOTH, expand=<span class="literal">True</span>)</span><br><span class="line">        <span class="variable language_">self</span>.result_text.config(state=tk.DISABLED)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate_table</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="comment"># 获取输入数据</span></span><br><span class="line">            title = <span class="variable language_">self</span>.title_entry.get()</span><br><span class="line">            lines = [line.strip() <span class="keyword">for</span> line <span class="keyword">in</span> <span class="variable language_">self</span>.data_text.get(<span class="string">&quot;1.0&quot;</span>, tk.END).split(<span class="string">&#x27;\n&#x27;</span>) <span class="keyword">if</span> line.strip()]</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> lines:</span><br><span class="line">                <span class="keyword">raise</span> ValueError(<span class="string">&quot;请输入至少一行数据&quot;</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 自动识别分隔符</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">any</span>(<span class="string">&#x27;\t&#x27;</span> <span class="keyword">in</span> line <span class="keyword">for</span> line <span class="keyword">in</span> lines):</span><br><span class="line">                sep = <span class="string">&#x27;\t&#x27;</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                sep = <span class="string">&#x27; &#x27;</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 解析数据</span></span><br><span class="line">            rows = [re.split(<span class="string">r&#x27;[\t ]+&#x27;</span>, line.strip()) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line">            headers = rows[<span class="number">0</span>]</span><br><span class="line">            data_rows = rows[<span class="number">1</span>:] <span class="keyword">if</span> <span class="built_in">len</span>(rows) &gt; <span class="number">1</span> <span class="keyword">else</span> []</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 检查列数一致性</span></span><br><span class="line">            col_count = <span class="built_in">len</span>(headers)</span><br><span class="line">            <span class="keyword">for</span> i, row <span class="keyword">in</span> <span class="built_in">enumerate</span>(rows, <span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(row) != col_count:</span><br><span class="line">                    <span class="keyword">raise</span> ValueError(<span class="string">f&quot;第 <span class="subst">&#123;i&#125;</span> 行列数不一致，应为 <span class="subst">&#123;col_count&#125;</span> 列，但找到 <span class="subst">&#123;<span class="built_in">len</span>(row)&#125;</span> 列&quot;</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 生成表格</span></span><br><span class="line">            table = <span class="variable language_">self</span>._create_perfect_table(title, headers, data_rows)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 显示结果</span></span><br><span class="line">            <span class="variable language_">self</span>.result_text.config(state=tk.NORMAL)</span><br><span class="line">            <span class="variable language_">self</span>.result_text.delete(<span class="string">&quot;1.0&quot;</span>, tk.END)</span><br><span class="line">            <span class="variable language_">self</span>.result_text.insert(tk.END, table)</span><br><span class="line">            <span class="variable language_">self</span>.result_text.config(state=tk.DISABLED)</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            messagebox.showerror(<span class="string">&quot;错误&quot;</span>, <span class="string">f&quot;生成表格时出错:\n<span class="subst">&#123;<span class="built_in">str</span>(e)&#125;</span>&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_create_perfect_table</span>(<span class="params">self, title, headers, data</span>):</span><br><span class="line">        borders = &#123;</span><br><span class="line">            <span class="string">&#x27;tl&#x27;</span>: <span class="string">&#x27;┌&#x27;</span>, <span class="string">&#x27;tr&#x27;</span>: <span class="string">&#x27;┐&#x27;</span>,  <span class="comment"># 顶角</span></span><br><span class="line">            <span class="string">&#x27;bl&#x27;</span>: <span class="string">&#x27;└&#x27;</span>, <span class="string">&#x27;br&#x27;</span>: <span class="string">&#x27;┘&#x27;</span>,  <span class="comment"># 底角</span></span><br><span class="line">            <span class="string">&#x27;h&#x27;</span>: <span class="string">&#x27;─&#x27;</span>, <span class="string">&#x27;v&#x27;</span>: <span class="string">&#x27;│&#x27;</span>,    <span class="comment"># 水平/垂直线</span></span><br><span class="line">            <span class="string">&#x27;lt&#x27;</span>: <span class="string">&#x27;├&#x27;</span>, <span class="string">&#x27;rt&#x27;</span>: <span class="string">&#x27;┤&#x27;</span>,  <span class="comment"># 左右连接</span></span><br><span class="line">            <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;┼&#x27;</span>               <span class="comment"># 交叉</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 计算每列宽度（内容+6保证两侧各3空格）</span></span><br><span class="line">        col_widths = [</span><br><span class="line">            <span class="built_in">max</span>(<span class="built_in">max</span>(<span class="built_in">len</span>(<span class="built_in">str</span>(item)) <span class="keyword">for</span> item <span class="keyword">in</span> col) + <span class="number">6</span>, <span class="number">7</span>)  <span class="comment"># 最小宽度为7</span></span><br><span class="line">            <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">zip</span>(headers, *data)</span><br><span class="line">        ]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 计算总宽度（列宽之和 + 列间垂直线）</span></span><br><span class="line">        total_width = <span class="built_in">sum</span>(col_widths) + (<span class="built_in">len</span>(col_widths) - <span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">        lines = []</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 1. 顶部边框</span></span><br><span class="line">        top_line = borders[<span class="string">&#x27;tl&#x27;</span>] + borders[<span class="string">&#x27;h&#x27;</span>] * total_width + borders[<span class="string">&#x27;tr&#x27;</span>]</span><br><span class="line">        lines.append(top_line)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 2. 标题行</span></span><br><span class="line">        <span class="keyword">if</span> title:</span><br><span class="line">            title_line = borders[<span class="string">&#x27;v&#x27;</span>] + title.center(total_width) + borders[<span class="string">&#x27;v&#x27;</span>]</span><br><span class="line">            lines.append(title_line)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 3. 表头分隔线</span></span><br><span class="line">        hline = borders[<span class="string">&#x27;lt&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> i, w <span class="keyword">in</span> <span class="built_in">enumerate</span>(col_widths):</span><br><span class="line">            hline += borders[<span class="string">&#x27;h&#x27;</span>] * w</span><br><span class="line">            hline += borders[<span class="string">&#x27;h&#x27;</span>] <span class="keyword">if</span> i &lt; <span class="built_in">len</span>(col_widths)-<span class="number">1</span> <span class="keyword">else</span> borders[<span class="string">&#x27;rt&#x27;</span>]</span><br><span class="line">        lines.append(hline)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 4. 表头行</span></span><br><span class="line">        header_line = borders[<span class="string">&#x27;v&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> i, (header, w) <span class="keyword">in</span> <span class="built_in">enumerate</span>(<span class="built_in">zip</span>(headers, col_widths)):</span><br><span class="line">            header_line += <span class="built_in">str</span>(header).center(w)</span><br><span class="line">            header_line += borders[<span class="string">&#x27;v&#x27;</span>] <span class="keyword">if</span> i &lt; <span class="built_in">len</span>(headers)-<span class="number">1</span> <span class="keyword">else</span> borders[<span class="string">&#x27;v&#x27;</span>]</span><br><span class="line">        lines.append(header_line)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 5. 数据分隔线（带交叉）</span></span><br><span class="line">        dline = borders[<span class="string">&#x27;lt&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> i, w <span class="keyword">in</span> <span class="built_in">enumerate</span>(col_widths):</span><br><span class="line">            dline += borders[<span class="string">&#x27;h&#x27;</span>] * w</span><br><span class="line">            dline += borders[<span class="string">&#x27;c&#x27;</span>] <span class="keyword">if</span> i &lt; <span class="built_in">len</span>(col_widths)-<span class="number">1</span> <span class="keyword">else</span> borders[<span class="string">&#x27;rt&#x27;</span>]</span><br><span class="line">        lines.append(dline)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 6. 数据行</span></span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> data:</span><br><span class="line">            row_line = borders[<span class="string">&#x27;v&#x27;</span>]</span><br><span class="line">            <span class="keyword">for</span> i, (item, w) <span class="keyword">in</span> <span class="built_in">enumerate</span>(<span class="built_in">zip</span>(row, col_widths)):</span><br><span class="line">                row_line += <span class="built_in">str</span>(item).center(w)</span><br><span class="line">                row_line += borders[<span class="string">&#x27;v&#x27;</span>] <span class="keyword">if</span> i &lt; <span class="built_in">len</span>(row)-<span class="number">1</span> <span class="keyword">else</span> borders[<span class="string">&#x27;v&#x27;</span>]</span><br><span class="line">            lines.append(row_line)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 7. 底部边框</span></span><br><span class="line">        bottom_line = borders[<span class="string">&#x27;bl&#x27;</span>]</span><br><span class="line">        <span class="keyword">for</span> i, w <span class="keyword">in</span> <span class="built_in">enumerate</span>(col_widths):</span><br><span class="line">            bottom_line += borders[<span class="string">&#x27;h&#x27;</span>] * w</span><br><span class="line">            bottom_line += borders[<span class="string">&#x27;h&#x27;</span>] <span class="keyword">if</span> i &lt; <span class="built_in">len</span>(col_widths)-<span class="number">1</span> <span class="keyword">else</span> borders[<span class="string">&#x27;br&#x27;</span>]</span><br><span class="line">        lines.append(bottom_line)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;\n&#x27;</span>.join(lines)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">copy_to_clipboard</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;将生成的表格复制到剪贴板&quot;&quot;&quot;</span></span><br><span class="line">        table = <span class="variable language_">self</span>.result_text.get(<span class="string">&quot;1.0&quot;</span>, tk.END).strip()</span><br><span class="line">        <span class="keyword">if</span> table:</span><br><span class="line">            <span class="variable language_">self</span>.root.clipboard_clear()</span><br><span class="line">            <span class="variable language_">self</span>.root.clipboard_append(table)</span><br><span class="line">            messagebox.showinfo(<span class="string">&quot;成功&quot;</span>, <span class="string">&quot;表格已复制到剪贴板!&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            messagebox.showwarning(<span class="string">&quot;警告&quot;</span>, <span class="string">&quot;没有可复制的内容!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    root = tk.Tk()</span><br><span class="line">    app = PerfectAsciiTableGenerator(root)</span><br><span class="line">    root.mainloop()</span><br><span class="line"></span><br><span class="line"><span class="comment"># pyinstaller -F -w -i my.ico --hidden-import numpy tool.py</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>欢迎关注微信公众号：</p>
-<img src="/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/ASCII%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E5%99%A8/公众号二维码.jpg">
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://LSKsp.github.io/RTOS/RT-Thread%20Nano%E6%BA%90%E7%A0%81%E6%B5%85%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1506,6 +1344,331 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://LSKsp.github.io/MCU%E5%BC%80%E5%8F%91/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="二进制的向阳的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/MCU%E5%BC%80%E5%8F%91/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/" itemprop="url">STM32H750存储器映射</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2025-08-08T00:00:00+08:00">
+                2025-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MCU%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">MCU开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+             <!-- toc -->
+
+<p>STM32H750 是 ST 基于 Cortex-M7 内核的高性能 MCU，其复杂的 <strong>存储器架构</strong> 和 <strong>多总线矩阵</strong> 为开发者提供了极高的灵活性，但也带来了学习难度。深入了解STM32存储器映射和物理内存布局，了解不同存储区域的用途与性能差异，对于我们实际开发，如bootloader程序编写、MPU配置、链接脚本等，有着巨大帮助。</p>
+<hr>
+<h4 id="一、存储器映射"><a href="#一、存储器映射" class="headerlink" title="一、存储器映射"></a>一、存储器映射</h4><p>STM32是一个32为单片机，它可以很方便访问4GB以内的存储空间，存储器本身是没有地址信息的，对存储器分配地址的过程就叫存储器映射。ST将所有的存储器及外设资源都映射在一个4GB的地址空间上（8个块)，从而可以通过访问对应的地址，访问具体的外设。其映射关系如下图所示:</p>
+<img src="/MCU%E5%BC%80%E5%8F%91/STM32H750%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84/STM32存储器映射.png" style="zoom:50%;">
+
+<h6 id="STM32H750存储器映射"><a href="#STM32H750存储器映射" class="headerlink" title="STM32H750存储器映射"></a>STM32H750存储器映射</h6><h4 id="二、Block-0"><a href="#二、Block-0" class="headerlink" title="二、Block 0"></a>二、Block 0</h4><table>
+<thead>
+<tr>
+<th>地址范围</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x0000 0000 ~ 0x0000 FFFF</td>
+<td><strong>ITCM RAM</strong>，只能被CPU和MDMA 访问，属于高速的RAM</td>
+</tr>
+<tr>
+<td>0x0001 0000 ~ 0x000F FFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x0010 0000 ~ 0x0010 EDBF</td>
+<td>系统存储器，用于存储STM32出厂固化的<strong>Bootloader程序</strong></td>
+</tr>
+<tr>
+<td>0x0011 0000 ~ 0x001F FFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x0020 0000 ~ 0x003F FFFF</td>
+<td>FLASH 存储基于ITCM总线接口，不支持写操作，即只读。</td>
+</tr>
+<tr>
+<td>0x0040 0000 ~ 0x07FF FFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x0800 0000 ~ 0x0801 FFFF</td>
+<td>用户FLASH，用于存储用户代码</td>
+</tr>
+<tr>
+<td>0x0802 0000 ~ 0x1FFF EFFF</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>0x1FFF 0000 ~ 0x1FFF 001F</td>
+<td>16个字节用于锁定对应的OTP数据块</td>
+</tr>
+<tr>
+<td>0x1FFF 0020 ~ 0x1FFF FFFF</td>
+<td>保留</td>
+</tr>
+</tbody></table>
+<h4 id="三、Block-1"><a href="#三、Block-1" class="headerlink" title="三、Block 1"></a>三、Block 1</h4><table>
+<thead>
+<tr>
+<th>地址范围</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x2000 0000 ~ 0x2001 FFFF</td>
+<td>DTCM RAM</td>
+</tr>
+<tr>
+<td>0x2400 0000 ~ 0x2407 FFFF</td>
+<td>AXI SRAM</td>
+</tr>
+<tr>
+<td>0x3000 0000 ~ 0x3001 FFFF</td>
+<td>SRAM1</td>
+</tr>
+<tr>
+<td>0x3002 0000 ~ 0x3003 FFFF</td>
+<td>SRAM2</td>
+</tr>
+<tr>
+<td>0x3004 0000 ~ 0x3004 7FFF</td>
+<td>SRAM3</td>
+</tr>
+<tr>
+<td>0x3800 0000 ~ 0x3800 FFFF</td>
+<td>SRAM4</td>
+</tr>
+<tr>
+<td>0x3880 0000 ~ 0x3880 0FFF</td>
+<td>Backup SRAM</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>DTCM RAM，用于数据存取，特点是速度很快，和内核一样。</p>
+</li>
+<li><p>AXI SRAM，位于D1域，数据带宽是64bit，挂在AXI总线上。</p>
+</li>
+<li><p>SRAM1，SRAM2和SRAM3区，位于D2域，数据带宽是32bit，挂在AHB总线上。</p>
+</li>
+<li><p>SRAM1：用于D2域中的DMA缓冲，也可以当D1域断电后用于运行程序代码。</p>
+</li>
+<li><p>SRAM2：用于D2域中的DMA缓冲 ，也可以用于用户数据存取。</p>
+</li>
+<li><p>SRAM3：主要用于以太网和USB的缓冲。</p>
+</li>
+<li><p>SRAM4：位于D3域，数据带宽是32bit，挂在AHB总线上。可以用于D3域中的DMA缓冲，</p>
+</li>
+</ul>
+<p>​		也可以当D1和D2域进入Dstandby待机方式后，继续保存用户数据。</p>
+<ul>
+<li>Backup SRAM：位于D3域，数据带宽是32bit，挂在AHB总线上。主要用于系统进入低功</li>
+</ul>
+<p>​		耗模式后，继续保存数据（Vbat引脚外接电池）。</p>
+<h4 id="四、Block-2"><a href="#四、Block-2" class="headerlink" title="四、Block 2"></a>四、Block 2</h4><table>
+<thead>
+<tr>
+<th align="left">地址范围</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0x4000 0000 ~ 0x4000 D3FF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x4000 D400 ~ 0x4000 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x4001 0000 ~ 0x4001 77FF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x4001 7800 ~ 0x4001 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x4002 0000 ~ 0x400B FFFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x400C 0000 ~ 0x4801 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x4802 0000 ~ 0x4802 2BFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x4802 2C00 ~ 0x4FFF FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5000 0000 ~ 0x5000 3FFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5000 4000 ~ 0x50FF FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5100 0000 ~ 0x5200 8FFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5200 9000 ~ 0x57FF FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5800 0000 ~ 0x5800 6BFF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5800 6C00 ~ 0x5801 FFFF</td>
+<td align="left">保留</td>
+</tr>
+<tr>
+<td align="left">0x5802 0000 ~ 0x5802 67FF</td>
+<td align="left">APB1总线外设</td>
+</tr>
+<tr>
+<td align="left">0x5802 6800 ~ 0x5FFF FFFF</td>
+<td align="left">保留</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://LSKsp.github.io/MCU%E5%BC%80%E5%8F%91/STM32%E5%88%86%E6%95%A3%E5%8A%A0%E8%BD%BD%E6%8F%8F%E8%BF%B0%E6%96%87%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2321,7 +2484,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2332,7 +2495,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
