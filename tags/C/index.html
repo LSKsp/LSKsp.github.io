@@ -1,802 +1,157 @@
-
-<!DOCTYPE html><html lang="zn-CH">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
-  
-  <meta name="robots" content="noindex,follow">
-  <meta name="generator" content="Hexo 8.0.0">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
-  <meta name="theme-color" content="#f9fafb">
-  <title>标签：C - 二进制的向阳</title>
-
-  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="二进制的向阳">
-<meta property="og:url" content="https://lsksp.github.io/tags/C/">
-<meta property="og:site_name" content="二进制的向阳">
-<meta property="og:locale" content="zn_CH">
-<meta property="og:image" content="https://lsksp.github.io/picture/my.jpg">
-<meta property="article:author" content="Shaokui Li">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lsksp.github.io/picture/my.jpg">
-  
-  
-  
-  
-
-  <!-- feed -->
-  
-
-  <link rel="stylesheet" href="/css/main.css?v=1.33.1">
-
-
-  
-    <link rel="shortcut icon" href="/picture/my.jpg">
-  
-
-  
-
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://LSKsp.github.io","author":{"@type":"Person","name":"Shaokui Li","sameAs":[],"image":"/picture/my.jpg"},"name":"二进制的向阳","description":"","url":"https://LSKsp.github.io"}</script>
-  
-</head>
-<body>
-
-<div class="l_body index" id="start" layout="undefined" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
-
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/picture/my.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">二进制的向阳</div></a></div></header>
-
-<div class="nav-area">
-
-<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/explore/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
-</div>
-<div class="widgets">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
-
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/MCU%E5%BC%80%E5%8F%91/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/"><span class="title">MPU内存保护单元</span></a><a class="item title" href="/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/CAN%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/"><span class="title">CAN通讯协议</span></a><a class="item title" href="/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Git%E4%BD%BF%E7%94%A8/"><span class="title">Git使用</span></a><a class="item title" href="/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/ASCII%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E5%99%A8/"><span class="title">ASCII表格生成器</span></a><a class="item title" href="/MCU%E5%BC%80%E5%8F%91/FreeRTOS%E5%AD%A6%E4%B9%A0/"><span class="title">FreeRTOS</span></a><a class="item title" href="/%E9%A9%B1%E5%8A%A8/PM004MNIA%E9%A9%B1%E5%8A%A8/"><span class="title">PM004MNIA驱动</span></a><a class="item title" href="/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/PM2%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"><span class="title">PM2进程管理工具</span></a><a class="item title" href="/RTOS/RT-Thread%20Nano%E6%BA%90%E7%A0%81%E6%B5%85%E6%9E%90/"><span class="title">RT-Thread Nano源码浅析</span></a><a class="item title" href="/RTOS/RT-Thread%E4%B9%8B%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B/"><span class="title">RT-Thread之创建线程</span></a><a class="item title" href="/RTOS/RT-Thread%E4%B9%8B%E5%9B%9B%E7%A7%8D%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0/"><span class="title">RT-Thread之四种延时函数</span></a></div></widget>
-</div>
-
-</div></aside><div class="l_main" id="main">
-
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/picture/my.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">二进制的向阳</div></a></div></header>
-
- 
-
-
-
-
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a class="active" href="/tags/">标签：C</a><a href="/archives/">归档</a></nav></div></div></div>
-<div class="post-list post"><a class="post-card post" href="/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
-<article class="md-text"><h2 class="post-title">数据结构与算法</h2><div class="excerpt"><p> 
-
-一、数据结构与算法：线性表1、顺序表实现代码：
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-05-06T16:00:00.000Z">2025-05-07</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>再探C语言</span></span></div></article>
-</a></div>
-
-
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Shaokui Li</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-
-
-<script type="text/javascript">
-  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
-  const ctx = {
-    date_suffix: {
-      just: `刚刚`,
-      min: `分钟前`,
-      hour: `小时前`,
-      day: `天前`,
-    },
-    root : `/`,
-    tag_plugins: {
-      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
-    }
-  };
-
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
-  };
-  const deps = {
-    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
-    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
-    lazyload: `/%5Bobject%20Object%5D`
-  }
-  
-
-</script>
-
-<script type="text/javascript">
-  
-  function RunItem() {
-    this.list = []; // 存放回调函数
-    this.start = () => {
-      for (var i = 0; i < this.list.length; i++) {
-        this.list[i].run();
-      }
-    };
-    this.push = (fn, name, setRequestAnimationFrame = true) => {
-      let myfn = fn
-      if (setRequestAnimationFrame) {
-        myfn = () => {
-          utils.requestAnimationFrame(fn)
-        }
-      }
-      var f = new Item(myfn, name);
-      this.list.push(f);
-    };
-    this.remove = (name) => {
-      for (let index = 0; index < this.list.length; index++) {
-        const e = this.list[index];
-        if (e.name == name) {
-          this.list.splice(index, 1);
-        }
-      }
-    }
-    // 构造一个可以run的对象
-    function Item(fn, name) {
-      // 函数名称
-      this.name = name || fn.name;
-      // run方法
-      this.run = () => {
-        try {
-          fn()
-        } catch (error) {
-          console.log(error);
-        }
-      };
-    }
-  }
-
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
+<!doctype html>
+<html lang="zn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: C - 二进制的向阳</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="二进制的向阳"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="二进制的向阳"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="二进制的向阳"><meta property="og:url" content="https://lsksp.github.io/"><meta property="og:site_name" content="二进制的向阳"><meta property="og:locale" content="zn_CH"><meta property="og:image" content="https://lsksp.github.io/img/og_image.png"><meta property="article:author" content="Shaokui Li"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://lsksp.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://LSKsp.github.io"},"headline":"二进制的向阳","image":["https://lsksp.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Shaokui Li"},"publisher":{"@type":"Organization","name":"二进制的向阳","logo":{"@type":"ImageObject","url":"https://lsksp.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
           }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
           }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
 
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')) {
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function () {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
 
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      const maxRetry = 3;
-      let retryCount = 0;
-
-      return new Promise((resolve, reject) => {
-        const load = () => {
-          utils.onLoading?.(el);
-
-          let timedOut = false;
-          const timeout = setTimeout(() => {
-            timedOut = true;
-            console.warn('[request] 超时:', url);
-
-            if (++retryCount >= maxRetry) {
-              utils.onLoadFailure?.(el);
-              onFailure?.();
-              reject('请求超时');
-            } else {
-              setTimeout(load, 1000);
-            }
-          }, 5000);
-
-          fetch(url).then(resp => {
-            if (timedOut) return;
-            clearTimeout(timeout);
-
-            if (!resp.ok) throw new Error('响应失败');
-            return resp;
-          }).then(data => {
-            if (timedOut) return;
-            utils.onLoadSuccess?.(el);
-            callback(data);
-            resolve(data);
-          }).catch(err => {
-            clearTimeout(timeout);
-            console.warn('[request] 错误:', err);
-
-            if (++retryCount >= maxRetry) {
-              utils.onLoadFailure?.(el);
-              onFailure?.();
-              reject(err);
-            } else {
-              setTimeout(load, 1000);
-            }
-          });
-        };
-
-        load();
-      });
-    },
-    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
-      return new Promise((resolve, reject) => {
-        let retryCount = 0;
-
-        const tryRequest = () => {
-          let timedOut = false;
-          const timer = setTimeout(() => {
-            timedOut = true;
-            if (++retryCount > maxRetry) reject('timeout');
-            else tryRequest();
-          }, timeout);
-
-          fetch(url, options)
-            .then(resp => {
-              clearTimeout(timer);
-              if (!resp.ok) throw new Error('bad response');
-              resolve(resp);
-            })
-            .catch(err => {
-              clearTimeout(timer);
-              if (++retryCount > maxRetry) reject(err);
-              else setTimeout(tryRequest, 500);
-            });
-        };
-
-        tryRequest();
-      });
-    },
-    /********************** requestAnimationFrame ********************************/
-    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
-    requestAnimationFrame: (fn) => {
-      if (!window.requestAnimationFrame) {
-        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
-      }
-      window.requestAnimationFrame(fn)
-    },
-    dark: {},
-  };
-
-  // utils.dark.mode 当前模式 dark or light
-  // utils.dark.toggle() 暗黑模式触发器
-  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
-  utils.dark.method = {
-    toggle: new RunItem(),
-  };
-  utils.dark = Object.assign(utils.dark, {
-    push: utils.dark.method.toggle.push,
-  });
-</script>
-<script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
-    }
-  }
-</script>
-<script type="text/javascript">
-  (() => {
-    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
-    for (const tagSwitcher of tagSwitchers) {
-      tagSwitcher.addEventListener('click', (e) => {
-        const parent = e.target.closest('.tag-subtree.parent-tag')
-        parent.classList.toggle('expanded')
-        e.preventDefault()
-      })
-    }
-
-    // Get active tag from query string, then activate it.
-    const urlParams = new URLSearchParams(window.location.search)
-    const activeTag = urlParams.get('tag')
-    if (activeTag) {
-      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
-      if (tag) {
-        tag.querySelector('a').classList.add('active')
-        
-        while (tag) {
-          tag.classList.add('expanded')
-          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
-        }
-      }
-    }
-  })()
-</script>
-
-<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-    callback_loaded: (el) => {
-      el.classList.add('loaded');
-      const wrapper = el.closest('.lazy-box');
-      const icon = wrapper?.querySelector('.lazy-icon');
-      if (icon) icon.remove();
-    }
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-
-  window.wrapLazyloadImages = (container) => {
-    if (typeof container === 'string') {
-      container = document.querySelector(container);
-    }
-    if (!container) return;
-    
-    const images = container.querySelectorAll('img');
-    images.forEach((img) => {
-      if (img.classList.contains('lazy')) return;
-
-      const src = img.getAttribute('src');
-      if (!src) return;
-
-      const wrapper = document.createElement('div');
-      wrapper.className = 'lazy-box';
-
-      const newImg = img.cloneNode();
-      newImg.removeAttribute('src');
-      newImg.setAttribute('data-src', src);
-      newImg.classList.add('lazy');
-
-      const icon = document.createElement('div');
-      icon.className = 'lazy-icon';
-      if (def.loading) {
-        icon.style.backgroundImage = `url("${def.loading}")`;
-      }
-
-      wrapper.appendChild(newImg);
-      wrapper.appendChild(icon);
-
-      img.replaceWith(wrapper);
-    });
-
-    // 通知 LazyLoad 更新
-    if (window.lazyLoadInstance?.update) {
-      window.lazyLoadInstance.update();
-    }
-  }
-  
-</script>
-
-<!-- required -->
-<script src="/js/main.js?v=1.33.1" defer></script>
-
-<script type="text/javascript">
-  const applyTheme = (theme) => {
-    if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
-    } else {
-      document.documentElement.setAttribute('data-theme', theme)
-    }
-
-    // applyThemeToGiscus(theme)
-  }
-
-  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
-  const applyThemeToGiscus = (theme) => {
-    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
-    const cmt = document.getElementById('giscus')
-    if (cmt) {
-      // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
-    }
-
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
-    if (iframe) {
-      // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
-    }
-  }
-
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
-    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
-    utils.dark.method.toggle.start();
-
-    const messages = {
-      light: `切换到浅色模式`,
-      dark: `切换到深色模式`,
-      auto: `切换到跟随系统配色`,
-    }
-    hud?.toast?.(messages[newTheme])
-  }
-
-  (() => {
-    // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
-    if (theme !== null) {
-      applyTheme(theme)
-    } else {
-      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-    utils.dark.method.toggle.start();
-  })()
-</script>
-
-
-<!-- optional -->
-
-
-
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else if (id == 'voice') {
-        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
-        if (ctx.voiceAudios?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            createVoiceDom(ctx.voiceAudios);
-          });
-        }
-      } else if (id == 'video') {
-        ctx.videos = document.querySelectorAll('.video>video');
-        if (ctx.videos?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            videoEvents(ctx.videos);
-          });
-        }
-      } else if (id == 'download-file') {
-        ctx.files = document.querySelectorAll('.file');
-        if (ctx.files?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            downloadFileEvent(ctx.files);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-
-    // chat iphone time
-    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
-
-    if (phoneTimes.length > 0) {
-      NowTime();
-      var date = new Date();
-      var sec = date.getSeconds();
-      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
-    }
-
-    function firstAdjustTime() {
-      NowTime();
-      clearInterval(firstAdjustInterval);
-      setInterval(NowTime, 1000 * 60);
-    }
-
-    function NowTime() {
-      for (let i = 0; i < phoneTimes.length; ++i) {
-        var timeSpan = phoneTimes[i];
-        var date = new Date();
-        var hour = date.getHours();
-        var min = date.getMinutes();
-        timeSpan.innerHTML = check(hour) + ":" + check(min);
-      }
-    };
-
-    function check(val) {
-      if (val < 10) {
-        return ("0" + val);
-      }
-      return (val);
-    }
-
-    // chat quote
-    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
-      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
-          observer.unobserve(entry.target);
-          setTimeout(() => {
-            entry.target.classList.add('quote-blink');
-            setTimeout(() => {
-              entry.target.classList.remove('quote-blink');
-            }, 1000);
-          }, Math.max(100, 16) * (index + 1));
-        });
-    });
-
-    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
-    chatQuotes.forEach((quote) => {
-      quote.addEventListener('click', function () {
-        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
-        if (chatCellDom) {
-          var chatDiv = chatCellDom.parentElement;
-          var mid = chatDiv.clientHeight / 2;
-          var offsetTop = chatCellDom.offsetTop;
-          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
-            chatDiv.scrollTo({
-              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
-              behavior: "smooth"
-            });
-          } else {
-            chatDiv.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
           }
-          chat_quote_obverser.observe(chatCellDom);
-        }
-      });
-    });
-  });
-</script>
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="二进制的向阳" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags/">标签</a></li><li class="is-active"><a href="#" aria-current="page">C</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-05-06T16:00:00.000Z" title="2025/5/7 00:00:00">2025-05-07</time>发表</span><span class="level-item"><time dateTime="2025-10-16T17:41:45.000Z" title="2025/10/17 01:41:45">2025-10-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/">再探C语言</a></span><span class="level-item">24 minutes读完 (大约3617个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></p><div class="content"> <!-- toc -->
 
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
-    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
-  };
-  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
-  }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const memos = document.getElementsByClassName('ds-memos');
-    if (memos != undefined && memos.length > 0) {
-      needFancybox = true;
-    }
-    const fancybox = document.getElementsByClassName('with-fancybox');
-    if (fancybox != undefined && fancybox.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
+<h3 id="一、数据结构与算法：线性表"><a href="#一、数据结构与算法：线性表" class="headerlink" title="一、数据结构与算法：线性表"></a>一、数据结构与算法：线性表</h3><h4 id="1、顺序表"><a href="#1、顺序表" class="headerlink" title="1、顺序表"></a>1、顺序表</h4><p>实现代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> E;  <span class="comment">//定义顺序表存储的数据为int</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">List</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    E *<span class="built_in">array</span>;    <span class="comment">//实现顺序表的底层数组</span></span><br><span class="line">    <span class="type">int</span> capacity;   <span class="comment">//表示底层数组的容量</span></span><br><span class="line">    <span class="type">int</span> size;   <span class="comment">//已存多少数据</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入元素</span></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">insertList</span><span class="params">(<span class="keyword">struct</span> List *<span class="built_in">list</span>, E element, <span class="type">int</span> index)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">1</span> || index &gt; <span class="built_in">list</span>-&gt;size + <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">//index可能非法</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">list</span>-&gt;size == <span class="built_in">list</span>-&gt;capacity)&#123;   <span class="comment">//判断顺序表是否满了，若满，则扩容。</span></span><br><span class="line">        <span class="type">int</span> newCapacity = <span class="built_in">list</span>-&gt;capacity + (<span class="built_in">list</span>-&gt;capacity &gt;&gt; <span class="number">1</span>);   <span class="comment">//&gt;&gt;1 相当于/2</span></span><br><span class="line">        E * newList = <span class="built_in">realloc</span>(<span class="built_in">list</span>-&gt;<span class="built_in">array</span>, newCapacity*<span class="keyword">sizeof</span>(E));</span><br><span class="line">        <span class="keyword">if</span>(newList == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">list</span>-&gt;<span class="built_in">array</span> = newList;</span><br><span class="line">        <span class="built_in">list</span>-&gt;capacity = newCapacity;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="built_in">list</span>-&gt;size; i&gt;=index; --i)&#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;<span class="built_in">array</span>[i] = <span class="built_in">list</span>-&gt;<span class="built_in">array</span>[i<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">list</span>-&gt;<span class="built_in">array</span>[index - <span class="number">1</span>] = element;</span><br><span class="line">    <span class="built_in">list</span>-&gt;size++;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素</span></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">deleteList</span><span class="params">(<span class="keyword">struct</span> List *<span class="built_in">list</span>,<span class="type">int</span> index)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &lt; <span class="number">1</span> || index &gt; <span class="built_in">list</span>-&gt;size) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = index - <span class="number">1</span>; i &lt; <span class="built_in">list</span>-&gt;size - <span class="number">1</span>; ++i)&#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;<span class="built_in">array</span>[i] = <span class="built_in">list</span>-&gt;<span class="built_in">array</span>[i+<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">list</span>-&gt;size--;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//活得顺序表大小</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sizeList</span><span class="params">(<span class="keyword">struct</span> List *<span class="built_in">list</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span>-&gt;size;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获得元素</span></span><br><span class="line">E * <span class="title function_">getList</span><span class="params">(<span class="keyword">struct</span> List *<span class="built_in">list</span>, <span class="type">int</span> index)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &lt; <span class="number">1</span> || index &gt; <span class="built_in">list</span>-&gt;size) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;<span class="built_in">list</span>-&gt;<span class="built_in">array</span>[index<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//查找元素</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">findList</span><span class="params">(<span class="keyword">struct</span> List *<span class="built_in">list</span>,E element)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">list</span>-&gt;size; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">list</span>-&gt;<span class="built_in">array</span>[i] == element) <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">**</span></span><br><span class="line"><span class="comment">**</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">initList</span><span class="params">(<span class="keyword">struct</span> List *<span class="built_in">list</span> )</span>&#123;</span><br><span class="line">    <span class="built_in">list</span>-&gt;<span class="built_in">array</span> = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(E)*<span class="number">10</span>); <span class="comment">//malloc开辟的内存在堆区，函数生命周期结束后还存在（需要手动释放或程序结束后由系统释放）。</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">list</span>-&gt;<span class="built_in">array</span> == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">//若申请内存空间失败，则返回0.</span></span><br><span class="line">    <span class="built_in">list</span>-&gt;capacity = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">list</span>-&gt;size = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">printList</span><span class="params">(<span class="keyword">struct</span> List *<span class="built_in">list</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;<span class="built_in">list</span>-&gt;size; ++i)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, <span class="built_in">list</span>-&gt;<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">int</span>* argv)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">List</span> * <span class="title">list</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> List *));</span><br><span class="line">    <span class="comment">/*结构体指针初始化，首先不能 “= NULL”，因为指针指向一个安全的区域，不能解析。</span></span><br><span class="line"><span class="comment">    **也不能，不初始化，因为指针可能指向未知地址，对其操作造成的后果是未知的，</span></span><br><span class="line"><span class="comment">    **初始化方式有：一、在堆区开辟一个空间；二、先定义一个结构体，用指针指向他；</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">if</span>(initList(<span class="built_in">list</span>))&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;<span class="number">10</span>; ++i)&#123;</span><br><span class="line">            insertList(<span class="built_in">list</span>,i*<span class="number">10</span>,i+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        deleteList(<span class="built_in">list</span>,<span class="number">2</span>);</span><br><span class="line">        printList(<span class="built_in">list</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d \n&quot;</span>,*getList(<span class="built_in">list</span>,<span class="number">2</span>));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,findList(<span class="built_in">list</span>,<span class="number">30</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;shibai&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(<span class="built_in">list</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>顺序表是一种随机存取的存储结构。</p>
+<h4 id="2、链表"><a href="#2、链表" class="headerlink" title="2、链表"></a>2、链表</h4><p>实现代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> E;  <span class="comment">//定义顺序表存储的数据为int</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    E element;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">Node</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">initList</span><span class="params">(Node node)</span>&#123;</span><br><span class="line">    node-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">insertList</span><span class="params">(Node head, E element, <span class="type">int</span> index)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(--index)&#123;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Node node = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode));</span><br><span class="line">    <span class="keyword">if</span>(node == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    node-&gt;element = element;</span><br><span class="line">    node-&gt;next = head-&gt;next;</span><br><span class="line">    head-&gt;next = node;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">deleteList</span><span class="params">(Node head, <span class="type">int</span> index)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(--index)&#123;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(head-&gt;next == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    Node node = head-&gt;next; </span><br><span class="line">    head-&gt;next = head-&gt;next-&gt;next;</span><br><span class="line">    <span class="built_in">free</span>(node);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获得元素；</span></span><br><span class="line">E *<span class="title function_">getList</span><span class="params">(Node head, <span class="type">int</span> index)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (head-&gt;next == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;    <span class="comment">//若为空表，则返回为空；</span></span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">while</span>(--index);</span><br><span class="line">    <span class="keyword">return</span> &amp;head-&gt;element;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//寻找元素下标</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">findList</span><span class="params">(Node head, E element)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(head-&gt;next == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">-1</span>;   <span class="comment">//判断是否为空表</span></span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(head-&gt;element == element) <span class="keyword">return</span> i;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;<span class="keyword">while</span>(head-&gt;next);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sizeList</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(head-&gt;next)&#123;</span><br><span class="line">        i++;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//函数都是值传递，传值，值不变；传指针，指针不变；传指针，值会变</span></span><br><span class="line"><span class="comment">//对head-&gt;element或者head-&gt;next操作会改变值</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">printfList</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(head-&gt;next)&#123;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,head-&gt;element);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    Node p1;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> <span class="title">head</span>;</span></span><br><span class="line">    initList(&amp;head);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i)&#123;</span><br><span class="line">        insertList(&amp;head,i*<span class="number">10</span>, i+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    printfList(&amp;head);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sizeList(&amp;head));</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>链表表是一种顺序访问的存储结构。</p>
+<h4 id="3、双向链表"><a href="#3、双向链表" class="headerlink" title="3、双向链表"></a>3、双向链表</h4><h4 id="4、循环链表w"><a href="#4、循环链表w" class="headerlink" title="4、循环链表w"></a>4、循环链表w</h4><h4 id="5、堆栈（Stack）"><a href="#5、堆栈（Stack）" class="headerlink" title="5、堆栈（Stack）"></a>5、堆栈（Stack）</h4><p>先进后出</p>
+<h4 id="6、队列（Queue）"><a href="#6、队列（Queue）" class="headerlink" title="6、队列（Queue）"></a>6、队列（Queue）</h4><p>先进先出</p>
+<h4 id="实战1、反转链表"><a href="#实战1、反转链表" class="headerlink" title="实战1、反转链表"></a>实战1、反转链表</h4><p>题目描述：给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
+<h5 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> E;  <span class="comment">//定义顺序表存储的数据为int</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> ListNode* <span class="title function_">reverseList</span><span class="params">(<span class="keyword">struct</span> ListNode* head)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">tmp</span>,*<span class="title">newHead</span> =</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">while</span> (head)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//假设前面已被反转。</span></span><br><span class="line">        tmp = head-&gt;next;	<span class="comment">//保存第二个节点，用于当作下一个节点的头结点。</span></span><br><span class="line">        head-&gt;next = newHead;	<span class="comment">//指向前节点</span></span><br><span class="line">        newHead = head;	<span class="comment">//更新前节点</span></span><br><span class="line">        head = tmp;	<span class="comment">//新链表</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> newHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="解法二-递归"><a href="#解法二-递归" class="headerlink" title="解法二:递归"></a>解法二:递归</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> E;  <span class="comment">//定义顺序表存储的数据为int</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> ListNode* <span class="title function_">reverseList</span><span class="params">(<span class="keyword">struct</span> ListNode* head)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">NULL</span> || head-&gt;next == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">newHead</span> =</span> reverseList(head-&gt;next);</span><br><span class="line">    head-&gt;next-&gt;next = head;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> newHead;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="实战2、匹配字符串"><a href="#实战2、匹配字符串" class="headerlink" title="实战2、匹配字符串"></a>实战2、匹配字符串</h4><p>给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;{&#39;</code>，<code>&#39;}&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。</li>
+<li>每个右括号都有一个对应的相同类型的左括号。</li>
+</ol>
+<h4 id="方法：栈的应用"><a href="#方法：栈的应用" class="headerlink" title="方法：栈的应用"></a>方法：栈的应用</h4><h5 id="方法1：自己的"><a href="#方法1：自己的" class="headerlink" title="方法1：自己的"></a>方法1：自己的</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> true 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> false 0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> E;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> &#123;</span></span><br><span class="line">    E val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">Node</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">initStack</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">printStack</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;| &quot;</span>);</span><br><span class="line">    head = head-&gt;next;</span><br><span class="line">    <span class="keyword">while</span> (head)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, head-&gt;val);</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//入栈</span></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">pushStack</span><span class="params">(Node head, E val)</span>&#123;</span><br><span class="line">    Node node = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> LNode));</span><br><span class="line">    <span class="keyword">if</span>(node == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    node-&gt;next = head-&gt;next;</span><br><span class="line">    node-&gt;val = val;</span><br><span class="line">    head-&gt;next = node;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//出栈</span></span><br><span class="line">E <span class="title function_">popStack</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(head-&gt;next == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    Node node;</span><br><span class="line">    node = head-&gt;next;</span><br><span class="line">    E val = node-&gt;val;</span><br><span class="line">    head-&gt;next = head-&gt;next-&gt;next;</span><br><span class="line">    <span class="built_in">free</span>(node);</span><br><span class="line">    <span class="keyword">return</span> val;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">isValid</span><span class="params">(<span class="type">char</span>* s)</span> &#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> <span class="title">head</span>;</span></span><br><span class="line">    initStack(&amp;head);</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> len = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">if</span>(len % <span class="number">2</span> == <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    pushStack(&amp;head,s[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; len; i++)&#123;</span><br><span class="line">        E top = popStack(&amp;head);</span><br><span class="line">        <span class="keyword">if</span>(top != <span class="number">0</span>)pushStack(&amp;head,top);</span><br><span class="line">        <span class="keyword">if</span>(top == <span class="string">&#x27;(&#x27;</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">&#x27;)&#x27;</span>) popStack(&amp;head);</span><br><span class="line">            <span class="keyword">else</span> pushStack(&amp;head,s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(top == <span class="string">&#x27;[&#x27;</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">&#x27;]&#x27;</span>) popStack(&amp;head);</span><br><span class="line">            <span class="keyword">else</span> pushStack(&amp;head,s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(top == <span class="string">&#x27;&#123;&#x27;</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">&#x27;&#125;&#x27;</span>) popStack(&amp;head);</span><br><span class="line">            <span class="keyword">else</span> pushStack(&amp;head,s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>  pushStack(&amp;head,s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(head.next == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">char</span> *s = <span class="string">&quot;()[]&#123;&#125;&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,isValid(s));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="方法2：更快"><a href="#方法2：更快" class="headerlink" title="方法2：更快"></a>方法2：更快</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdbool.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> E;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> &#123;</span></span><br><span class="line">    E element;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> * <span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> * <span class="title">Node</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">initStack</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">pushStack</span><span class="params">(Node head, E element)</span>&#123;</span><br><span class="line">    Node node = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> LNode));</span><br><span class="line">    <span class="keyword">if</span>(node == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    node-&gt;next = head-&gt;next;</span><br><span class="line">    node-&gt;element = element;</span><br><span class="line">    head-&gt;next = node;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">isEmpty</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> head-&gt;next == <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">popStack</span><span class="params">(Node head)</span>&#123;</span><br><span class="line">    Node top = head-&gt;next;</span><br><span class="line">    head-&gt;next = head-&gt;next-&gt;next;</span><br><span class="line">    E e = top-&gt;element;</span><br><span class="line">    <span class="built_in">free</span>(top);</span><br><span class="line">    <span class="keyword">return</span> e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">isValid</span><span class="params">(<span class="type">char</span> * s)</span>&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> len = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">if</span>(len % <span class="number">2</span> == <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;  <span class="comment">//如果长度不是偶数，那么一定不能成功匹配</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> <span class="title">head</span>;</span></span><br><span class="line">    initStack(&amp;head);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">        <span class="type">char</span> c = s[i];</span><br><span class="line">        <span class="keyword">if</span>(c == <span class="string">&#x27;(&#x27;</span> || c == <span class="string">&#x27;[&#x27;</span> || c == <span class="string">&#x27;&#123;&#x27;</span>) &#123;</span><br><span class="line">            pushStack(&amp;head, c);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(isEmpty(&amp;head)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">&#x27;)&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(popStack(&amp;head) != <span class="string">&#x27;(&#x27;</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">&#x27;]&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(popStack(&amp;head) != <span class="string">&#x27;[&#x27;</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span>(popStack(&amp;head) != <span class="string">&#x27;&#123;&#x27;</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isEmpty(&amp;head);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="方法三：更快"><a href="#方法三：更快" class="headerlink" title="方法三：更快"></a>方法三：更快</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="title function_">pairs</span><span class="params">(<span class="type">char</span> a)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (a == <span class="string">&#x27;&#125;&#x27;</span>) <span class="keyword">return</span> <span class="string">&#x27;&#123;&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span> (a == <span class="string">&#x27;]&#x27;</span>) <span class="keyword">return</span> <span class="string">&#x27;[&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span> (a == <span class="string">&#x27;)&#x27;</span>) <span class="keyword">return</span> <span class="string">&#x27;(&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">isValid</span><span class="params">(<span class="type">char</span>* s)</span> &#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> stk[n + <span class="number">1</span>], top = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">char</span> ch = pairs(s[i]);</span><br><span class="line">        <span class="keyword">if</span> (ch) &#123;</span><br><span class="line">            <span class="keyword">if</span> (top == <span class="number">0</span> || stk[top - <span class="number">1</span>] != ch) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            top--;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            stk[top++] = s[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> top == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、数据结构与算法：树"><a href="#二、数据结构与算法：树" class="headerlink" title="二、数据结构与算法：树"></a>二、数据结构与算法：树</h3><h4 id="1、树：理论"><a href="#1、树：理论" class="headerlink" title="1、树：理论"></a>1、树：理论</h4><ul>
+<li><p>我们一般称位于最上方的结点为树的<strong>根结点</strong>（Root）；</p>
+</li>
+<li><p>每个结点连接的子结点数目（分支的数目），我们称为结点的<strong>度</strong>（Degree），而各个结点度的最大值称为<strong>树的度</strong>；</p>
+</li>
+<li><p>每个结点延伸下去的下一个结点都可以称为一棵<strong>子树</strong>（SubTree）；</p>
+</li>
+<li><p>每个<strong>结点的层次</strong>（Level）按照从上往下的顺序，树的根结点为<code>1</code>，每向下一层<code>+1</code>，比如<code>G</code>的层次就是<code>3</code>，整棵树中所有结点的最大层次，就是这颗<strong>树的深度</strong>（Depth）；</p>
+</li>
+<li><p>与当前结点直接向下相连的结点，我们称为<strong>子结点</strong>（Child）；相反即为<strong>父节点</strong>；</p>
+</li>
+<li><p>如果某个节点没有任何的子结点（结点度为0时）那么我们称这个结点为<strong>叶子结点</strong>；</p>
+</li>
+<li><p>如果两个结点的父结点是同一个，那么称这两个节点为<strong>兄弟结点</strong>（Sibling）；</p>
+</li>
+<li><p>从根结点开始一直到某个结点的整条路径的所有结点，都是这个结点的<strong>祖先结点</strong>（Ancestor）；</p>
+</li>
+</ul>
+<h4 id="2、二叉树的性质"><a href="#2、二叉树的性质" class="headerlink" title="2、二叉树的性质"></a>2、二叉树的性质</h4><ul>
+<li>性质一： 对于一棵二叉树，第<code>i</code>层的最大结点数量为 个2^i - 1;</li>
+<li>一棵深度为<code>k</code>的二叉树最大结点数量为 n &#x3D; 2^k*−1，顺便得出，结点的边数为 E &#x3D; n - 1。</li>
+<li>于任何一棵二叉树，如果其叶子结点个数为 n0，度为2的结点个数为 n2 ，那么两者满足以下公式：n0 &#x3D; n2+1;</li>
+<li><code>n</code>个结点的完全二叉树深度为 k &#x3D; log2^n + 1 ;</li>
+<li></li>
+</ul>
+<h4 id="3、二叉树遍历：前序、中序、后序遍历"><a href="#3、二叉树遍历：前序、中序、后序遍历" class="headerlink" title="3、二叉树遍历：前序、中序、后序遍历"></a>3、二叉树遍历：前序、中序、后序遍历</h4><p><img src="/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5C%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="二叉树"></p>
+<p>前序遍历结果为：<code>ABDECF</code>；</p>
+<p>中序遍历结果为：<code>DBEACF</code>；</p>
+<p>后序遍历结果为：<code>DEBFCA</code>；</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> E;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>&#123;</span></span><br><span class="line">    E element;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">right</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">Node</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//前序递归，利用函数栈的特性，不断出栈入栈</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">preOrder</span><span class="params">(Node root)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span>;   </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, root-&gt;element);</span><br><span class="line">    preOrder(root-&gt;left);</span><br><span class="line">    preOrder(root-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//中序遍历</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">inOrder</span><span class="params">(Node root)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span>;</span><br><span class="line">    inOrder(root-&gt;left);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,root-&gt;element);</span><br><span class="line">    inOrder(root-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//后序遍历</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">afOrder</span><span class="params">(Node root)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span>;</span><br><span class="line">    afOrder(root-&gt;left);</span><br><span class="line">    afOrder(root-&gt;right);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,root-&gt;element);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    Node a = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node b = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node c = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node d = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node e = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node f = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    a-&gt;element = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    b-&gt;element = <span class="string">&#x27;B&#x27;</span>;</span><br><span class="line">    c-&gt;element = <span class="string">&#x27;C&#x27;</span>;</span><br><span class="line">    d-&gt;element = <span class="string">&#x27;D&#x27;</span>;</span><br><span class="line">    e-&gt;element = <span class="string">&#x27;E&#x27;</span>;</span><br><span class="line">    f-&gt;element = <span class="string">&#x27;F&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    a-&gt;left = b;</span><br><span class="line">    a-&gt;right = c;</span><br><span class="line">    b-&gt;left = d;</span><br><span class="line">    b-&gt;right = e;</span><br><span class="line">    c-&gt;right = f;</span><br><span class="line">    c-&gt;left = <span class="literal">NULL</span>;</span><br><span class="line">    d-&gt;left = e-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">    e-&gt;left = e-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">    f-&gt;left = f-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    afOrder(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、二叉树遍历：层序遍历"><a href="#4、二叉树遍历：层序遍历" class="headerlink" title="4、二叉树遍历：层序遍历"></a>4、二叉树遍历：层序遍历</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> E;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> &#123;</span></span><br><span class="line">    E element;    <span class="comment">//存放元素</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> * <span class="title">left</span>;</span>   <span class="comment">//指向左子树的指针</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> * <span class="title">right</span>;</span>   <span class="comment">//指向右子树的指针</span></span><br><span class="line">&#125; *Node;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">initNode</span>&#123;</span>   <span class="comment">//定义队列初始节点</span></span><br><span class="line">    Node element;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">initNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; *INode;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Queue</span>&#123;</span>   <span class="comment">//队列头尾指针</span></span><br><span class="line">    INode front,rear;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Queue</span>* <span class="title">LinkedQueue</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">initQueue</span><span class="params">(LinkedQueue <span class="built_in">queue</span>)</span>&#123;</span><br><span class="line">    INode node = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> initNode));</span><br><span class="line">    <span class="keyword">if</span>(node == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    node-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="built_in">queue</span>-&gt;front = <span class="built_in">queue</span>-&gt;rear = node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//入队</span></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">enQueue</span><span class="params">(LinkedQueue quene, Node element)</span>&#123;</span><br><span class="line">    INode node = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> initNode));</span><br><span class="line">    <span class="keyword">if</span>(node == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    node-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    node-&gt;element = element;</span><br><span class="line">    quene-&gt;rear-&gt;next = node;</span><br><span class="line">    quene-&gt;rear = node;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 出队</span></span><br><span class="line">Node <span class="title function_">deQueue</span><span class="params">(LinkedQueue <span class="built_in">queue</span>)</span>&#123;</span><br><span class="line">    Node val = <span class="built_in">queue</span>-&gt;front-&gt;next-&gt;element;</span><br><span class="line">    INode node;</span><br><span class="line">    node = <span class="built_in">queue</span>-&gt;front-&gt;next;</span><br><span class="line">    <span class="built_in">queue</span>-&gt;front-&gt;next = <span class="built_in">queue</span>-&gt;front-&gt;next-&gt;next;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">queue</span>-&gt;rear == node) <span class="built_in">queue</span>-&gt;rear = <span class="built_in">queue</span>-&gt;front;</span><br><span class="line">    <span class="built_in">free</span>(node);</span><br><span class="line">    <span class="keyword">return</span> val;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">isEmpty</span><span class="params">(LinkedQueue <span class="built_in">queue</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="built_in">queue</span>-&gt;front == <span class="built_in">queue</span>-&gt;rear);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">levelQueue</span><span class="params">(Node root)</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> <span class="title">queue</span>;</span></span><br><span class="line">    initQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">    enQueue(&amp;<span class="built_in">queue</span>,root);</span><br><span class="line">    <span class="keyword">while</span>(!isEmpty(&amp;<span class="built_in">queue</span>))&#123;</span><br><span class="line">        Node node = deQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,node-&gt;element);</span><br><span class="line">        <span class="keyword">if</span>(node-&gt;left) enQueue(&amp;<span class="built_in">queue</span>,node-&gt;left);</span><br><span class="line">        <span class="keyword">if</span>(node-&gt;right) enQueue(&amp;<span class="built_in">queue</span>,node-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    Node a = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node b = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node c = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node d = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node e = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    Node f = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    a-&gt;element = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    b-&gt;element = <span class="string">&#x27;B&#x27;</span>;</span><br><span class="line">    c-&gt;element = <span class="string">&#x27;C&#x27;</span>;</span><br><span class="line">    d-&gt;element = <span class="string">&#x27;D&#x27;</span>;</span><br><span class="line">    e-&gt;element = <span class="string">&#x27;E&#x27;</span>;</span><br><span class="line">    f-&gt;element = <span class="string">&#x27;F&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    a-&gt;left = b;</span><br><span class="line">    a-&gt;right = c;</span><br><span class="line">    b-&gt;left = d;</span><br><span class="line">    b-&gt;right = e;</span><br><span class="line">    c-&gt;right = f;</span><br><span class="line">    c-&gt;left = <span class="literal">NULL</span>;</span><br><span class="line">    d-&gt;left = e-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">    e-&gt;left = e-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">    f-&gt;left = f-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    levelQueue(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、二叉树的线索化-以前序为例"><a href="#5、二叉树的线索化-以前序为例" class="headerlink" title="5、二叉树的线索化(以前序为例)"></a>5、二叉树的线索化(以前序为例)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> E;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> &#123;</span></span><br><span class="line">    E element;    <span class="comment">//存放元素</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> * <span class="title">left</span>;</span>   <span class="comment">//指向左子树的指针</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> * <span class="title">right</span>;</span>   <span class="comment">//指向右子树的指针</span></span><br><span class="line">    <span class="type">char</span> leftFlag,rightFlag     <span class="comment">//线索化标志位</span></span><br><span class="line">&#125; *Node;</span><br><span class="line"></span><br><span class="line">Node pre = <span class="literal">NULL</span>;  <span class="comment">//这里我们需要一个pre来保存后续结点的指向</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">treeOrdered</span><span class="params">(Node root)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//线索化规则：结点的左指针，指向其当前遍历顺序的前驱结点；结点的右指针，指向其当前遍历顺序的后继结点。</span></span><br><span class="line">    <span class="keyword">if</span>(root-&gt;left == <span class="literal">NULL</span>)&#123; <span class="comment">//判断当前节点的左节点是否为空，若为空，则指向上一个节点。</span></span><br><span class="line">        root-&gt;leftFlag = <span class="number">1</span>;</span><br><span class="line">        root-&gt;left = pre;</span><br><span class="line"></span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">if</span>(pre &amp;&amp; pre-&gt;right == <span class="literal">NULL</span>)&#123;  <span class="comment">//判断上一个节点的右节点是否为空，若为空，则指向当前节点</span></span><br><span class="line">        pre-&gt;right = root;</span><br><span class="line">        pre-&gt;rightFlag = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    pre = root;</span><br><span class="line">    <span class="keyword">if</span>(root-&gt;leftFlag == <span class="number">0</span>) treeOrdered(root-&gt;left);    <span class="comment">//判断左节点是否是线索化的，若不是，才能继续。</span></span><br><span class="line">    <span class="keyword">if</span>(root-&gt;rightFlag == <span class="number">0</span>) treeOrdered(root-&gt;right);  <span class="comment">//判断可略，因为，我们对右节点的线索化，是在后面执行的</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">preOrder</span><span class="params">(Node root)</span>&#123; </span><br><span class="line">    <span class="keyword">while</span> (root) &#123;   <span class="comment">//到头为止</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, root-&gt;element);   <span class="comment">//因为是前序遍历，所以直接按顺序打印就行了</span></span><br><span class="line">        <span class="keyword">if</span>(root-&gt;leftFlag == <span class="number">0</span>) </span><br><span class="line">            root = root-&gt;left;   <span class="comment">//如果是左孩子，那么就走左边</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            root = root-&gt;right;   <span class="comment">//如果左边指向是线索，那么就直接走右边。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node <span class="title function_">createNode</span><span class="params">(E element)</span>&#123;   <span class="comment">//单独写了个函数来创建结点</span></span><br><span class="line">    Node node = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> TreeNode));</span><br><span class="line">    node-&gt;left = node-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">    node-&gt;rightFlag = node-&gt;leftFlag = <span class="number">0</span>;</span><br><span class="line">    node-&gt;element = element;</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    Node a = createNode(<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">    Node b = createNode(<span class="string">&#x27;B&#x27;</span>);</span><br><span class="line">    Node c = createNode(<span class="string">&#x27;C&#x27;</span>);</span><br><span class="line">    Node d = createNode(<span class="string">&#x27;D&#x27;</span>);</span><br><span class="line">    Node e = createNode(<span class="string">&#x27;E&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    a-&gt;left = b;</span><br><span class="line">    b-&gt;left = d;</span><br><span class="line">    a-&gt;right = c;</span><br><span class="line">    b-&gt;right = e;</span><br><span class="line"></span><br><span class="line">    treeOrdered(a);</span><br><span class="line">    preOrder(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="六、二叉搜索树（二叉查找树）"><a href="#六、二叉搜索树（二叉查找树）" class="headerlink" title="六、二叉搜索树（二叉查找树）"></a>六、二叉搜索树（二叉查找树）</h4><h4 id="七、平衡二叉树"><a href="#七、平衡二叉树" class="headerlink" title="七、平衡二叉树"></a>七、平衡二叉树</h4><h3 id="三、数据结构与算法：哈希表"><a href="#三、数据结构与算法：哈希表" class="headerlink" title="三、数据结构与算法：哈希表"></a>三、数据结构与算法：哈希表</h3><h4 id="1、哈希表"><a href="#1、哈希表" class="headerlink" title="1、哈希表"></a>1、哈希表</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 9</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//结构体指针，直接用E-&gt;key访问，避免用*E访问</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Element</span> &#123;</span>   <span class="comment">//这里用一个Element将值包装一下</span></span><br><span class="line">    <span class="type">int</span> key;    <span class="comment">//这里元素设定为int</span></span><br><span class="line">&#125; * E;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">HashTable</span>&#123;</span>   <span class="comment">//这里把数组封装为一个哈希表</span></span><br><span class="line">    E * table;</span><br><span class="line">&#125; * HashTable;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hash</span><span class="params">(<span class="type">int</span> key)</span>&#123;   <span class="comment">//哈希函数</span></span><br><span class="line">    <span class="keyword">return</span> key % SIZE;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">init</span><span class="params">(HashTable hashTable)</span>&#123;   <span class="comment">//初始化函数</span></span><br><span class="line">    hashTable-&gt;table = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> Element) * SIZE);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; SIZE; ++i)</span><br><span class="line">        hashTable-&gt;table[i] = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">insert</span><span class="params">(HashTable hashTable, E element)</span>&#123;   <span class="comment">//插入操作，为了方便就不考虑装满的情况了</span></span><br><span class="line">    <span class="type">int</span> hashCode = hash(element-&gt;key);   <span class="comment">//首先计算元素的哈希值</span></span><br><span class="line">    hashTable-&gt;table[hashCode] = element;   <span class="comment">//对号入座</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">find</span><span class="params">(HashTable hashTable, <span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> hashCode = hash(key);   <span class="comment">//首先计算元素的哈希值</span></span><br><span class="line">    <span class="keyword">if</span>(!hashTable-&gt;table[hashCode]) <span class="keyword">return</span> <span class="number">0</span>;   <span class="comment">//如果为NULL那就说明没有</span></span><br><span class="line">    <span class="keyword">return</span> hashTable-&gt;table[hashCode]-&gt;key == key;  <span class="comment">//如果有，直接看是不是就完事</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">E <span class="title function_">create</span><span class="params">(<span class="type">int</span> key)</span>&#123;    <span class="comment">//创建一个新的元素</span></span><br><span class="line">    E e = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> Element));</span><br><span class="line">    e-&gt;key = key;</span><br><span class="line">    <span class="keyword">return</span> e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">HashTable</span> <span class="title">hashTable</span>;</span></span><br><span class="line">    init(&amp;hashTable);</span><br><span class="line">    insert(&amp;hashTable, create(<span class="number">10</span>));</span><br><span class="line">    insert(&amp;hashTable, create(<span class="number">7</span>));</span><br><span class="line">    insert(&amp;hashTable, create(<span class="number">13</span>));</span><br><span class="line">    insert(&amp;hashTable, create(<span class="number">29</span>));</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, find(&amp;hashTable, <span class="number">1</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, find(&amp;hashTable, <span class="number">13</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、哈希冲突（链地址法）"><a href="#2、哈希冲突（链地址法）" class="headerlink" title="2、哈希冲突（链地址法）"></a>2、哈希冲突（链地址法）</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 9</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> &#123;</span>   <span class="comment">//结点定义</span></span><br><span class="line">    <span class="type">int</span> key;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> * <span class="title">next</span>;</span></span><br><span class="line">&#125; * Node;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">HashTable</span>&#123;</span>   <span class="comment">//哈希表</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> * <span class="title">table</span>;</span>   <span class="comment">//这个数组专门保存头结点</span></span><br><span class="line">&#125; * HashTable;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">init</span><span class="params">(HashTable hashTable)</span>&#123;</span><br><span class="line">    hashTable-&gt;table = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode) * SIZE);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; SIZE; ++i) &#123;</span><br><span class="line">        hashTable-&gt;table[i].key = <span class="number">-1</span>;   <span class="comment">//将头结点key置为-1，next指向NULL</span></span><br><span class="line">        hashTable-&gt;table[i].next = <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">hash</span><span class="params">(<span class="type">int</span> key)</span>&#123;   <span class="comment">//哈希函数</span></span><br><span class="line">    <span class="keyword">return</span> key % SIZE;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node <span class="title function_">createNode</span><span class="params">(<span class="type">int</span> key)</span>&#123;   <span class="comment">//创建结点专用函数</span></span><br><span class="line">    Node node = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode));</span><br><span class="line">    node-&gt;key = key;</span><br><span class="line">    node-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">insert</span><span class="params">(HashTable hashTable, <span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> hashCode = hash(key);</span><br><span class="line">    Node head = hashTable-&gt;table + hashCode;   <span class="comment">//先计算哈希值，找到位置后直接往链表后面插入结点就完事了</span></span><br><span class="line">    <span class="keyword">while</span> (head-&gt;next) head = head-&gt;next;</span><br><span class="line">    head-&gt;next = createNode(key);   <span class="comment">//插入新的结点</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">_Bool</span> <span class="title function_">find</span><span class="params">(HashTable hashTable, <span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> hashCode = hash(key);</span><br><span class="line">    Node head = hashTable-&gt;table + hashCode;</span><br><span class="line">    <span class="keyword">while</span> (head-&gt;next &amp;&amp; head-&gt;key != key)   <span class="comment">//直到最后或是找到为止</span></span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">    <span class="keyword">return</span> head-&gt;key == key;   <span class="comment">//直接返回是否找到</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">HashTable</span> <span class="title">table</span>;</span></span><br><span class="line">    init(&amp;table);</span><br><span class="line"></span><br><span class="line">    insert(&amp;table, <span class="number">10</span>);</span><br><span class="line">    insert(&amp;table, <span class="number">19</span>);</span><br><span class="line">    insert(&amp;table, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, find(&amp;table, <span class="number">20</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, find(&amp;table, <span class="number">17</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, find(&amp;table, <span class="number">19</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">33</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">23</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/MCU%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">MCU开发</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/RTOS/"><span class="level-start"><span class="level-item">RTOS</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/pyQt/"><span class="level-start"><span class="level-item">pyQt</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">上位机开发</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/"><span class="level-start"><span class="level-item">再探C语言</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">嵌入式基础</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"><span class="level-start"><span class="level-item">工具使用</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><span class="level-start"><span class="level-item">环境配置</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">通讯协议</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%A9%B1%E5%8A%A8/"><span class="level-start"><span class="level-item">驱动</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-10-14T16:00:00.000Z">2025-10-15</time></p><p class="title"><a href="/MCU%E5%BC%80%E5%8F%91/STM32%E4%B9%8Bfromelf%E7%9A%84%E4%BD%BF%E7%94%A8/">STM32之fromelf的使用</a></p><p class="categories"><a href="/categories/MCU%E5%BC%80%E5%8F%91/">MCU开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-10-14T16:00:00.000Z">2025-10-15</time></p><p class="title"><a href="/MCU%E5%BC%80%E5%8F%91/ST%E4%BA%A7%E5%93%81%E5%9E%8B%E5%8F%B7%E8%A7%A3%E6%9E%90/">ST产品型号解析</a></p><p class="categories"><a href="/categories/MCU%E5%BC%80%E5%8F%91/">MCU开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-10-05T16:00:00.000Z">2025-10-06</time></p><p class="title"><a href="/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/">TCP/IP协议概述</a></p><p class="categories"><a href="/categories/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/">通讯协议</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-29T16:00:00.000Z">2025-09-30</time></p><p class="title"><a href="/RTOS/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">RT-Thread之邮箱使用示例</a></p><p class="categories"><a href="/categories/RTOS/">RTOS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-28T16:00:00.000Z">2025-09-29</time></p><p class="title"><a href="/RTOS/RT-Thread%E4%B9%8B%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">RT-Thread之消息队列使用示例</a></p><p class="categories"><a href="/categories/RTOS/">RTOS</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2025/10/"><span class="level-start"><span class="level-item">October 2025</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/09/"><span class="level-start"><span class="level-item">September 2025</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/08/"><span class="level-start"><span class="level-item">August 2025</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/07/"><span class="level-start"><span class="level-item">July 2025</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/06/"><span class="level-start"><span class="level-item">June 2025</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/05/"><span class="level-start"><span class="level-item">May 2025</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CAN/"><span class="tag">CAN</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FreeRTOS/"><span class="tag">FreeRTOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4/"><span class="tag">MPU内存保护</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RT-Thread/"><span class="tag">RT-Thread</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/STM32/"><span class="tag">STM32</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TCP-IP/"><span class="tag">TCP/IP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Typora/"><span class="tag">Typora</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VScode/"><span class="tag">VScode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basic/"><span class="tag">basic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/conda/"><span class="tag">conda</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/config/"><span class="tag">config</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/envs/"><span class="tag">envs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tkinter/"><span class="tag">tkinter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/typedef/"><span class="tag">typedef</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ubuntu/"><span class="tag">ubuntu</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vscode/"><span class="tag">vscode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/"><span class="tag">启动过程</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%84%E5%AD%98%E5%99%A8/"><span class="tag">寄存器</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"><span class="tag">版本管理</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="二进制的向阳" height="28"></a><p class="is-size-7"><span>&copy; 2025 Shaokui Li</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zn-ch");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
         },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
-        }
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
       });
-    })
-  }
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          rewind: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      })
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
-</script>
-
-
-<!-- inject -->
-
-</div></body></html>
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

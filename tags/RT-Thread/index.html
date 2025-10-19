@@ -1,829 +1,330 @@
-
-<!DOCTYPE html><html lang="zn-CH">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
-  
-  <meta name="robots" content="noindex,follow">
-  <meta name="generator" content="Hexo 8.0.0">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
-  <meta name="theme-color" content="#f9fafb">
-  <title>标签：RT-Thread - 二进制的向阳</title>
-
-  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="二进制的向阳">
-<meta property="og:url" content="https://lsksp.github.io/tags/RT-Thread/">
-<meta property="og:site_name" content="二进制的向阳">
-<meta property="og:locale" content="zn_CH">
-<meta property="og:image" content="https://lsksp.github.io/picture/my.jpg">
-<meta property="article:author" content="Shaokui Li">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lsksp.github.io/picture/my.jpg">
-  
-  
-  
-  
-
-  <!-- feed -->
-  
-
-  <link rel="stylesheet" href="/css/main.css?v=1.33.1">
-
-
-  
-    <link rel="shortcut icon" href="/picture/my.jpg">
-  
-
-  
-
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://LSKsp.github.io","author":{"@type":"Person","name":"Shaokui Li","sameAs":[],"image":"/picture/my.jpg"},"name":"二进制的向阳","description":"","url":"https://LSKsp.github.io"}</script>
-  
-</head>
-<body>
-
-<div class="l_body index" id="start" layout="undefined" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
-
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/picture/my.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">二进制的向阳</div></a></div></header>
-
-<div class="nav-area">
-
-<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/explore/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
-</div>
-<div class="widgets">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
-
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/MCU%E5%BC%80%E5%8F%91/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E5%8D%95%E5%85%83/"><span class="title">MPU内存保护单元</span></a><a class="item title" href="/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/CAN%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/"><span class="title">CAN通讯协议</span></a><a class="item title" href="/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Git%E4%BD%BF%E7%94%A8/"><span class="title">Git使用</span></a><a class="item title" href="/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/ASCII%E8%A1%A8%E6%A0%BC%E7%94%9F%E6%88%90%E5%99%A8/"><span class="title">ASCII表格生成器</span></a><a class="item title" href="/MCU%E5%BC%80%E5%8F%91/FreeRTOS%E5%AD%A6%E4%B9%A0/"><span class="title">FreeRTOS</span></a><a class="item title" href="/%E9%A9%B1%E5%8A%A8/PM004MNIA%E9%A9%B1%E5%8A%A8/"><span class="title">PM004MNIA驱动</span></a><a class="item title" href="/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/PM2%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"><span class="title">PM2进程管理工具</span></a><a class="item title" href="/RTOS/RT-Thread%20Nano%E6%BA%90%E7%A0%81%E6%B5%85%E6%9E%90/"><span class="title">RT-Thread Nano源码浅析</span></a><a class="item title" href="/RTOS/RT-Thread%E4%B9%8B%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B/"><span class="title">RT-Thread之创建线程</span></a><a class="item title" href="/RTOS/RT-Thread%E4%B9%8B%E5%9B%9B%E7%A7%8D%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0/"><span class="title">RT-Thread之四种延时函数</span></a></div></widget>
-</div>
-
-</div></aside><div class="l_main" id="main">
-
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/picture/my.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">二进制的向阳</div></a></div></header>
-
- 
-
-
-
-
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a class="active" href="/tags/">标签：RT-Thread</a><a href="/archives/">归档</a></nav></div></div></div>
-<div class="post-list post"><a class="post-card post" href="/RTOS/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">
-<article class="md-text"><h2 class="post-title">RT-Thread之邮箱使用示例</h2><div class="excerpt"><p> 
-
-邮箱（Mailbox）是RT-Thread中高效的线程间通信机制，其核心特点是：
-
-传输固定尺寸数据：每条消息为4字节（32位系统），可传递整型或指针
-轻量级通信：比消息队列更节省内存，适用于小数据量场景
-优先级传递：支持紧急消息优先处理
-
-典...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-09-29T16:00:00.000Z">2025-09-30</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>RTOS</span></span></div></article>
-</a><a class="post-card post" href="/RTOS/RT-Thread%E4%B9%8B%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">
-<article class="md-text"><h2 class="post-title">RT-Thread之消息队列使用示例</h2><div class="excerpt"><p> 
-
-消息队列（Message Queue）是一种异步通信机制，其核心功能是：
-
-解耦生产者和消费者：发送方和接收方无需同时在线
-缓冲与流量整形：应对瞬时流量过载
-优先级处理：支持紧急消息插队
-
- 典型案例： 在RT-Thread中，中断服务程序（I...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-09-28T16:00:00.000Z">2025-09-29</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>RTOS</span></span></div></article>
-</a><a class="post-card post" href="/RTOS/RT-Thread%E4%B9%8B%E5%9B%9B%E7%A7%8D%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0/">
-<article class="md-text"><h2 class="post-title">RT-Thread之四种延时函数</h2><div class="excerpt"><p> 
-
-在RT-Thread实时操作系统中，延时函数是实现任务调度的关键工具。它们允许任务在指定的时间间隔内挂起，释放CPU资源供其他任务运行，从而提高系统响应性和资源利用率。RT-Thread提供了四种主要的延时函数：
-
-绝对延时（精准延时）
-
-1r...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-09-25T16:00:00.000Z">2025-09-26</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>RTOS</span></span></div></article>
-</a><a class="post-card post" href="/RTOS/RT-Thread%E4%B9%8B%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B/">
-<article class="md-text"><h2 class="post-title">RT-Thread之创建线程</h2><div class="excerpt"><p> 
-
-一、静态线程创建1、thread_task.c文件1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-09-13T16:00:00.000Z">2025-09-14</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>RTOS</span></span></div></article>
-</a></div>
-
-
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Shaokui Li</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-
-
-<script type="text/javascript">
-  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
-  const ctx = {
-    date_suffix: {
-      just: `刚刚`,
-      min: `分钟前`,
-      hour: `小时前`,
-      day: `天前`,
-    },
-    root : `/`,
-    tag_plugins: {
-      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
-    }
-  };
-
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
-  };
-  const deps = {
-    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
-    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
-    lazyload: `/%5Bobject%20Object%5D`
-  }
-  
-
-</script>
-
-<script type="text/javascript">
-  
-  function RunItem() {
-    this.list = []; // 存放回调函数
-    this.start = () => {
-      for (var i = 0; i < this.list.length; i++) {
-        this.list[i].run();
-      }
-    };
-    this.push = (fn, name, setRequestAnimationFrame = true) => {
-      let myfn = fn
-      if (setRequestAnimationFrame) {
-        myfn = () => {
-          utils.requestAnimationFrame(fn)
-        }
-      }
-      var f = new Item(myfn, name);
-      this.list.push(f);
-    };
-    this.remove = (name) => {
-      for (let index = 0; index < this.list.length; index++) {
-        const e = this.list[index];
-        if (e.name == name) {
-          this.list.splice(index, 1);
-        }
-      }
-    }
-    // 构造一个可以run的对象
-    function Item(fn, name) {
-      // 函数名称
-      this.name = name || fn.name;
-      // run方法
-      this.run = () => {
-        try {
-          fn()
-        } catch (error) {
-          console.log(error);
-        }
-      };
-    }
-  }
-
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
+<!doctype html>
+<html lang="zn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: RT-Thread - 二进制的向阳</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="二进制的向阳"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="二进制的向阳"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="二进制的向阳"><meta property="og:url" content="https://lsksp.github.io/"><meta property="og:site_name" content="二进制的向阳"><meta property="og:locale" content="zn_CH"><meta property="og:image" content="https://lsksp.github.io/img/og_image.png"><meta property="article:author" content="Shaokui Li"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://lsksp.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://LSKsp.github.io"},"headline":"二进制的向阳","image":["https://lsksp.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Shaokui Li"},"publisher":{"@type":"Organization","name":"二进制的向阳","logo":{"@type":"ImageObject","url":"https://lsksp.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
           }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
           }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
 
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')) {
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function () {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
 
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      const maxRetry = 3;
-      let retryCount = 0;
-
-      return new Promise((resolve, reject) => {
-        const load = () => {
-          utils.onLoading?.(el);
-
-          let timedOut = false;
-          const timeout = setTimeout(() => {
-            timedOut = true;
-            console.warn('[request] 超时:', url);
-
-            if (++retryCount >= maxRetry) {
-              utils.onLoadFailure?.(el);
-              onFailure?.();
-              reject('请求超时');
-            } else {
-              setTimeout(load, 1000);
-            }
-          }, 5000);
-
-          fetch(url).then(resp => {
-            if (timedOut) return;
-            clearTimeout(timeout);
-
-            if (!resp.ok) throw new Error('响应失败');
-            return resp;
-          }).then(data => {
-            if (timedOut) return;
-            utils.onLoadSuccess?.(el);
-            callback(data);
-            resolve(data);
-          }).catch(err => {
-            clearTimeout(timeout);
-            console.warn('[request] 错误:', err);
-
-            if (++retryCount >= maxRetry) {
-              utils.onLoadFailure?.(el);
-              onFailure?.();
-              reject(err);
-            } else {
-              setTimeout(load, 1000);
-            }
-          });
-        };
-
-        load();
-      });
-    },
-    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
-      return new Promise((resolve, reject) => {
-        let retryCount = 0;
-
-        const tryRequest = () => {
-          let timedOut = false;
-          const timer = setTimeout(() => {
-            timedOut = true;
-            if (++retryCount > maxRetry) reject('timeout');
-            else tryRequest();
-          }, timeout);
-
-          fetch(url, options)
-            .then(resp => {
-              clearTimeout(timer);
-              if (!resp.ok) throw new Error('bad response');
-              resolve(resp);
-            })
-            .catch(err => {
-              clearTimeout(timer);
-              if (++retryCount > maxRetry) reject(err);
-              else setTimeout(tryRequest, 500);
-            });
-        };
-
-        tryRequest();
-      });
-    },
-    /********************** requestAnimationFrame ********************************/
-    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
-    requestAnimationFrame: (fn) => {
-      if (!window.requestAnimationFrame) {
-        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
-      }
-      window.requestAnimationFrame(fn)
-    },
-    dark: {},
-  };
-
-  // utils.dark.mode 当前模式 dark or light
-  // utils.dark.toggle() 暗黑模式触发器
-  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
-  utils.dark.method = {
-    toggle: new RunItem(),
-  };
-  utils.dark = Object.assign(utils.dark, {
-    push: utils.dark.method.toggle.push,
-  });
-</script>
-<script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
-    }
-  }
-</script>
-<script type="text/javascript">
-  (() => {
-    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
-    for (const tagSwitcher of tagSwitchers) {
-      tagSwitcher.addEventListener('click', (e) => {
-        const parent = e.target.closest('.tag-subtree.parent-tag')
-        parent.classList.toggle('expanded')
-        e.preventDefault()
-      })
-    }
-
-    // Get active tag from query string, then activate it.
-    const urlParams = new URLSearchParams(window.location.search)
-    const activeTag = urlParams.get('tag')
-    if (activeTag) {
-      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
-      if (tag) {
-        tag.querySelector('a').classList.add('active')
-        
-        while (tag) {
-          tag.classList.add('expanded')
-          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
-        }
-      }
-    }
-  })()
-</script>
-
-<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-    callback_loaded: (el) => {
-      el.classList.add('loaded');
-      const wrapper = el.closest('.lazy-box');
-      const icon = wrapper?.querySelector('.lazy-icon');
-      if (icon) icon.remove();
-    }
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-
-  window.wrapLazyloadImages = (container) => {
-    if (typeof container === 'string') {
-      container = document.querySelector(container);
-    }
-    if (!container) return;
-    
-    const images = container.querySelectorAll('img');
-    images.forEach((img) => {
-      if (img.classList.contains('lazy')) return;
-
-      const src = img.getAttribute('src');
-      if (!src) return;
-
-      const wrapper = document.createElement('div');
-      wrapper.className = 'lazy-box';
-
-      const newImg = img.cloneNode();
-      newImg.removeAttribute('src');
-      newImg.setAttribute('data-src', src);
-      newImg.classList.add('lazy');
-
-      const icon = document.createElement('div');
-      icon.className = 'lazy-icon';
-      if (def.loading) {
-        icon.style.backgroundImage = `url("${def.loading}")`;
-      }
-
-      wrapper.appendChild(newImg);
-      wrapper.appendChild(icon);
-
-      img.replaceWith(wrapper);
-    });
-
-    // 通知 LazyLoad 更新
-    if (window.lazyLoadInstance?.update) {
-      window.lazyLoadInstance.update();
-    }
-  }
-  
-</script>
-
-<!-- required -->
-<script src="/js/main.js?v=1.33.1" defer></script>
-
-<script type="text/javascript">
-  const applyTheme = (theme) => {
-    if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
-    } else {
-      document.documentElement.setAttribute('data-theme', theme)
-    }
-
-    // applyThemeToGiscus(theme)
-  }
-
-  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
-  const applyThemeToGiscus = (theme) => {
-    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
-    const cmt = document.getElementById('giscus')
-    if (cmt) {
-      // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
-    }
-
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
-    if (iframe) {
-      // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
-    }
-  }
-
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
-    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
-    utils.dark.method.toggle.start();
-
-    const messages = {
-      light: `切换到浅色模式`,
-      dark: `切换到深色模式`,
-      auto: `切换到跟随系统配色`,
-    }
-    hud?.toast?.(messages[newTheme])
-  }
-
-  (() => {
-    // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
-    if (theme !== null) {
-      applyTheme(theme)
-    } else {
-      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-    utils.dark.method.toggle.start();
-  })()
-</script>
-
-
-<!-- optional -->
-
-
-
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else if (id == 'voice') {
-        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
-        if (ctx.voiceAudios?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            createVoiceDom(ctx.voiceAudios);
-          });
-        }
-      } else if (id == 'video') {
-        ctx.videos = document.querySelectorAll('.video>video');
-        if (ctx.videos?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            videoEvents(ctx.videos);
-          });
-        }
-      } else if (id == 'download-file') {
-        ctx.files = document.querySelectorAll('.file');
-        if (ctx.files?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            downloadFileEvent(ctx.files);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-
-    // chat iphone time
-    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
-
-    if (phoneTimes.length > 0) {
-      NowTime();
-      var date = new Date();
-      var sec = date.getSeconds();
-      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
-    }
-
-    function firstAdjustTime() {
-      NowTime();
-      clearInterval(firstAdjustInterval);
-      setInterval(NowTime, 1000 * 60);
-    }
-
-    function NowTime() {
-      for (let i = 0; i < phoneTimes.length; ++i) {
-        var timeSpan = phoneTimes[i];
-        var date = new Date();
-        var hour = date.getHours();
-        var min = date.getMinutes();
-        timeSpan.innerHTML = check(hour) + ":" + check(min);
-      }
-    };
-
-    function check(val) {
-      if (val < 10) {
-        return ("0" + val);
-      }
-      return (val);
-    }
-
-    // chat quote
-    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
-      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
-          observer.unobserve(entry.target);
-          setTimeout(() => {
-            entry.target.classList.add('quote-blink');
-            setTimeout(() => {
-              entry.target.classList.remove('quote-blink');
-            }, 1000);
-          }, Math.max(100, 16) * (index + 1));
-        });
-    });
-
-    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
-    chatQuotes.forEach((quote) => {
-      quote.addEventListener('click', function () {
-        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
-        if (chatCellDom) {
-          var chatDiv = chatCellDom.parentElement;
-          var mid = chatDiv.clientHeight / 2;
-          var offsetTop = chatCellDom.offsetTop;
-          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
-            chatDiv.scrollTo({
-              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
-              behavior: "smooth"
-            });
-          } else {
-            chatDiv.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
           }
-          chat_quote_obverser.observe(chatCellDom);
-        }
-      });
-    });
-  });
-</script>
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="二进制的向阳" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags/">标签</a></li><li class="is-active"><a href="#" aria-current="page">RT-Thread</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-09-29T16:00:00.000Z" title="2025/9/30 00:00:00">2025-09-30</time>发表</span><span class="level-item"><time dateTime="2025-10-16T17:41:45.000Z" title="2025/10/17 01:41:45">2025-10-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/RTOS/">RTOS</a></span><span class="level-item">9 minutes读完 (大约1383个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/RTOS/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">RT-Thread之邮箱使用示例</a></p><div class="content"> <!-- toc -->
 
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
-    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
-  };
-  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
-  }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const memos = document.getElementsByClassName('ds-memos');
-    if (memos != undefined && memos.length > 0) {
-      needFancybox = true;
-    }
-    const fancybox = document.getElementsByClassName('with-fancybox');
-    if (fancybox != undefined && fancybox.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
+<p><strong>邮箱（Mailbox）<strong>是RT-Thread中高效的</strong>线程间通信机制</strong>，其核心特点是：</p>
+<ul>
+<li><strong>传输固定尺寸数据</strong>：每条消息为4字节（32位系统），可传递整型或指针</li>
+<li><strong>轻量级通信</strong>：比消息队列更节省内存，适用于小数据量场景</li>
+<li><strong>优先级传递</strong>：支持紧急消息优先处理</li>
+</ul>
+<p><strong>典型应用场景</strong>： 在硬件中断服务中，通过<code>rt_mb_send</code>快速传递传感器状态字，消费线程解析后触发相应动作，避免中断长时间占用CPU资源。</p>
+<h3 id="一、邮箱API函数"><a href="#一、邮箱API函数" class="headerlink" title="一、邮箱API函数"></a>一、邮箱API函数</h3><h4 id="1、邮箱的创建"><a href="#1、邮箱的创建" class="headerlink" title="1、邮箱的创建"></a>1、邮箱的创建</h4><ul>
+<li><strong>动态创建邮箱（推荐灵活场景）</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_mailbox_t</span> <span class="title function_">rt_mb_create</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *name, <span class="type">rt_size_t</span> size, <span class="type">rt_uint8_t</span> flag)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>静态创建邮箱</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mb_init</span><span class="params">(<span class="type">rt_mailbox_t</span> mb,</span></span><br><span class="line"><span class="params">                    <span class="type">const</span> <span class="type">char</span>  *name,</span></span><br><span class="line"><span class="params">                    <span class="type">void</span>        *msgpool,</span></span><br><span class="line"><span class="params">                    <span class="type">rt_size_t</span>    size,</span></span><br><span class="line"><span class="params">                    <span class="type">rt_uint8_t</span>   flag)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、邮箱的发送"><a href="#2、邮箱的发送" class="headerlink" title="2、邮箱的发送"></a>2、邮箱的发送</h4><p>线程或者中断服务程序都可以通过往邮箱里写入邮件。发送的邮件，可以是32位的任意格式数据，可以是一个整型值或者一个指向某块内存的指针</p>
+<ul>
+<li><strong>直接发送邮件</strong>：只有在邮箱有可用的空闲空间时，才能成功发送消息，否则返回错误。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mb_send</span><span class="params">(<span class="type">rt_mailbox_t</span> mb, <span class="type">rt_ubase_t</span> value)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>等待发送邮件</strong>：如果邮箱没有可用的空闲空间，会根据timeout参数等待，超时后才返回错误。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mb_send_wait</span><span class="params">(<span class="type">rt_mailbox_t</span> mb,</span></span><br><span class="line"><span class="params">                         <span class="type">rt_ubase_t</span>   value,</span></span><br><span class="line"><span class="params">                         <span class="type">rt_int32_t</span>   timeout)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>紧急发送邮件</strong>：只有在邮箱有可用的空闲空间，它才会把邮件插在邮件队首，以便这个邮件能被第1时间读取。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mb_urgent</span><span class="params">(<span class="type">rt_mailbox_t</span> mb, <span class="type">rt_ubase_t</span> value)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3、消息的接收"><a href="#3、消息的接收" class="headerlink" title="3、消息的接收"></a>3、消息的接收</h4><p>当邮箱有邮件时，使用收邮件函数，可以从邮箱接收邮件。如果没有邮件，根据指定的timeout参数等待，直到超时结束。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mb_recv</span><span class="params">(<span class="type">rt_mailbox_t</span> mb, <span class="type">rt_ubase_t</span> *value, <span class="type">rt_int32_t</span> timeout)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4、邮箱的脱离-删除"><a href="#4、邮箱的脱离-删除" class="headerlink" title="4、邮箱的脱离&#x2F;删除"></a>4、邮箱的脱离&#x2F;删除</h4><p>删除或者脱离邮箱时，如果有线程在等待该邮箱，则内核先唤醒这些线程（线程返回值是RT_ERROR），然后再释放邮箱使用的内存，最后删除邮箱对象。</p>
+<ul>
+<li><strong>删除使用 rt_mb_create()创建的队列</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mb_delete</span><span class="params">(<span class="type">rt_mailbox_t</span> mb)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>脱离使用 rt_mb_init()初始化的队列</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mb_detach</span><span class="params">(<span class="type">rt_mailbox_t</span> mb)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二、创建邮箱示例"><a href="#二、创建邮箱示例" class="headerlink" title="二、创建邮箱示例"></a>二、创建邮箱示例</h3><h4 id="1、创建邮箱"><a href="#1、创建邮箱" class="headerlink" title="1、创建邮箱"></a>1、创建邮箱</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rt_mailbox</span> <span class="title">mb_static</span>;</span>	<span class="comment">/* 邮箱句柄 */</span></span><br><span class="line"><span class="type">uint8_t</span> msgpool[<span class="number">48</span>];	<span class="comment">/* 邮箱静态内存池 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 静态创建一个邮箱 */</span></span><br><span class="line">rt_mb_init(</span><br><span class="line">    &amp;mb_static,             <span class="comment">/* 邮箱对象的句柄 */</span></span><br><span class="line">    <span class="string">&quot;mb_static_test&quot;</span>,       <span class="comment">/* 邮箱对象名称 */</span></span><br><span class="line">    msgpool,                <span class="comment">/* 内存池指向 */</span></span><br><span class="line">    <span class="keyword">sizeof</span>(msgpool) / <span class="number">4</span>,    <span class="comment">/* 邮箱中能容纳的邮件数量,每封邮件占四字节 */</span></span><br><span class="line">    RT_IPC_FLAG_FIFO        <span class="comment">/* 如果有多个线程等待，按照先来先得到的方法分配 */</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">rt_mailbox_t</span> mb_dynamic;    <span class="comment">/* 邮箱句柄指针 */</span></span><br><span class="line"><span class="comment">/* 动态创建一个邮箱 */</span></span><br><span class="line">mb_dynamic = rt_mb_create(</span><br><span class="line">    <span class="string">&quot;mb_dynamic_test&quot;</span>,		<span class="comment">/* 邮箱对象名称 */</span></span><br><span class="line">    <span class="number">12</span>,						<span class="comment">/* 邮箱中能容纳的邮件数量,每封邮件占四字节 */</span></span><br><span class="line">    RT_IPC_FLAG_FIFO		 <span class="comment">/* 如果有多个线程等待，按照先来先得到的方法分配 */</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、接收与发送消息"><a href="#2、接收与发送消息" class="headerlink" title="2、接收与发送消息"></a>2、接收与发送消息</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;thread_task.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;main.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>      </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;rtthread.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;rthw.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 1 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_PRIORITY  		4           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_TIMESLICE		10           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> *<span class="title">thread_1_handle</span>;</span>        <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 2 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_TIMESLICE		10           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> *<span class="title">thread_2_handle</span>;</span>    <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="type">rt_mailbox_t</span> mb_dynamic;    <span class="comment">/* 邮箱句柄指针 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程1入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_1_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint32_t</span> value = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        rt_thread_delay(<span class="number">4000</span>);     <span class="comment">/* 精准延时4000时间片 */</span></span><br><span class="line"></span><br><span class="line">        rt_mb_recv(mb_dynamic, &amp;value, <span class="number">0xffffffff</span>);</span><br><span class="line">        HAL_GPIO_TogglePin(GPIOC, LED1_Pin);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;   </span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        rt_mb_send_wait(mb_dynamic, (<span class="type">uint32_t</span>)<span class="number">0x01</span>, <span class="number">0xffffffff</span>);</span><br><span class="line">        HAL_GPIO_TogglePin(GPIOC, LED2_Pin);</span><br><span class="line"></span><br><span class="line">        rt_thread_delay(<span class="number">200</span>);    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   动态创建线程任务并启动</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">rt_base_t</span> level = rt_hw_interrupt_disable();</span><br><span class="line">    <span class="comment">/* 动态创建线程 */</span></span><br><span class="line">    thread_1_handle = rt_thread_create(</span><br><span class="line">        <span class="string">&quot;thread_1&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">        thread_1_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">        RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">        THREAD_1_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">        THREAD_1_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">        THREAD_1_TIMESLICE  	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(thread_1_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line"></span><br><span class="line">    thread_2_handle = rt_thread_create(</span><br><span class="line">            <span class="string">&quot;thread_2&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">            thread_2_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">            RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">            THREAD_2_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">            THREAD_2_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">            THREAD_2_TIMESLICE  	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">        );</span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(thread_2_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* 动态创建邮箱 */</span></span><br><span class="line">    mb_dynamic = rt_mb_create(</span><br><span class="line">        <span class="string">&quot;mb_dynamic_test&quot;</span>,</span><br><span class="line">        <span class="number">12</span>,</span><br><span class="line">        RT_IPC_FLAG_FIFO</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    rt_hw_interrupt_enable(level);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>执行流程如下</strong>：</p>
+<p><strong>（1）初始阶段</strong></p>
+<ul>
+<li>线程1立即阻塞等待消息（邮箱空）</li>
+<li>线程2开始高频发送（每200 ticks发送1次）</li>
+</ul>
+<p><strong>（2）邮箱填满阶段</strong></p>
+<ul>
+<li><p>线程2发送12条消息后邮箱满 → <code>rt_mb_send_wait()</code>开始阻塞</p>
+</li>
+<li><p>系统进入双阻塞状态（线程1和2均挂起）</p>
+</li>
+</ul>
+<p><strong>（3）恢复同步阶段</strong></p>
+<ul>
+<li><p>线程1的rt_thread_delay(4000)到期后：</p>
+<ul>
+<li><p>消费1条消息 → 释放1个邮箱槽位</p>
+</li>
+<li><p>唤醒线程2继续发送</p>
+</li>
+</ul>
+</li>
+<li><p><strong>稳定状态</strong>：每4000 ticks消费1条，线程2每200 ticks补充1条</p>
+<hr>
+</li>
+</ul>
+<img src="/RTOS/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/保持热爱，奔赴星海.jpg" style="zoom:33%;">
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-09-28T16:00:00.000Z" title="2025/9/29 00:00:00">2025-09-29</time>发表</span><span class="level-item"><time dateTime="2025-10-16T17:41:45.000Z" title="2025/10/17 01:41:45">2025-10-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/RTOS/">RTOS</a></span><span class="level-item">9 minutes读完 (大约1297个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/RTOS/RT-Thread%E4%B9%8B%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">RT-Thread之消息队列使用示例</a></p><div class="content"> <!-- toc -->
+
+<p><strong>消息队列（Message Queue）<strong>是一种</strong>异步通信机制</strong>，其核心功能是：</p>
+<ul>
+<li><strong>解耦生产者和消费者</strong>：发送方和接收方无需同时在线</li>
+<li><strong>缓冲与流量整形</strong>：应对瞬时流量过载</li>
+<li><strong>优先级处理</strong>：支持紧急消息插队</li>
+</ul>
+<p> <strong>典型案例</strong>：<br> 在RT-Thread中，中断服务程序（ISR）通过<code>rt_mq_send</code>非阻塞发送传感器数据，消费者线程按需从队列读取数据，避免ISR因等待导致实时性下降。</p>
+<h3 id="一、消息队列API函数"><a href="#一、消息队列API函数" class="headerlink" title="一、消息队列API函数"></a>一、消息队列API函数</h3><h4 id="1、消息队列的创建"><a href="#1、消息队列的创建" class="headerlink" title="1、消息队列的创建"></a>1、消息队列的创建</h4><ul>
+<li><strong>动态创建消息队列</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_mq_t</span> <span class="title function_">rt_mq_create</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *name,</span></span><br><span class="line"><span class="params">                     <span class="type">rt_size_t</span>   msg_size,</span></span><br><span class="line"><span class="params">                     <span class="type">rt_size_t</span>   max_msgs,</span></span><br><span class="line"><span class="params">                     <span class="type">rt_uint8_t</span>  flag)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>静态创建消息队列</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mq_init</span><span class="params">(<span class="type">rt_mq_t</span>     mq,</span></span><br><span class="line"><span class="params">                    <span class="type">const</span> <span class="type">char</span> *name,</span></span><br><span class="line"><span class="params">                    <span class="type">void</span>       *msgpool,</span></span><br><span class="line"><span class="params">                    <span class="type">rt_size_t</span>   msg_size,</span></span><br><span class="line"><span class="params">                    <span class="type">rt_size_t</span>   pool_size,</span></span><br><span class="line"><span class="params">                    <span class="type">rt_uint8_t</span>  flag)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、消息的发送"><a href="#2、消息的发送" class="headerlink" title="2、消息的发送"></a>2、消息的发送</h4><p>发送消息时，从空闲消息链表取一个空闲消息块，把消息复制到该消息块，然后把消息块挂到消息队列尾部。消息的发送有以下三种：</p>
+<ul>
+<li><strong>直接发送消息</strong></li>
+</ul>
+<p>队列中有空闲消息块时，才能成功发送消息，否则返回错误。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mq_send</span><span class="params">(<span class="type">rt_mq_t</span> mq, <span class="type">const</span> <span class="type">void</span> *buffer, <span class="type">rt_size_t</span> size)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>等待发送消息</strong></li>
+</ul>
+<p>如果队列中没有可用的空闲消息块，会根据timeout参数等待，超时后才返回错误。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mq_send_wait</span><span class="params">(<span class="type">rt_mq_t</span>     mq,</span></span><br><span class="line"><span class="params">                         <span class="type">const</span> <span class="type">void</span> *buffer,</span></span><br><span class="line"><span class="params">                         <span class="type">rt_size_t</span>   size,</span></span><br><span class="line"><span class="params">                         <span class="type">rt_int32_t</span>  timeout)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>紧急发送消息</strong></li>
+</ul>
+<p>它会把消息块放在消息队列的头部，以便这个消息能被第1时间读取。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mq_urgent</span><span class="params">(<span class="type">rt_mq_t</span> mq, <span class="type">const</span> <span class="type">void</span> *buffer, <span class="type">rt_size_t</span> size)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3、消息的接收"><a href="#3、消息的接收" class="headerlink" title="3、消息的接收"></a>3、消息的接收</h4><p>当队列有消息时，使用收消息函数，可以从队列接收消息；如果没有消息，根据指定的 timeout 参数等待，直到超时结束。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mq_recv</span><span class="params">(<span class="type">rt_mq_t</span>    mq,</span></span><br><span class="line"><span class="params">                    <span class="type">void</span>      *buffer,</span></span><br><span class="line"><span class="params">                    <span class="type">rt_size_t</span>  size,</span></span><br><span class="line"><span class="params">                    <span class="type">rt_int32_t</span> timeout)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4、消息队列的脱离-删除"><a href="#4、消息队列的脱离-删除" class="headerlink" title="4、消息队列的脱离&#x2F;删除"></a>4、消息队列的脱离&#x2F;删除</h4><ul>
+<li><strong>删除使用 rt_mq_create()创建的队列</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mq_delete</span><span class="params">(<span class="type">rt_mq_t</span> mq)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>脱离使用 rt_mq_init()初始化的队列</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_mq_detach</span><span class="params">(<span class="type">rt_mq_t</span> mq)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二、创建消息队列示例"><a href="#二、创建消息队列示例" class="headerlink" title="二、创建消息队列示例"></a>二、创建消息队列示例</h3><h4 id="1、创建消息队列"><a href="#1、创建消息队列" class="headerlink" title="1、创建消息队列"></a>1、创建消息队列</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 使用静态创建（确定内存占用）	*/</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rt_messagequeue</span> <span class="title">mq_static</span>;</span></span><br><span class="line"><span class="type">uint8_t</span> msgpool[<span class="number">96</span>];  <span class="comment">/* 消息数量计算：96/(RT_ALIGN(2,4)+4)=12条消息 */</span></span><br><span class="line">rt_mq_init(</span><br><span class="line">    &amp;mq_static,         <span class="comment">/* 消息队列对象的句柄 */</span></span><br><span class="line">    <span class="string">&quot;smq&quot;</span>,              <span class="comment">/* 消息队列的名字 */</span></span><br><span class="line">    msgpool,            <span class="comment">/* 内存池指向的地址 */</span></span><br><span class="line">    <span class="number">2</span>,                  <span class="comment">/* 每一个消息占2字节 */</span></span><br><span class="line">    <span class="number">96</span>,                 <span class="comment">/* 内存池的大小 */</span></span><br><span class="line">    RT_IPC_FLAG_FIFO);  <span class="comment">/* 选择线程唤醒的顺序方式 */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 使用动态创建（灵活调整） */</span></span><br><span class="line"><span class="type">rt_mq_t</span> mq_dynamic = rt_mq_create(</span><br><span class="line">    <span class="string">&quot;dmq&quot;</span>,               <span class="comment">/* 消息队列名称 */</span></span><br><span class="line">    <span class="number">2</span>,                  <span class="comment">/* 每一个消息大小 */</span></span><br><span class="line">    <span class="number">12</span>,                 <span class="comment">/* 消息数量 */</span></span><br><span class="line">    RT_IPC_FLAG_FIFO);  <span class="comment">/* 选择线程唤醒的顺序方式 */</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、完整示例"><a href="#2、完整示例" class="headerlink" title="2、完整示例"></a>2、完整示例</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;thread_task.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;main.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>      </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;rtthread.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;rthw.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 1 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_PRIORITY  		4           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_TIMESLICE		10           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> *<span class="title">thread_1_handle</span>;</span>        <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 2 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_TIMESLICE		10           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> *<span class="title">thread_2_handle</span>;</span>    <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 消息队列 */</span></span><br><span class="line"><span class="type">rt_mq_t</span> mq_test;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程1入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_1_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint8_t</span> buffer[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        rt_mq_recv(mq_test, buffer, <span class="number">2</span>, <span class="number">0xffffffff</span>);</span><br><span class="line"></span><br><span class="line">        HAL_GPIO_TogglePin(GPIOC, LED1_Pin);</span><br><span class="line"></span><br><span class="line">        rt_thread_delay(<span class="number">4000</span>);     <span class="comment">/* 精准延时1000时间片 */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint8_t</span> text[<span class="number">2</span>] = &#123;<span class="number">0</span>,<span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        text[<span class="number">0</span>] ++;</span><br><span class="line">        rt_mq_send_wait(mq_test, text, <span class="number">2</span>, <span class="number">0xffff</span>);</span><br><span class="line"></span><br><span class="line">        HAL_GPIO_TogglePin(GPIOC, LED2_Pin);</span><br><span class="line">        </span><br><span class="line">        rt_thread_delay(<span class="number">200</span>);    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   动态创建线程任务并启动</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">rt_base_t</span> level = rt_hw_interrupt_disable();</span><br><span class="line">    <span class="comment">/* 动态创建线程 */</span></span><br><span class="line">    thread_1_handle = rt_thread_create(</span><br><span class="line">        <span class="string">&quot;thread_1&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">        thread_1_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">        RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">        THREAD_1_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">        THREAD_1_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">        THREAD_1_TIMESLICE  	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(thread_1_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line"></span><br><span class="line">    thread_2_handle = rt_thread_create(</span><br><span class="line">            <span class="string">&quot;thread_2&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">            thread_2_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">            RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">            THREAD_2_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">            THREAD_2_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">            THREAD_2_TIMESLICE  	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">        );</span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(thread_2_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 动态创建一个消息队列 */</span></span><br><span class="line">    mq_test = rt_mq_create(</span><br><span class="line">        <span class="string">&quot;mq_test&quot;</span>,              <span class="comment">/* 消息队列名称 */</span></span><br><span class="line">        <span class="number">2</span>,                      <span class="comment">/* 消息大小 */</span></span><br><span class="line">        <span class="number">12</span>,                     <span class="comment">/* 消息数量 */</span></span><br><span class="line">        RT_IPC_FLAG_FIFO        <span class="comment">/* 选择线程唤醒的顺序方式 */</span></span><br><span class="line">    );</span><br><span class="line">    rt_hw_interrupt_enable(level);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>执行流程如下:</p>
+<ol>
+<li><strong>初始阶段</strong></li>
+</ol>
+<ul>
+<li>线程1立即阻塞等待消息（队列空）</li>
+<li>线程2开始高频发送（每200 ticks发送1次）</li>
+</ul>
+<ol start="2">
+<li><strong>队列填满阶段</strong><ul>
+<li>线程2发送12条消息后队列满 → <code>rt_mq_send_wait()</code>开始阻塞</li>
+<li>系统进入双阻塞状态（线程1和2均挂起）</li>
+</ul>
+</li>
+<li><strong>恢复同步阶段</strong><ul>
+<li>线程1的rt_thread_delay(4000)到期后：<ul>
+<li>消费1条消息 → 释放1个队列空间</li>
+<li>唤醒线程2继续发送</li>
+</ul>
+</li>
+<li><strong>稳定状态</strong>：每4000 ticks消费1条，线程2每200 ticks补充1条</li>
+</ul>
+</li>
+</ol>
+<hr>
+<img src="/RTOS/RT-Thread%E4%B9%8B%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/保持热爱，奔赴星海.jpg" style="zoom: 33%;">
+
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-09-25T16:00:00.000Z" title="2025/9/26 00:00:00">2025-09-26</time>发表</span><span class="level-item"><time dateTime="2025-10-16T17:41:45.000Z" title="2025/10/17 01:41:45">2025-10-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/RTOS/">RTOS</a></span><span class="level-item">8 minutes读完 (大约1204个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/RTOS/RT-Thread%E4%B9%8B%E5%9B%9B%E7%A7%8D%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0/">RT-Thread之四种延时函数</a></p><div class="content"> <!-- toc -->
+
+<p>在RT-Thread实时操作系统中，延时函数是实现任务调度的关键工具。它们允许任务在指定的时间间隔内挂起，释放CPU资源供其他任务运行，从而提高系统响应性和资源利用率。RT-Thread提供了四种主要的延时函数：</p>
+<ul>
+<li><strong>绝对延时（精准延时）</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_thread_delay_until</span><span class="params">(<span class="type">rt_tick_t</span> *tick, <span class="type">rt_tick_t</span> inc_tick)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>相对延时（基于当前时间）</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_thread_delay</span><span class="params">(<span class="type">rt_tick_t</span> tick)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>毫秒级延时</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">rt_err_t</span> <span class="title function_">rt_thread_mdelay</span><span class="params">(<span class="type">rt_int32_t</span> ms)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>微秒级硬件延时（可基于基于DWT或定时器）</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RT_WEAK <span class="type">void</span> <span class="title function_">rt_hw_us_delay</span><span class="params">(<span class="type">rt_uint32_t</span> us)</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：前三个函数受系统tick影响，tick &#x3D; （1 &#x2F; RT_TICK_PER_SECOND）秒，其中RT_TICK_PER_SECOND默认为1000，即默认tick &#x3D; 1ms。</p>
+<h3 id="一、rt-thread-delay-until-函数"><a href="#一、rt-thread-delay-until-函数" class="headerlink" title="一、rt_thread_delay_until()函数"></a>一、rt_thread_delay_until()函数</h3><p>此函数提供一个<strong>固定周期的精准延时</strong>，其特点是基于<strong>预计算的绝对时间</strong>，而不是从调用时刻开始计时。这意味着它可以避免累积误差，适用于需要<strong>严格定时周期性任务</strong>的场景（如PID控制、ADC采样等）。</p>
+<p><strong>注意：在对时域算法离散化时，dt步长尤为重要，它关乎系统的稳定和精度！</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">rt_tick_t</span> now_tick = rt_tick_get();     <span class="comment">/* 获取当前时间,从此刻记时 */</span></span><br><span class="line"> </span><br><span class="line">		sys_conrtol();</span><br><span class="line">        </span><br><span class="line">         <span class="comment">/* 再延时（ticks） = 1000 - sys_conrtol()执行时间 */</span></span><br><span class="line">        <span class="comment">/* 保证sys_conrtol()执行周期为严格的1000个ticks */</span></span><br><span class="line">        rt_thread_delay_until(&amp;now_tick, <span class="number">1000</span>);    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>关键点：</strong></p>
+<ul>
+<li>必须<strong>用 <code>&amp;last_tick</code>（指针）传输上次延时结束时的时间</strong>，以实现精准循环。</li>
+<li>适用于<strong>需要严格时间间隔的任务</strong>，如PWM控制、传感器采样等。</li>
+<li>长时间运行也不会出现累积误差。</li>
+</ul>
+<h3 id="二、rt-thread-delay-函数"><a href="#二、rt-thread-delay-函数" class="headerlink" title="二、rt_thread_delay()函数"></a>二、rt_thread_delay()函数</h3><p>该函数实现<strong>相对延时</strong>，即从<strong>当前时刻</strong>开始挂起线程 <code>delay</code> 个系统时钟节拍（tick）。它的特点是<strong>计算简单</strong>，但如果在任务中有其他耗时操作，可能导致周期不稳定。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">		sys_conrtol();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/* 再延时时间（ticks） = 1000  */</span></span><br><span class="line">        <span class="comment">/* sys_conrtol()函数执行时间不确定，实际执行周期 &gt; 1000 ticks*/</span></span><br><span class="line">        rt_thread_delay(<span class="number">1000</span>);    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>关键点：</strong></p>
+<ul>
+<li><strong>适用于不要求严格周期</strong>的任务，如后台日志打印、网络轮询。</li>
+<li>如果任务本身的执行时间较长，会导致总周期不再是准确的 <code>delay</code>。</li>
+<li>RT-Thread的系统tick通常为1ms（默认配置），<code>delay=1000</code> 表示1000ms（1秒）。</li>
+<li>用户可通过修改RT_TICK_PER_SECOND调整tick分辨率，但需权衡系统性能。</li>
+</ul>
+<h3 id="三、rt-thread-mdelay-函数"><a href="#三、rt-thread-mdelay-函数" class="headerlink" title="三、rt_thread_mdelay()函数"></a>三、rt_thread_mdelay()函数</h3><p>由于 <code>rt_thread_delay()</code> 的延时单位是<strong>系统tick</strong>（默认1ms），而 <code>rt_thread_mdelay()</code> 直接指定<strong>毫秒</strong>（ms）单位，更方便开发者进行计算。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">		sys_conrtol();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/* 再延时时间（ticks） = 1000  */</span></span><br><span class="line">        <span class="comment">/* sys_conrtol()函数执行时间不确定，实际执行周期 &gt; 1000 ms*/</span></span><br><span class="line">        rt_thread_mdelay(<span class="number">1000</span>);    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>关键点：</strong></p>
+<ul>
+<li>本质上仍然是 <strong>基于 <code>rt_thread_delay</code></strong> 的封装，适用于需要<strong>直接使用毫秒单位</strong>的情况。</li>
+<li>常用于设备轮询、IO等待等场景。</li>
+<li>延时精度受限于tick分辨率。</li>
+</ul>
+<h3 id="四、rt-hw-us-delay-函数"><a href="#四、rt-hw-us-delay-函数" class="headerlink" title="四、rt_hw_us_delay()函数"></a>四、rt_hw_us_delay()函数</h3><p>这是<strong>基于CPU空循环实现的硬件级延时</strong>，精度远高于 <code>rt_thread_delay</code> 或 <code>rt_thread_mdelay</code>，适用于<strong>短时间、高精度</strong>的任务（如SPI&#x2F;I2C通信时序控制）。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><strong>不会触发线程调度，适用于短延时，长时间延时应优先使用调度函数</strong></li>
+<li><strong>依赖于CPU频率</strong>，部分STM32&#x2F;MCU可能需要调整<code>delay_us</code>的计算方式。</li>
+<li>部分芯片不支持需自己实现。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">......</span><br><span class="line">    </span><br><span class="line"><span class="comment">/* 拉低CS片选信号 */</span></span><br><span class="line">rt_pin_write(SPI_CS_PIN, PIN_LOW);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 10us延时（确保SPI设备就绪） */</span></span><br><span class="line">rt_hw_us_delay(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* SPI数据传输 */</span></span><br><span class="line">rt_spi_send(spi_dev, &amp;data, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 拉高CS */</span></span><br><span class="line">rt_pin_write(SPI_CS_PIN, PIN_HIGH);</span><br><span class="line"></span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<p> <strong>关键点：</strong></p>
+<ul>
+<li><strong>适用于硬件驱动开发</strong>（如GPIO、SPI、I2C）。</li>
+<li><strong>慎用在主线程</strong>，否则会阻塞其他任务运行</li>
+</ul>
+<blockquote>
+<p>RT-Thread提供了四种不同的延时方式，适用于不同精度的任务调度需求。合理选择延时函数可以提高系统的实时性和稳定性。</p>
+</blockquote>
+<hr>
+<p>欢迎关注本人微信公众号：</p>
+<img src="/RTOS/RT-Thread%E4%B9%8B%E5%9B%9B%E7%A7%8D%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0/公众号二维码.jpg">
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-09-13T16:00:00.000Z" title="2025/9/14 00:00:00">2025-09-14</time>发表</span><span class="level-item"><time dateTime="2025-10-16T17:41:45.000Z" title="2025/10/17 01:41:45">2025-10-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/RTOS/">RTOS</a></span><span class="level-item">9 minutes读完 (大约1390个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/RTOS/RT-Thread%E4%B9%8B%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B/">RT-Thread之创建线程</a></p><div class="content"> <!-- toc -->
+
+<h3 id="一、静态线程创建"><a href="#一、静态线程创建" class="headerlink" title="一、静态线程创建"></a>一、静态线程创建</h3><h4 id="1、thread-task-c文件"><a href="#1、thread-task-c文件" class="headerlink" title="1、thread_task.c文件"></a>1、thread_task.c文件</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;thread_task.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;main.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>      </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;rtthread.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 1 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_TIMESLICE		1           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="type">char</span> thread_1_stack[THREAD_1_STACK_SIZE];   <span class="comment">/* 进程栈 */</span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> <span class="title">thread_1_handle</span>;</span>        <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 2 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_TIMESLICE		1           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="type">char</span> thread_2_stack[THREAD_1_STACK_SIZE];    <span class="comment">/* 进程栈 */</span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> <span class="title">thread_2_handle</span>;</span>    <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="type">uint8_t</span> count_1 = <span class="number">0</span>;</span><br><span class="line"><span class="type">uint8_t</span> count_2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程1入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_1_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">rt_tick_t</span> now_tick = rt_tick_get();     <span class="comment">/* 获取当前时间 */</span></span><br><span class="line">        </span><br><span class="line">        HAL_GPIO_TogglePin(GPIOC, LED1_Pin);</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        rt_thread_delay_until(&amp;now_tick, <span class="number">1000</span>);     <span class="comment">/* 精准延时1000时间片 */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">rt_tick_t</span> now_tick = rt_tick_get();     <span class="comment">/* 获取当前时间 */</span></span><br><span class="line">        </span><br><span class="line">		HAL_GPIO_TogglePin(GPIOC, LED2_Pin);</span><br><span class="line">        </span><br><span class="line">        rt_thread_delay_until(&amp;now_tick, <span class="number">1000</span>);     <span class="comment">/* 精准延时1000时间片 */</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   创建线程任务并启动</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">/* 初始化静态线程*/</span></span><br><span class="line">	rt_thread_init(</span><br><span class="line">		&amp;thread_1_handle,		<span class="comment">/* 线程句柄*/</span></span><br><span class="line">		<span class="string">&quot;thread_1&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">		thread_1_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">		RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">		&amp;thread_1_stack[<span class="number">0</span>],		<span class="comment">/* 线程栈地址 */</span></span><br><span class="line">		THREAD_1_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">		THREAD_1_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">		THREAD_1_TIMESLICE);	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(&amp;thread_1_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 初始化静态线程*/</span></span><br><span class="line">	rt_thread_init(</span><br><span class="line">		&amp;thread_2_handle,		<span class="comment">/* 线程句柄*/</span></span><br><span class="line">		<span class="string">&quot;thread_2&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">		thread_2_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">		RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">		&amp;thread_2_stack[<span class="number">0</span>],		<span class="comment">/* 线程栈地址 */</span></span><br><span class="line">		THREAD_2_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">		THREAD_2_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">		THREAD_2_TIMESLICE);	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(&amp;thread_2_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、thread-task-h文件"><a href="#2、thread-task-h文件" class="headerlink" title="2、thread_task.h文件"></a>2、thread_task.h文件</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> __THREAD_TASK_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> __THREAD_TASK_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">&quot;C&quot;</span> &#123;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> __cplusplus</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">/* __THREAD_TASK_H */</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="二、静态创建线程（自定义实现调度）"><a href="#二、静态创建线程（自定义实现调度）" class="headerlink" title="二、静态创建线程（自定义实现调度）"></a>二、静态创建线程（自定义实现调度）</h3><h4 id="1、thread-task-c文件-1"><a href="#1、thread-task-c文件-1" class="headerlink" title="1、thread_task.c文件"></a>1、thread_task.c文件</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;thread_task.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;main.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>      </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;rtthread.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 1 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_CYCLE          1000        <span class="comment">/* 进程执行周期 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_TIMESLICE		1           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="type">char</span> thread_1_stack[THREAD_1_STACK_SIZE];   <span class="comment">/* 进程栈 */</span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> <span class="title">thread_1_handle</span>;</span>        <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 2 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_CYCLE          1000        <span class="comment">/* 进程执行周期 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_TIMESLICE		1           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="type">char</span> thread_2_stack[THREAD_1_STACK_SIZE];    <span class="comment">/* 进程栈 */</span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> <span class="title">thread_2_handle</span>;</span>    <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="type">uint8_t</span> count_1 = <span class="number">0</span>;</span><br><span class="line"><span class="type">uint8_t</span> count_2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程1入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_1_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        HAL_GPIO_TogglePin(GPIOC, LED1_Pin);</span><br><span class="line"></span><br><span class="line">        rt_thread_suspend(&amp;thread_1_handle);  <span class="comment">//挂起线程</span></span><br><span class="line">		rt_schedule();              <span class="comment">//启动调度器</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">		HAL_GPIO_TogglePin(GPIOC, LED2_Pin);</span><br><span class="line">        </span><br><span class="line">        rt_thread_suspend(&amp;thread_2_handle);  <span class="comment">//挂起线程</span></span><br><span class="line">		rt_schedule();              <span class="comment">//启动调度器</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   创建线程任务并启动</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">/* 初始化静态线程*/</span></span><br><span class="line">	rt_thread_init(</span><br><span class="line">		&amp;thread_1_handle,		<span class="comment">/* 线程句柄*/</span></span><br><span class="line">		<span class="string">&quot;thread_1&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">		thread_1_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">		RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">		&amp;thread_1_stack[<span class="number">0</span>],		<span class="comment">/* 线程栈其实地址 */</span></span><br><span class="line">		THREAD_1_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">		THREAD_1_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">		THREAD_1_TIMESLICE);	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(&amp;thread_1_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 初始化静态线程*/</span></span><br><span class="line">	rt_thread_init(</span><br><span class="line">		&amp;thread_2_handle,		<span class="comment">/* 线程句柄*/</span></span><br><span class="line">		<span class="string">&quot;thread_2&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">		thread_2_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">		RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">		&amp;thread_2_stack[<span class="number">0</span>],		<span class="comment">/* 线程栈其实地址 */</span></span><br><span class="line">		THREAD_2_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">		THREAD_2_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">		THREAD_2_TIMESLICE);	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(&amp;thread_2_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*任务调度*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Task_Schedule</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">static</span> <span class="type">uint32_t</span> task_count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(task_count%<span class="number">1000</span> == <span class="number">0</span>)   rt_thread_resume(&amp;thread_1_handle);</span><br><span class="line">	<span class="keyword">if</span>(task_count%<span class="number">2000</span> == <span class="number">0</span>)   rt_thread_resume(&amp;thread_2_handle);</span><br><span class="line">			</span><br><span class="line">	rt_schedule();</span><br><span class="line">	task_count++;</span><br><span class="line">    <span class="comment">//计数值达到一定值后清零，防止任务调度错乱</span></span><br><span class="line">	<span class="keyword">if</span>(task_count == <span class="number">200000</span>)	task_count = <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、thread-task-h文件-1"><a href="#2、thread-task-h文件-1" class="headerlink" title="2、thread_task.h文件"></a>2、thread_task.h文件</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> __THREAD_TASK_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> __THREAD_TASK_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">&quot;C&quot;</span> &#123;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Task_Schedule</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> __cplusplus</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">/* __THREAD_TASK_H */</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、修改board-c中的SysTick-Handler-函数"><a href="#2、修改board-c中的SysTick-Handler-函数" class="headerlink" title="2、修改board.c中的SysTick_Handler()函数"></a>2、修改board.c中的SysTick_Handler()函数</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="type">void</span> <span class="title function_">Task_Schedule</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">SysTick_Handler</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* 进入中断 */</span></span><br><span class="line">    rt_interrupt_enter();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 更新时基 */</span></span><br><span class="line">    rt_tick_increase();</span><br><span class="line">    <span class="comment">/* 自定义调度函数 */</span></span><br><span class="line">    Task_Schedule();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* 离开中断 */</span></span><br><span class="line">    rt_interrupt_leave();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、动态创建线程"><a href="#三、动态创建线程" class="headerlink" title="三、动态创建线程"></a>三、动态创建线程</h3><h4 id="1、thread-task-c文件-2"><a href="#1、thread-task-c文件-2" class="headerlink" title="1、thread_task.c文件"></a>1、thread_task.c文件</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;thread_task.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;main.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>      </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;rtthread.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 1 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_1_TIMESLICE		1           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> *<span class="title">thread_1_handle</span>;</span>        <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/******************************************** 线程 2 ******************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_PRIORITY  		5           <span class="comment">/* 进程优先级 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_STACK_SIZE		512         <span class="comment">/* 进程栈空间大小 */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> THREAD_2_TIMESLICE		1           <span class="comment">/* 进程执行时间片个数 */</span></span></span><br><span class="line"><span class="type">static</span> <span class="class"><span class="keyword">struct</span> <span class="title">rt_thread</span> *<span class="title">thread_2_handle</span>;</span>    <span class="comment">/* 进程句柄 */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程1入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_1_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">rt_tick_t</span> now_tick = rt_tick_get();     <span class="comment">/* 获取当前时间 */</span></span><br><span class="line">        </span><br><span class="line">        HAL_GPIO_TogglePin(GPIOC, LED1_Pin);</span><br><span class="line"></span><br><span class="line">        rt_thread_delay_until(&amp;now_tick, <span class="number">1000</span>);     <span class="comment">/* 精准延时1000时间片 */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   线程2入口函数</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">thread_2_entry</span><span class="params">(<span class="type">void</span>* param)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">rt_tick_t</span> now_tick = rt_tick_get();     <span class="comment">/* 获取当前时间 */</span></span><br><span class="line">        </span><br><span class="line">		HAL_GPIO_TogglePin(GPIOC, LED2_Pin);</span><br><span class="line">        </span><br><span class="line">        rt_thread_delay_until(&amp;now_tick, <span class="number">1000</span>);     <span class="comment">/* 精准延时1000时间片 */</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief   动态创建线程任务并启动</span></span><br><span class="line"><span class="comment"> * @param   无</span></span><br><span class="line"><span class="comment"> * @retval  无</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* 动态创建线程 */</span></span><br><span class="line">    thread_1_handle = rt_thread_create(</span><br><span class="line">        <span class="string">&quot;thread_1&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">        thread_1_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">        RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">        THREAD_1_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">        THREAD_1_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">        THREAD_1_TIMESLICE  	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(thread_1_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line"></span><br><span class="line">    thread_2_handle = rt_thread_create(</span><br><span class="line">            <span class="string">&quot;thread_2&quot;</span>,				<span class="comment">/* 线程句柄名称*/</span></span><br><span class="line">            thread_2_entry,			<span class="comment">/* 函数入口 */</span></span><br><span class="line">            RT_NULL,				<span class="comment">/* 入口函数参数 */</span></span><br><span class="line">            THREAD_2_STACK_SIZE,	<span class="comment">/* 线程栈大小 */</span></span><br><span class="line">            THREAD_2_PRIORITY,		<span class="comment">/* 线程优先级 */</span></span><br><span class="line">            THREAD_2_TIMESLICE  	<span class="comment">/* 线程时间片大小 */</span></span><br><span class="line">        );</span><br><span class="line">		</span><br><span class="line">	rt_thread_startup(thread_2_handle); <span class="comment">/* 启动线程 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、thread-task-h文件-2"><a href="#2、thread-task-h文件-2" class="headerlink" title="2、thread_task.h文件"></a>2、thread_task.h文件</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> __THREAD_TASK_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> __THREAD_TASK_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">&quot;C&quot;</span> &#123;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">ThreadStart</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Task_Schedule</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> __cplusplus</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">/* __THREAD_TASK_H */</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<img src="/RTOS/RT-Thread%E4%B9%8B%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B/保持热爱，奔赴星海.jpg">
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">33</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">23</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/MCU%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">MCU开发</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/RTOS/"><span class="level-start"><span class="level-item">RTOS</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/pyQt/"><span class="level-start"><span class="level-item">pyQt</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">上位机开发</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%86%8D%E6%8E%A2C%E8%AF%AD%E8%A8%80/"><span class="level-start"><span class="level-item">再探C语言</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">嵌入式基础</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"><span class="level-start"><span class="level-item">工具使用</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><span class="level-start"><span class="level-item">环境配置</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">通讯协议</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%A9%B1%E5%8A%A8/"><span class="level-start"><span class="level-item">驱动</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-10-14T16:00:00.000Z">2025-10-15</time></p><p class="title"><a href="/MCU%E5%BC%80%E5%8F%91/STM32%E4%B9%8Bfromelf%E7%9A%84%E4%BD%BF%E7%94%A8/">STM32之fromelf的使用</a></p><p class="categories"><a href="/categories/MCU%E5%BC%80%E5%8F%91/">MCU开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-10-14T16:00:00.000Z">2025-10-15</time></p><p class="title"><a href="/MCU%E5%BC%80%E5%8F%91/ST%E4%BA%A7%E5%93%81%E5%9E%8B%E5%8F%B7%E8%A7%A3%E6%9E%90/">ST产品型号解析</a></p><p class="categories"><a href="/categories/MCU%E5%BC%80%E5%8F%91/">MCU开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-10-05T16:00:00.000Z">2025-10-06</time></p><p class="title"><a href="/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/TCP-IP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/">TCP/IP协议概述</a></p><p class="categories"><a href="/categories/%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/">通讯协议</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-29T16:00:00.000Z">2025-09-30</time></p><p class="title"><a href="/RTOS/RT-Thread%E4%B9%8B%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">RT-Thread之邮箱使用示例</a></p><p class="categories"><a href="/categories/RTOS/">RTOS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-28T16:00:00.000Z">2025-09-29</time></p><p class="title"><a href="/RTOS/RT-Thread%E4%B9%8B%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/">RT-Thread之消息队列使用示例</a></p><p class="categories"><a href="/categories/RTOS/">RTOS</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2025/10/"><span class="level-start"><span class="level-item">October 2025</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/09/"><span class="level-start"><span class="level-item">September 2025</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/08/"><span class="level-start"><span class="level-item">August 2025</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/07/"><span class="level-start"><span class="level-item">July 2025</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/06/"><span class="level-start"><span class="level-item">June 2025</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/05/"><span class="level-start"><span class="level-item">May 2025</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CAN/"><span class="tag">CAN</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FreeRTOS/"><span class="tag">FreeRTOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPU%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4/"><span class="tag">MPU内存保护</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RT-Thread/"><span class="tag">RT-Thread</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/STM32/"><span class="tag">STM32</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TCP-IP/"><span class="tag">TCP/IP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Typora/"><span class="tag">Typora</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VScode/"><span class="tag">VScode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basic/"><span class="tag">basic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/conda/"><span class="tag">conda</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/config/"><span class="tag">config</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/envs/"><span class="tag">envs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tkinter/"><span class="tag">tkinter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/typedef/"><span class="tag">typedef</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ubuntu/"><span class="tag">ubuntu</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vscode/"><span class="tag">vscode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/"><span class="tag">启动过程</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%84%E5%AD%98%E5%99%A8/"><span class="tag">寄存器</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"><span class="tag">版本管理</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="二进制的向阳" height="28"></a><p class="is-size-7"><span>&copy; 2025 Shaokui Li</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zn-ch");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
         },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
-        }
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
       });
-    })
-  }
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          rewind: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      })
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
-</script>
-
-
-<!-- inject -->
-
-</div></body></html>
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
